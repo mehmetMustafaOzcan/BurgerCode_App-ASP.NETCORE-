@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w70w45lGE875BFUDKJxdH/uKaoBEpmYsptzHyMBjTopTyrFgkuAUNMaTp2OknkaUV1IsnjboBf4ph+Q3vJsoaA==",
+  "dgSpecHash": "cHRC5qILGI73cHXL1YUzXwEecli9P1xEPTAEZ0q6E9FFie2Mimwo84JVAl6vkMHnRRHSDaKyIDB3NF8IdWLJRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ÖZCAN\\Desktop\\Mustafanın kodları\\BurgerCodeApp\\BurgerCodeApp\\BurgerCodeApp.csproj",
+  "projectFilePath": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\BurgerCodeApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ÖZCAN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ÖZCAN\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

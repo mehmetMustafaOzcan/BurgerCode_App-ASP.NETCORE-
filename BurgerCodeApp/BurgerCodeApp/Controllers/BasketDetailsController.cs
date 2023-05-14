@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using System.Security.Claims;
+using BurgerCodeApp.Models.Enums;
 
 namespace BurgerCodeApp.Controllers
 {
@@ -78,8 +79,17 @@ namespace BurgerCodeApp.Controllers
                 return NotFound();
             }
             //TODO BasketId set edilecek kullanıcının girişte aldığı basket id ve basket false edilecek.
-            Basket basket = _context.Baskets.Where(x => x.AppUserId == userId).FirstOrDefault();
+            Basket basket = _context.Baskets.Where(x => x.AppUserId == userId&& x.Stage==BasketStage.Active).FirstOrDefault();
             BasketDetail basketDetail = new() { BasketId=basket.BasketId, MenuId = vm.MenuId, MenuSize = vm.Size, Quantity = vm.Quantity };
+            List<ExtraDetail> extraDetails = new();
+            foreach (var item in vm.Extras)
+            {
+                Extra extra = _context.Extras.Find(item);
+                ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, BasketId = basket.BasketId, Quantity = "1" };
+                basket.ExtraDetails.Add(extraDetail);
+            }
+            
+           // ExtraDetail extraDetail = new() { BasketId = basket.BasketId,Quantity=1,ExtraId=vm.}
             _context.BasketDetails.Add(basketDetail);
             _context.SaveChanges();
             return RedirectToAction("Index", "Menus");

@@ -10,10 +10,11 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-@foreach (var item in Model)
-{
+
     <div class="container-fluid d-flex justify-content-center">
         <div class="row mt-5">
+        @foreach (var item in Model)
+        {
             <div class="col-sm-4">
                 <div class="card">
                     <img src="/img/hamb2.png" class="card-img-top" width="100%">
@@ -36,12 +37,12 @@
                 </div>
             </div>
 
-
+        }
 
 
         </div>
     </div>
-        }
+       
     <table class="table">
         <thead>
             <tr>

@@ -6,6 +6,6 @@
         public int MenuId { get; set; }
         public string MenuName { get; set; }
         public int Quantity { get; set; }
-        public List<string> Extras { get; set; }
+        public List<int> Extras { get; set; }
     }
 }

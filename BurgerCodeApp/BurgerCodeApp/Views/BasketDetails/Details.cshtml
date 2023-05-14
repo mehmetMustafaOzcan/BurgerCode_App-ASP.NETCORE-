@@ -23,7 +23,7 @@
                     @foreach (var item in ViewBag.Extras)
                     {
                         <div class="form-check d-inline-flex">
-                            <input type="checkbox" name="Extras" value="@item.Name" />
+                            <input type="checkbox" name="Extras" value="@item.ExtraId" />
                             <label class="form-check-label" for="SelectedToppings">
                                 @item.Name
                             </label>
@@ -46,11 +46,14 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" value="3" id="flexRadioDefault1" asp-for="Size">
                     <label class="form-check-label" asp-for="Size">
-                        Biyük
+                        Büyük
                     </label>
                 </div>
                 <div>
                     <input type="number" asp-for="Quantity" />
+                </div>
+                <div>
+                    <input type="" asp-for="MenuId" readonly/>
                 </div>
                 <button type="submit" class="btn btn-warning w-75 text-center "> Sipariş ver</button>
             </div>

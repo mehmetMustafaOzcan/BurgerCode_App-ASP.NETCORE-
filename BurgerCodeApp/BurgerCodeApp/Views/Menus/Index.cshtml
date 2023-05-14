@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BurgerCodeApp.Models.Menu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Menus</h1>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@foreach (var item in Model)
+{
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="row mt-5">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="/img/hamb2.png" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0">
+                        <div class="d-flex flex-column text-center"><h5 class="mb-0">@Html.DisplayFor(modelItem => item.MenuName)</h5>
+                            <small class="text-muted key ">Patates Kızartması ve Soğan Halkalarıyla harika lezzet</small>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="text-muted mt-1">Price</small>
+                            <h6>&dollar;    @Html.DisplayFor(modelItem => item.MenüPrice)</h6>
+                        </div>
+                      @*  <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="text-muted"> @Html.DisplayFor(modelItem => item.MenuName)</span><small class="text-muted">  @Html.DisplayFor(modelItem => item.MenuName)</small></div>
+                            <div class="d-flex flex-column "><h5 class="mb-0">@Html.DisplayFor(modelItem => item.MenuName)</h5><small class="text-muted text-right">(city/Hwy)</small></div>
+                        </div>*@
+
+                        <div class="mx-3 mt-3 mb-2 text-center "><a asp-controller="basketdetails" asp-action="details" asp-route-id="@item.MenuId" class="btn btn-danger btn-block rounded-pill"><small>Sipariş Ver</small></a></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+        }
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MenuName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MenüPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MenuCategory)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenüPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MenuCategory.MenuCategoryId)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.MenuId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.MenuId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.MenuId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

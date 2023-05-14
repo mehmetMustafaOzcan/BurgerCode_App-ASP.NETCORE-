@@ -1,0 +1,59 @@
+﻿@model BurgerCodeApp.Models.BasketVm
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BasketDetail</h4>
+    <hr />
+    <form asp-action="details" method="post">
+        <div class="d-flex align-items-center">
+            <img class="flex-shrink-0 img-fluid rounded" src="/img/hamb.png" alt="" style="width: 600px;">
+            <div class="w-100 d-flex flex-column text-start ps-4">
+                <h5 class="d-flex justify-content-between border-bottom pb-2">
+                    <span>@Model.MenuName</span>
+                    <span class="text-primary">$115</span>
+                </h5>
+                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                <div class="d-flex flex-row justify-content-end mb-0 px-3">
+                
+                    @foreach (var item in ViewBag.Extras)
+                    {
+                        <div class="form-check d-inline-flex">
+                            <input type="checkbox" name="Extras" value="@item.Name" />
+                            <label class="form-check-label" for="SelectedToppings">
+                                @item.Name
+                            </label>
+                        </div>
+                    }
+                  
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"  value="1" id="flexRadioDefault1" asp-for="Size">
+                    <label class="form-check-label" asp-for="Size">
+                        Küçük
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault1" asp-for="Size">
+                    <label class="form-check-label" asp-for="Size">
+                        Orta
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault1" asp-for="Size">
+                    <label class="form-check-label" asp-for="Size">
+                        Biyük
+                    </label>
+                </div>
+                <div>
+                    <input type="number" asp-for="Quantity" />
+                </div>
+                <button type="submit" class="btn btn-warning w-75 text-center "> Sipariş ver</button>
+            </div>
+        </div>
+    </form>
+</div>

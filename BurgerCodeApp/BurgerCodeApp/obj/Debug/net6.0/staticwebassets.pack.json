@@ -5,6 +5,926 @@
       "PackagePath": "staticwebassets\\BurgerCodeApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\notifications\\alerts.html",
+      "PackagePath": "staticwebassets\\admin\\notifications\\alerts.html"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\notifications\\badge.html",
+      "PackagePath": "staticwebassets\\admin\\notifications\\badge.html"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\notifications\\modals.html",
+      "PackagePath": "staticwebassets\\admin\\notifications\\modals.html"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\notifications\\toasts.html",
+      "PackagePath": "staticwebassets\\admin\\notifications\\toasts.html"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\chartjs\\css\\coreui-chartjs.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\chartjs\\css\\coreui-chartjs.css"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\chartjs\\css\\coreui-chartjs.css.map",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\chartjs\\css\\coreui-chartjs.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\chartjs\\js\\coreui-chartjs.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\chartjs\\js\\coreui-chartjs.js"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\chartjs\\js\\coreui-chartjs.js.map",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\chartjs\\js\\coreui-chartjs.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\coreui\\js\\coreui.bundle.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\coreui\\js\\coreui.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\coreui\\js\\coreui.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\coreui\\js\\coreui.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\css\\brand.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\css\\brand.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\css\\brand.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\css\\brand.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\css\\flag.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\css\\flag.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\css\\flag.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\css\\flag.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\css\\free.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\css\\free.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\css\\free.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\css\\free.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.eot"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Brand.woff"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.eot",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.eot"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.woff",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\fonts\\CoreUI-Icons-Free.woff"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\brand.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\brand.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ad.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ad.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ae.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ae.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-af.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-af.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ag.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ag.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-al.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-al.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-am.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-am.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ao.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ao.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ar.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ar.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-at.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-at.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-au.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-au.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-az.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-az.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ba.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ba.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bb.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bb.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bd.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bd.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-be.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-be.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bf.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bf.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bh.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bh.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bi.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bi.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bj.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bj.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bo.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-br.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-br.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bs.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bs.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bt.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bt.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-by.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-by.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-bz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ca.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ca.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cd.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cd.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cf.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cf.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ch.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ch.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ci.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ci.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ck.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ck.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cl.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cl.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-co.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-co.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cu.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cu.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cv.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cv.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cy.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cy.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-cz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-de.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-de.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dj.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dj.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-do.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-do.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-dz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ec.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ec.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ee.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ee.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-eg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-eg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-er.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-er.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-es.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-es.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-et.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-et.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fi.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fi.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fj.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fj.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-fr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ga.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ga.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gb.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gb.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gd.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gd.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ge.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ge.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gh.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gh.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gq.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gq.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gt.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gt.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gy.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-gy.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ht.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ht.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hu.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-hu.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-id.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-id.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ie.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ie.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-il.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-il.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-in.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-in.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-iq.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-iq.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ir.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ir.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-is.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-is.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-it.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-it.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-jm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-jm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-jo.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-jo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-jp.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-jp.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ke.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ke.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kh.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kh.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ki.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ki.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-km.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-km.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kp.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kp.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-kz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-la.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-la.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lb.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lb.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lc.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lc.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-li.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-li.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ls.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ls.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lt.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lt.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lu.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lu.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lv.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-lv.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ly.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ly.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ma.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ma.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mc.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mc.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-md.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-md.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-me.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-me.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mh.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mh.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ml.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ml.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mt.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mt.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mu.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mu.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mv.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mv.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mx.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mx.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-my.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-my.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-mz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-na.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-na.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ne.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ne.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ng.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ng.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ni.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ni.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nl.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nl.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-no.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-no.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-np.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-np.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nu.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nu.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-nz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-om.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-om.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pa.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pa.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pe.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pe.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ph.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ph.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pl.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pl.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pt.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pt.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-pw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-py.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-py.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-qa.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-qa.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ro.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ro.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-rs.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-rs.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ru.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ru.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-rw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-rw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sa.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sa.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sb.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sb.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sc.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sc.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sd.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sd.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-se.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-se.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-si.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-si.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sl.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sl.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-so.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-so.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ss.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ss.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-st.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-st.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sv.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sv.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sy.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sy.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-sz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-td.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-td.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-th.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-th.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tj.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tj.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tl.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tl.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-to.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-to.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tr.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tr.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tt.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tt.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tv.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tv.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-tz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ua.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ua.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ug.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ug.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-us.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-us.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-uy.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-uy.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-uz.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-uz.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-va.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-va.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-vc.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-vc.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ve.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ve.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-vg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-vg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-vn.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-vn.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ws.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ws.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-xk.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-xk.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ye.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-ye.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-za.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-za.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-zm.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-zm.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-zw.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\flag\\cif-zw.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\icons\\svg\\free.svg",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\icons\\svg\\free.svg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\@coreui\\utils\\js\\coreui-utils.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\@coreui\\utils\\js\\coreui-utils.js"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\chart.js\\js\\chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\chart.js\\js\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\simplebar\\css\\simplebar.css",
+      "PackagePath": "staticwebassets\\admin\\vendors\\simplebar\\css\\simplebar.css"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\vendors\\simplebar\\js\\simplebar.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendors\\simplebar\\js\\simplebar.min.js"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },

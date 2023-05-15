@@ -45,14 +45,20 @@
 .btn {
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
-    text-transform: uppercase;
     transition: .5s;
 }
-
-.btn.btn-primary,
-.btn.btn-secondary {
-    color: #FFFFFF;
+.btn-ghost-warning {
+    --cui-btn-color: #f9b115;
+    --cui-btn-hover-bg: #d49612;
+    --cui-btn-hover-border-color: #c78e11;
+    --cui-btn-hover-color: #000015;
+    --cui-btn-active-bg: #c78e11;
+    --cui-btn-active-border-color: #bb8510;
+    --cui-btn-active-color: #000015;
+    --cui-btn-disabled-color: #f9b115;
+    --cui-btn-shadow: rgba(249, 177, 21, 0.5);
 }
+
 
 .btn-square {
     width: 38px;
@@ -88,7 +94,7 @@
     padding: 35px 0;
     font-size: 15px;
     color: var(--light) !important;
-    text-transform: uppercase;
+   /* text-transform: uppercase;*/
     font-weight: 500;
     outline: none;
     transition: .5s;

@@ -614,3 +614,4 @@ C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Burge
 C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\BurgerCodeApp.pdb
 C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\BurgerCodeApp.genruntimeconfig.cache
 C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\ref\BurgerCodeApp.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layoutadmin.cshtml.rz.scp.css

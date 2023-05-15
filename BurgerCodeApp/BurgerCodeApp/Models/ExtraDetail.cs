@@ -5,11 +5,11 @@ namespace BurgerCodeApp.Models
 {
     public partial class ExtraDetail
     {
-        public int BasketId { get; set; }
+        public int BasketDetailId { get; set; }
         public int ExtraId { get; set; }
-        public string Quantity { get; set; } = null!;
+        public int Quantity { get; set; }
 
-        public virtual Basket Basket { get; set; } = null!;
+        public virtual BasketDetail BasketDetail { get; set; } = null!;
         public virtual Extra Extra { get; set; } = null!;
     }
 }

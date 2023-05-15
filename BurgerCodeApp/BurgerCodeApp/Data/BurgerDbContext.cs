@@ -38,9 +38,12 @@ namespace BurgerCodeApp.Data
 
             modelBuilder.Entity<BasketDetail>(entity =>
             {
-                entity.HasKey(e => new { e.BasketId, e.MenuId });
+                entity.HasIndex(e => new { e.BasketId, e.MenuId }, "IX_BasketDetails")
+                    .IsUnique();
 
                 entity.HasIndex(e => e.MenuId, "IX_BasketDetails_MenuId");
+
+                entity.Property(e => e.BasketDetailId).HasColumnName("BasketDetailID");
 
                 entity.HasOne(d => d.Basket)
                     .WithMany(p => p.BasketDetails)
@@ -69,21 +72,23 @@ namespace BurgerCodeApp.Data
                 entity.Property(e => e.Description).HasMaxLength(50);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
+
+                entity.Property(e => e.Price).HasColumnType("money");
             });
 
             modelBuilder.Entity<ExtraDetail>(entity =>
             {
-                entity.HasKey(e => new { e.BasketId, e.ExtraId });
+                entity.HasKey(e => new { e.BasketDetailId, e.ExtraId });
 
-                entity.Property(e => e.BasketId).HasColumnName("BasketID");
+                entity.HasIndex(e => e.ExtraId, "IX_ExtraDetails_ExtraId");
 
-                entity.Property(e => e.Quantity).HasMaxLength(50);
+                entity.Property(e => e.BasketDetailId).HasColumnName("BasketDetailID");
 
-                entity.HasOne(d => d.Basket)
+                entity.HasOne(d => d.BasketDetail)
                     .WithMany(p => p.ExtraDetails)
-                    .HasForeignKey(d => d.BasketId)
+                    .HasForeignKey(d => d.BasketDetailId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_ExtraDetails_Baskets");
+                    .HasConstraintName("FK_ExtraDetails_BasketDetails");
 
                 entity.HasOne(d => d.Extra)
                     .WithMany(p => p.ExtraDetails)

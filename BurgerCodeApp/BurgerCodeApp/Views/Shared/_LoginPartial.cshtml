@@ -12,17 +12,15 @@
     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
         <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
     </form>
-
+    <a class="nav-link btn btn-link text-dark" href="Account/Logout">Çıkış</a>
 }
 else
 {
 
-    <a class="nav-item nav-link" href="/Identity/Account/Register">Register</a>
-
-    <a href="/Identity/Account/Login" class="nav-item nav-link">Login</a>
+    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Register">Register</a>
 
 
-    @* <a class="nav-item nav-link" asp-area="Account" asp-controller="Home" asp-action="Index">Login</a>*@
+    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Login">Login</a>
 
 
 }

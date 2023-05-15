@@ -14,7 +14,7 @@ namespace BurgerCodeApp.Models
         public int MenuId { get; set; }
         public string MenuName { get; set; } = null!;
         public int? MenuCategoryId { get; set; }
-        public string? MenüPrice { get; set; }
+        public decimal? MenüPrice { get; set; }
 
         public virtual MenuCategory? MenuCategory { get; set; }
         public virtual ICollection<BasketDetail> BasketDetails { get; set; }

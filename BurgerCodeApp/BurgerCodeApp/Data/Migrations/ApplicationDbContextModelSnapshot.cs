@@ -46,6 +46,13 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("BurgerCodeApp.Models.BasketDetail", b =>
                 {
+                    b.Property<int>("BasketDetailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("BasketDetailID");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BasketDetailId"), 1L, 1);
+
                     b.Property<int>("BasketId")
                         .HasColumnType("int");
 
@@ -58,7 +65,10 @@ namespace BurgerCodeApp.Data.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("BasketId", "MenuId");
+                    b.HasKey("BasketDetailId");
+
+                    b.HasIndex(new[] { "BasketId", "MenuId" }, "IX_BasketDetails")
+                        .IsUnique();
 
                     b.HasIndex(new[] { "MenuId" }, "IX_BasketDetails_MenuId");
 
@@ -104,6 +114,9 @@ namespace BurgerCodeApp.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<decimal?>("Price")
+                        .HasColumnType("money");
+
                     b.HasKey("ExtraId");
 
                     b.ToTable("Extras");
@@ -111,21 +124,19 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("BurgerCodeApp.Models.ExtraDetail", b =>
                 {
-                    b.Property<int>("BasketId")
+                    b.Property<int>("BasketDetailId")
                         .HasColumnType("int")
-                        .HasColumnName("BasketID");
+                        .HasColumnName("BasketDetailID");
 
                     b.Property<int>("ExtraId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Quantity")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
 
-                    b.HasKey("BasketId", "ExtraId");
+                    b.HasKey("BasketDetailId", "ExtraId");
 
-                    b.HasIndex("ExtraId");
+                    b.HasIndex(new[] { "ExtraId" }, "IX_ExtraDetails_ExtraId");
 
                     b.ToTable("ExtraDetails");
                 });
@@ -148,9 +159,9 @@ namespace BurgerCodeApp.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("MenüPrice")
+                    b.Property<decimal?>("MenüPrice")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("MenuId");
 
@@ -444,9 +455,6 @@ namespace BurgerCodeApp.Data.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
-                    b.Property<int>("BasketId")
-                        .HasColumnType("int");
-
                     b.HasDiscriminator().HasValue("AppUser");
                 });
 
@@ -482,11 +490,11 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("BurgerCodeApp.Models.ExtraDetail", b =>
                 {
-                    b.HasOne("BurgerCodeApp.Models.Basket", "Basket")
+                    b.HasOne("BurgerCodeApp.Models.BasketDetail", "BasketDetail")
                         .WithMany("ExtraDetails")
-                        .HasForeignKey("BasketId")
+                        .HasForeignKey("BasketDetailId")
                         .IsRequired()
-                        .HasConstraintName("FK_ExtraDetails_Baskets");
+                        .HasConstraintName("FK_ExtraDetails_BasketDetails");
 
                     b.HasOne("BurgerCodeApp.Models.Extra", "Extra")
                         .WithMany("ExtraDetails")
@@ -494,7 +502,7 @@ namespace BurgerCodeApp.Data.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_ExtraDetails_Extras");
 
-                    b.Navigation("Basket");
+                    b.Navigation("BasketDetail");
 
                     b.Navigation("Extra");
                 });
@@ -593,7 +601,10 @@ namespace BurgerCodeApp.Data.Migrations
             modelBuilder.Entity("BurgerCodeApp.Models.Basket", b =>
                 {
                     b.Navigation("BasketDetails");
+                });
 
+            modelBuilder.Entity("BurgerCodeApp.Models.BasketDetail", b =>
+                {
                     b.Navigation("ExtraDetails");
                 });
 

@@ -22,10 +22,13 @@ namespace BurgerCodeApp.Controllers
         }
 
         // GET: BasketDetails
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Basket()
         {
-            var burgerDbContext = _context.BasketDetails.Include(b => b.Basket).Include(b => b.Menu);
-            return View(await burgerDbContext.ToListAsync());
+            Basket basket = GetUserActiveBasket();
+           
+           
+           
+            return View(basket);
         }
 
         // GET: BasketDetails/Details/5
@@ -47,13 +50,13 @@ namespace BurgerCodeApp.Controllers
 
         //    return View(basketDetail);
         //}
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id)//sepete eklenecek ürün gösterme
         {
             if (id == null || _context.Menus == null)
             {
                 return NotFound();
             }
-         
+
             ViewBag.Extras = _context.Extras;
             var Menü = await _context.Menus
                 .Include(b => b.MenuDetails)
@@ -63,43 +66,52 @@ namespace BurgerCodeApp.Controllers
             {
                 return NotFound();
             }
-            BasketVm vm = new BasketVm() { MenuName=Menü.MenuName,MenuId=Menü.MenuId};
-           
+            BasketVm vm = new BasketVm() { MenuName = Menü.MenuName, MenuId = Menü.MenuId };
+
             return View(vm);
         }
         [HttpPost]
-        public async Task<IActionResult> Details(BasketVm vm)
+        public async Task<IActionResult> Details(BasketVm vm)//sepete ürün ekleme
         {
-            //menüıd alınacak
-            var userIdClaim = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier);
-            var userId = userIdClaim.Value;
-            
+
             if (vm == null)
             {
                 return NotFound();
             }
             //TODO BasketId set edilecek kullanıcının girişte aldığı basket id ve basket false edilecek.
-            Basket basket = _context.Baskets.Where(x => x.AppUserId == userId&& x.Stage==BasketStage.Active).FirstOrDefault();
-            BasketDetail basketDetail = new() { BasketId=basket.BasketId, MenuId = vm.MenuId, MenuSize = vm.Size, Quantity = vm.Quantity };
-            List<ExtraDetail> extraDetails = new();
+            Basket basket = GetUserActiveBasket();
+            BasketDetail basketDetail = new() { BasketId = basket.BasketId, MenuId = vm.MenuId, MenuSize = vm.Size, Quantity = vm.Quantity, };
             foreach (var item in vm.Extras)
             {
                 Extra extra = _context.Extras.Find(item);
-                ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, BasketId = basket.BasketId, Quantity = "1" };
-                basket.ExtraDetails.Add(extraDetail);
+                ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
+                basketDetail.ExtraDetails.Add(extraDetail);
             }
-            
-           // ExtraDetail extraDetail = new() { BasketId = basket.BasketId,Quantity=1,ExtraId=vm.}
+
+            // ExtraDetail extraDetail = new() { BasketId = basket.BasketId,Quantity=1,ExtraId=vm.}
             _context.BasketDetails.Add(basketDetail);
             _context.SaveChanges();
             return RedirectToAction("Index", "Menus");
+        }
+
+        private Basket GetUserActiveBasket()
+        {
+            var userIdClaim = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = userIdClaim.Value;
+            Basket basket = _context.Baskets.Where(x => x.AppUserId == userId && x.Stage == BasketStage.Active)
+                .Include(x=>x.BasketDetails)
+                .ThenInclude(x => x.ExtraDetails)
+                .Include(x=>x.BasketDetails).
+                ThenInclude(x=>x.Menu)
+                .FirstOrDefault();
+            return basket;
         }
 
 
         // GET: BasketDetails/Create
         public async Task<IActionResult> Create()
         {
-            ViewData["BasketId"] = new SelectList( _context.Baskets, "BasketId", "BasketId");
+            ViewData["BasketId"] = new SelectList(_context.Baskets, "BasketId", "BasketId");
             ViewData["Extra"] = await _context.Extras.ToListAsync();
             ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId");
             return View();
@@ -110,7 +122,7 @@ namespace BurgerCodeApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BasketId,MenuId,Quantity,MenuSize")] BasketDetail basketDetail,List<string> selectedExtras)
+        public async Task<IActionResult> Create([Bind("BasketId,MenuId,Quantity,MenuSize")] BasketDetail basketDetail, List<string> selectedExtras)
         {
             if (ModelState.IsValid)
             {
@@ -212,14 +224,14 @@ namespace BurgerCodeApp.Controllers
             {
                 _context.BasketDetails.Remove(basketDetail);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool BasketDetailExists(int id)
         {
-          return (_context.BasketDetails?.Any(e => e.BasketId == id)).GetValueOrDefault();
+            return (_context.BasketDetails?.Any(e => e.BasketId == id)).GetValueOrDefault();
         }
     }
 }

@@ -32,20 +32,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Employee/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZWVcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Employee/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZWVcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Dene/Dene.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVuZVxEZW5lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Employee/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZWVcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Employee/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRW1wbG95ZWVcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Identity/Pages/_ViewStart.cshtml]
@@ -70,6 +78,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Identity/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/BasketDetails/Basket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0RGV0YWlsc1xCYXNrZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/BasketDetails/Create.cshtml]
@@ -134,26 +146,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/ExtraDetails/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFEZXRhaWxzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/ExtraDetails/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFEZXRhaWxzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/ExtraDetails/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFEZXRhaWxzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/ExtraDetails/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFEZXRhaWxzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/ExtraDetails/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFEZXRhaWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Extras/Create.cshtml]
@@ -283,6 +275,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Shared/_Layoutadmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRhZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-8h5csqnmgg
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

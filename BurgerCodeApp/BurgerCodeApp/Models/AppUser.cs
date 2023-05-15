@@ -8,7 +8,6 @@ namespace BurgerCodeApp.Models
         {
          Baskets = new HashSet<Basket>();
         }
-        public int BasketId { get; set; }
         public virtual ICollection<Basket> Baskets { get; set; }
     }
 }

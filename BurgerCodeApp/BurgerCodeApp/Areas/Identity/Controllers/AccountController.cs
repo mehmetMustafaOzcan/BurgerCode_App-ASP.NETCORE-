@@ -1,6 +1,7 @@
 ﻿using BurgerCodeApp.Areas.Identity.Models;
 using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,18 +12,18 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
 
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         private readonly BurgerDbContext _context;
 
-        public AccountController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager,BurgerDbContext context)
+        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager,BurgerDbContext context)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _context = context;
         }
 
-    
+      
         public IActionResult Register()
         {
             return View();
@@ -71,7 +72,7 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
                 if (result.Succeeded)
                 {
 
-                    return RedirectToAction("Index", "home");
+                    return RedirectToAction("Index", "home", new { area = "" });
                 }
                 else
                 {
@@ -88,7 +89,7 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
         {
             await _signInManager.SignOutAsync();
 
-            return RedirectToAction( "Index", "Home");
+            return RedirectToAction("Index", "home", new { area = "" });
         }
 
     }

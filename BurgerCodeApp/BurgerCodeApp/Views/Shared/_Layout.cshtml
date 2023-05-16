@@ -46,7 +46,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                     <img src="/img/logo.png" alt="Logo" height="100px">
-                <a asp-action="index" asp-controller="home" class="navbar-brand p-0">
+                <a asp-action="index" asp-controller="home" asp-area="" class="navbar-brand p-0">
                 
                     <h1 class="text-primary m-0">@*<i class="fa fa-utensils me-3"></i>*@<span class="text-danger fw-bolder">Burger</span>Code</h1>
                     
@@ -59,7 +59,7 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a asp-controller="Menus" class="nav-item nav-link">Menu</a>
+                        <a asp-area="" asp-controller="Menus" asp-action="index" class="nav-item nav-link">Menu</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -69,10 +69,10 @@
                             </div>
 
                         </div>
-
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
-                     <partial name="_LoginPartial" />
+                        <partial name="_LoginPartial" />
                     </div>
+                    
 
                 </div>
             </nav>

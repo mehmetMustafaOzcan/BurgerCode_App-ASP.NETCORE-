@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4422AI2aesQuNseZYBT88GQdHnmOJ0k3Za9ZPEHy/3Y=",
+  "Hash": "OtppBPDjn4m2L5wx5Bjfm0jYk6biG61f6l5HWLnQOBA=",
   "Source": "BurgerCodeApp",
   "BasePath": "_content/BurgerCodeApp",
   "Mode": "Default",
@@ -22336,6 +22336,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\bg-hero.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero2.jpg",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "img/bg-hero2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bg-hero2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\circle.png",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "img/circle.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\circle.png"
     },
     {
       "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\hamb.png",

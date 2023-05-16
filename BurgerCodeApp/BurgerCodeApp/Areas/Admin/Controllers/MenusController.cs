@@ -9,12 +9,13 @@ using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using BurgerCodeApp.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.CodeAnalysis;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize]
-   
+
     public class MenusController : Controller
     {
         private readonly BurgerDbContext _context;
@@ -54,8 +55,6 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         public IActionResult Create()
         {
             List<SelectListItem> MenuCategory = _context.MenuCategories.Select(x => new SelectListItem { Value = x.MenuCategoryId.ToString(), Text = x.Name, }).ToList();
-            List<SelectListItem> Product = _context.Products.Select(x => new SelectListItem { Value = x.ProductId.ToString(), Text = x.Name, }).ToList();
-            ViewBag.ProductId = Product;
             ViewData["MenuCategoryId"] = MenuCategory;
             return View();
         }
@@ -65,35 +64,57 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")] MenuVm menuvm)
+        public async Task<IActionResult> Create(/*[Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")]*/ MenuVm menuvm)
         {
-            if (ModelState.IsValid)
+            if (menuvm != null)
             {
-                MenuDetail menuDetail = new()
-                {
-                    ProductId = menuvm.ProductId,
-                    Quantity = menuvm.ProductQuantity,
-                    UnitPrice = _context.Products.Find(menuvm.ProductId).Price
-
-                };
-                Menu menu = new()
+                 Menu menu = new()
                 {
                     MenuName = menuvm.MenuName,
-                    MenuCategoryId = menuvm.MenuCategoryId,
                     MenüPrice = menuvm.MenüPrice,
-                    // MenuDetails = menuDetail yarım kaldı burası
+                    MenuCategoryId = menuvm.MenuCategoryId,
+
                 };
-                //_context.Add(menu);
-                //await _context.SaveChangesAsync();
+                _context.Menus.Add(menu);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(AddProduct));
 
-
-
-                //return RedirectToAction(nameof(Index));
-
-                //ViewData["MenuCategoryId"] = new SelectList(_context.MenuCategories, "MenuCategoryId", "MenuCategoryId", menu.MenuCategoryId);
-                //return View(menu);
             }
-                return View();
+            List<SelectListItem> MenuCategory = _context.MenuCategories.Select(x => new SelectListItem { Value = x.MenuCategoryId.ToString(), Text = x.Name, }).ToList();
+            List<SelectListItem> Product = _context.Products.Select(x => new SelectListItem { Value = x.ProductId.ToString(), Text = x.Name, }).ToList();
+            ViewBag.ProductId = Product;
+            ViewData["MenuCategoryId"] = MenuCategory;
+            return View(menuvm);
+        }
+        public async Task<IActionResult> AddProduct()
+        {
+         
+            List<SelectListItem> Product = _context.Products.Select(x => new SelectListItem { Value = x.ProductId.ToString(), Text = x.Name, }).ToList();
+            ViewBag.ProductId = Product;
+            List<SelectListItem> Menus = _context.Menus.Select(x => new SelectListItem { Value = x.MenuId.ToString(), Text = x.MenuName}).ToList();
+            ViewBag.Menus = Menus;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddProduct(MenuVm menuvm)
+        {
+            if (menuvm != null)
+            {
+               
+                MenuDetail menudt = new()
+                {
+                    MenuId = menuvm.MenuId,
+                    ProductId = menuvm.ProductId,
+                    Quantity=menuvm.ProductQuantity,
+                    UnitPrice=_context.Products.Find(menuvm.ProductId).Price
+                };
+                 _context.Menus.Find(menuvm.MenuId).MenuDetails.Add(menudt);
+                await _context.SaveChangesAsync();
+            }
+            List<SelectListItem> Product = _context.Products.Select(x => new SelectListItem { Value = x.ProductId.ToString(), Text = x.Name, }).ToList();
+            ViewBag.ProductId = Product;
+            return RedirectToAction("AddProduct");
         }
 
 

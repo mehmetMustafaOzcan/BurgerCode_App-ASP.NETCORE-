@@ -38,8 +38,7 @@ namespace BurgerCodeApp.Data
 
             modelBuilder.Entity<BasketDetail>(entity =>
             {
-                entity.HasIndex(e => new { e.BasketId, e.MenuId }, "IX_BasketDetails")
-                    .IsUnique();
+               
 
                 entity.HasIndex(e => e.MenuId, "IX_BasketDetails_MenuId");
 

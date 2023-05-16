@@ -5009,6 +5009,14 @@
       "PackagePath": "staticwebassets\\img\\bg-hero.jpg"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero2.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-hero2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\circle.png",
+      "PackagePath": "staticwebassets\\img\\circle.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\hamb.png",
       "PackagePath": "staticwebassets\\img\\hamb.png"
     },

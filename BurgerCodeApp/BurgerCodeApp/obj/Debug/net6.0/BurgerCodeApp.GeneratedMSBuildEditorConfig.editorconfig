@@ -56,6 +56,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Extras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXh0cmFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Extras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXh0cmFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Extras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXh0cmFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Extras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXh0cmFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Extras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXh0cmFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/MenuCategories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudUNhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,6 +94,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/MenuCategories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudUNhdGVnb3JpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Menus/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVudXNcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Areas/Admin/Views/Menus/Create.cshtml]
@@ -222,26 +246,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Extras/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Extras/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Extras/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Extras/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Extras/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ÖZCAN/Documents/GitHub/BurgerCode_App-ASP.NETCORE-/BurgerCodeApp/BurgerCodeApp/Views/Home/Index.cshtml]

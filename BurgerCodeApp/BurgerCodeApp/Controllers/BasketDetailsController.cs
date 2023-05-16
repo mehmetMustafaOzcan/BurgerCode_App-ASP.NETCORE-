@@ -26,7 +26,7 @@ namespace BurgerCodeApp.Controllers
         {
             Basket basket = GetUserActiveBasket();
            
-           
+          
            
             return View(basket);
         }
@@ -100,7 +100,7 @@ namespace BurgerCodeApp.Controllers
             var userId = userIdClaim.Value;
             Basket basket = _context.Baskets.Where(x => x.AppUserId == userId && x.Stage == BasketStage.Active)
                 .Include(x=>x.BasketDetails)
-                .ThenInclude(x => x.ExtraDetails)
+                .ThenInclude(x => x.ExtraDetails).ThenInclude(x=>x.Extra)
                 .Include(x=>x.BasketDetails).
                 ThenInclude(x=>x.Menu)
                 .FirstOrDefault();

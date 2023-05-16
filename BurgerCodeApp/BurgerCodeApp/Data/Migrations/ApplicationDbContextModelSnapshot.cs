@@ -67,8 +67,7 @@ namespace BurgerCodeApp.Data.Migrations
 
                     b.HasKey("BasketDetailId");
 
-                    b.HasIndex(new[] { "BasketId", "MenuId" }, "IX_BasketDetails")
-                        .IsUnique();
+                    b.HasIndex("BasketId");
 
                     b.HasIndex(new[] { "MenuId" }, "IX_BasketDetails_MenuId");
 

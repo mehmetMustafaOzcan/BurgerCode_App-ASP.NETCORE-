@@ -69,7 +69,6 @@
     <Folder Include="Areas\Account\Pages\" />
     <Folder Include="Areas\Account\Views\Shared\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Controller\" />
     <Folder Include="Areas\Identity\Data\" />
     <Folder Include="Areas\Identity\Views\Shared\" />

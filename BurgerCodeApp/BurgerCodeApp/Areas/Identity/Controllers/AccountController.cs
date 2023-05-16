@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BurgerCodeApp.Areas.Identity.Controllers
 {
-  
+    [Area("Identity")]
+
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -21,7 +22,7 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
             _context = context;
         }
 
-        [Area("Identity")]
+    
         public IActionResult Register()
         {
             return View();
@@ -53,7 +54,6 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
             }
             return View();
         }
-        [Area("Identity")]
         public IActionResult Login()
         {
             return View();

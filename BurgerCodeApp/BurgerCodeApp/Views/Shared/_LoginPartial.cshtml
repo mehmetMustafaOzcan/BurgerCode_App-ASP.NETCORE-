@@ -10,9 +10,15 @@
 
 
     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+
         <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        <a class="btn btn-primary py-2 px-4 nav-link" asp-action="Basket" asp-controller="BasketDetails"><i class="fa fa-basket me-3"></i>Sepet</a>
     </form>
     <a class="nav-link btn btn-link text-dark" href="Account/Logout">Çıkış</a>
+    <div>
+   
+    </div>
+
 }
 else
 {

@@ -25,7 +25,7 @@ namespace BurgerCodeApp.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\;Database=BurgerCode_AppDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.\\;Database=BurgerCode_DB;Trusted_Connection=True;");
             }
         }
 
@@ -86,7 +86,7 @@ namespace BurgerCodeApp.Data
                 entity.HasOne(d => d.BasketDetail)
                     .WithMany(p => p.ExtraDetails)
                     .HasForeignKey(d => d.BasketDetailId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_ExtraDetails_BasketDetails");
 
                 entity.HasOne(d => d.Extra)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BurgerCodeApp.Models.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace BurgerCodeApp.Models
@@ -14,6 +15,8 @@ namespace BurgerCodeApp.Models
         public int MenuId { get; set; }
         public string MenuName { get; set; } = null!;
         public int? MenuCategoryId { get; set; }
+        public string? Photopath { get; set; }
+        public Status SaleStatus { get; set; } = Status.Onsale;
         public decimal? MenüPrice { get; set; }
 
         public virtual MenuCategory? MenuCategory { get; set; }

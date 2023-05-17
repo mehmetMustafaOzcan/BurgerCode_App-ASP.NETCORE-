@@ -7,56 +7,151 @@
 <h1>Details</h1>
 
 <div>
-    <h4>BasketDetail</h4>
+    @*  <h4>BasketDetail</h4>
     <hr />
     <form asp-action="details" method="post">
-        <div class="d-flex align-items-center">
-            <img class="flex-shrink-0 img-fluid rounded" src="/img/hamb.png" alt="" style="width: 600px;">
-            <div class="w-100 d-flex flex-column text-start ps-4">
-                <h5 class="d-flex justify-content-between border-bottom pb-2">
-                    <span>@Model.MenuName</span>
-                    <span class="text-primary">$115</span>
-                </h5>
-                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
-                <div class="d-flex flex-row justify-content-end mb-0 px-3">
-                
-                    @foreach (var item in ViewBag.Extras)
-                    {
-                        <div class="form-check d-inline-flex">
-                            <input type="checkbox" name="Extras" value="@item.ExtraId" />
-                            <label class="form-check-label" for="SelectedToppings">
-                                @item.Name
-                            </label>
-                        </div>
-                    }
-                  
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio"  value="1" id="flexRadioDefault1" asp-for="Size">
-                    <label class="form-check-label" asp-for="Size">
-                        Küçük
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault1" asp-for="Size">
-                    <label class="form-check-label" asp-for="Size">
-                        Orta
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault1" asp-for="Size">
-                    <label class="form-check-label" asp-for="Size">
-                        Büyük
-                    </label>
-                </div>
-                <div>
-                    <input type="number" asp-for="Quantity" />
-                </div>
-                <div>
-                    <input type="" asp-for="MenuId" readonly/>
-                </div>
-                <button type="submit" class="btn btn-warning w-75 text-center "> Sipariş ver</button>
+    <div class="d-flex align-items-center">
+    <img class="flex-shrink-0 img-fluid rounded" src="@Model.PicturePath" alt="" style="width: 600px;">
+    <div class=" d-flex flex-column text-start ps-4">
+    <h5 class="d-flex justify-content-between border-bottom pb-2">
+    <span>@Model.MenuName</span>
+    <span class="text-primary">$115</span>
+    </h5>
+    <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+    <div class="d-flex flex-row justify-content-end mb-0 px-3">
+
+    @foreach (var item in ViewBag.Extras)
+    {
+    <div class="form-check d-inline-flex">
+    <input type="checkbox" name="Extras" value="@item.ExtraId" />
+    <label class="form-check-label" for="SelectedToppings">
+    @item.Name
+    </label>
+    </div>
+    }
+
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" asp-for="Size">
+    <label class="form-check-label" for="flexRadioDefault1" asp-for="Size">
+    Küçük
+    </label>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" asp-for="Size">
+    <label class="form-check-label" for="flexRadioDefault2" asp-for="Size">
+    Orta
+    </label>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault3" for="Size" asp-for="Size">
+    <label class="form-check-label" for="flexRadioDefault3" >
+    Büyük
+    </label>
+    </div>
+    <div class="form-group">
+    <label class="form-check-label" asp-for="Quantity">Quantity</label>
+    <input class="form-control w-25" type="number" asp-for="Quantity" />
+    </div>
+    <div>
+    <input type="" asp-for="MenuId" class="invisible" readonly />
+    </div>
+    <button type="submit" class="btn btn-warning w-75 text-center "> Sipariş ver</button>
+    </div>
+    </div>
+    </form>*@
+</div>
+
+<!-- Reservation Start -->
+<div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row g-0 align-items-center border">
+        <div class="col-md-6 ">
+            <div>
+                <img class="flex-shrink-0 img-fluid rounded" src="@Model.PicturePath" alt="" style="width: 600px;">
+                <span></span>
+
             </div>
         </div>
-    </form>
+        <div class="col-md-6 bg-white d-flex align-items-center">
+            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                <h1 class="text-dark mb-4">@Model.MenuName</h1>
+                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+
+                <form asp-action="details" method="post">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                @*<div class="display-5">@Model.MenuName</div>*@
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <div class="form-floating">
+                                <h5 class="text-primary ">@Model.MenuPrice</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" asp-for="Size">
+                                    <label class="form-check-label" for="flexRadioDefault1" asp-for="Size">
+                                        Küçük
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" asp-for="Size">
+                                    <label class="form-check-label" for="flexRadioDefault2" asp-for="Size">
+                                        Orta
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input " type="radio" value="3" id="flexRadioDefault3" for="Size" asp-for="Size">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        Büyük
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating ">
+                                <div class="form-group d-flex justify-content-end align-items-center">
+
+                                    <input class="form-control w-25 border-0 border-bottom " type="number" asp-for="Quantity" min="1" max="100" value="1" />
+                                    <label class="form-check-label ms-2 " asp-for="Quantity">Pc. </label>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="mb-0 mt-2">
+                            Soslar
+                        </label>
+                        <div class="col-12 mt-0">
+                            <div class="form-floating border-top border-primary">
+
+                                @{
+                                    int i = 0;
+                                }
+                                @foreach (var item in ViewBag.Extras)
+                                {
+                                    <div class="form-check d-inline-flex">
+                                        <input type="checkbox" class="m-1" name="Extras" id="@(i)" value="@item.ExtraId" />
+                                        <label class="form-check-label" for="@(i++)">
+                                            @item.Name
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div>
+                            <input type="" asp-for="MenuId" class="invisible" readonly />
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+

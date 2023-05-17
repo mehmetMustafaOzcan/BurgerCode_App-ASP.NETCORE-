@@ -66,7 +66,7 @@ namespace BurgerCodeApp.Controllers
             {
                 return NotFound();
             }
-            BasketVm vm = new BasketVm() { MenuName = Menü.MenuName, MenuId = Menü.MenuId };
+            BasketVm vm = new BasketVm() { MenuName = Menü.MenuName, MenuId = Menü.MenuId ,PicturePath=Menü.Photopath,MenuPrice=(decimal)Menü.MenüPrice};
 
             return View(vm);
         }
@@ -201,7 +201,7 @@ namespace BurgerCodeApp.Controllers
             var basketDetail = await _context.BasketDetails
                 .Include(b => b.Basket)
                 .Include(b => b.Menu)
-                .FirstOrDefaultAsync(m => m.BasketId == id);
+                .FirstOrDefaultAsync(m => m.BasketDetailId == id);
             if (basketDetail == null)
             {
                 return NotFound();
@@ -226,7 +226,7 @@ namespace BurgerCodeApp.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Basket));
         }
 
         private bool BasketDetailExists(int id)

@@ -1,5 +1,8 @@
-﻿namespace BurgerCodeApp.Areas.Admin.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BurgerCodeApp.Areas.Admin.Models
 {
+    [NotMapped]
     public class MenuVm
     {
         public int MenuId { get; set; }

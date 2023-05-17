@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BurgerCodeApp.Models.Enums;
+using System;
 using System.Collections.Generic;
 
 namespace BurgerCodeApp.Models
@@ -13,6 +14,7 @@ namespace BurgerCodeApp.Models
         public int ExtraId { get; set; }
         public string Name { get; set; } = null!;
         public string? Description { get; set; }
+        public Status SaleStatus { get; set; } = Status.Onsale;
         public decimal? Price { get; set; }
 
         public virtual ICollection<ExtraDetail> ExtraDetails { get; set; }

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\BurgerCodeApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\bg-hero.webp",
+      "PackagePath": "staticwebassets\\Uploads\\bg-hero.webp"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\wepik-export-202305161009467BhH.png",
+      "PackagePath": "staticwebassets\\Uploads\\wepik-export-202305161009467BhH.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\assets\\brand\\coreui.svg",
       "PackagePath": "staticwebassets\\admin\\assets\\brand\\coreui.svg"
     },

@@ -26,6 +26,7 @@ builder.Services.AddAuthorization();
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Identity/Account/Login";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(400);
 });
 var app = builder.Build();
 

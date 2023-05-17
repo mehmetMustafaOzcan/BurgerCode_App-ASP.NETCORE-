@@ -86,7 +86,8 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CateogryId", "CateogryId", product.CategoryId);
+            List<SelectListItem> Categories = _context.Categories.Select(x => new SelectListItem { Value = x.CateogryId.ToString(), Text = x.Name, }).ToList();
+            ViewData["CategoryId"] = Categories;
             return View(product);
         }
 

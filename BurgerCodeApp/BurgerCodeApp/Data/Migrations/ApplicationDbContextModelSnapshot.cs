@@ -116,6 +116,9 @@ namespace BurgerCodeApp.Data.Migrations
                     b.Property<decimal?>("Price")
                         .HasColumnType("money");
 
+                    b.Property<int>("SaleStatus")
+                        .HasColumnType("int");
+
                     b.HasKey("ExtraId");
 
                     b.ToTable("Extras");
@@ -130,7 +133,7 @@ namespace BurgerCodeApp.Data.Migrations
                     b.Property<int>("ExtraId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int?>("Quantity")
                         .HasColumnType("int");
 
                     b.HasKey("BasketDetailId", "ExtraId");
@@ -161,6 +164,12 @@ namespace BurgerCodeApp.Data.Migrations
                     b.Property<decimal?>("MenüPrice")
                         .HasMaxLength(50)
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Photopath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SaleStatus")
+                        .HasColumnType("int");
 
                     b.HasKey("MenuId");
 
@@ -221,7 +230,7 @@ namespace BurgerCodeApp.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -492,6 +501,7 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasOne("BurgerCodeApp.Models.BasketDetail", "BasketDetail")
                         .WithMany("ExtraDetails")
                         .HasForeignKey("BasketDetailId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_ExtraDetails_BasketDetails");
 
@@ -540,7 +550,6 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasOne("BurgerCodeApp.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
-                        .IsRequired()
                         .HasConstraintName("FK_Products_Categories");
 
                     b.Navigation("Category");

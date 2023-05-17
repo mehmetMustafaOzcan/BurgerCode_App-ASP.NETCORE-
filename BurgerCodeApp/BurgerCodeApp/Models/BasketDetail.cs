@@ -10,11 +10,11 @@ namespace BurgerCodeApp.Models
             ExtraDetails = new HashSet<ExtraDetail>();
         }
 
+        public int BasketDetailId { get; set; }
         public int BasketId { get; set; }
         public int MenuId { get; set; }
         public int Quantity { get; set; }
         public int MenuSize { get; set; }
-        public int BasketDetailId { get; set; }
 
         public virtual Basket Basket { get; set; } = null!;
         public virtual Menu Menu { get; set; } = null!;

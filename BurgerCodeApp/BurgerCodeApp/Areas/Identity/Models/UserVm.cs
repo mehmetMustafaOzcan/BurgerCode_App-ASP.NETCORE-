@@ -1,5 +1,8 @@
-﻿namespace BurgerCodeApp.Areas.Identity.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BurgerCodeApp.Areas.Identity.Models
 {
+    [NotMapped]
     public class UserVm
     {
         public string UserName { get; set; }

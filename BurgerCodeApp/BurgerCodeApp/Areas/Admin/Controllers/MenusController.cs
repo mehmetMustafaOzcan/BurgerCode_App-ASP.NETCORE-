@@ -19,10 +19,12 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
     public class MenusController : Controller
     {
         private readonly BurgerDbContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public MenusController(BurgerDbContext context)
+        public MenusController(BurgerDbContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         // GET: Admin/Menus
@@ -64,15 +66,28 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(/*[Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")]*/ MenuVm menuvm)
+        public async Task<IActionResult> Create(/*[Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")]*/ MenuVm menuvm, IFormFile photo)
         {
+            var fileName = "";
+            if (photo != null && photo.Length > 0)
+            {
+                 fileName = Path.GetFileName(photo.FileName);
+                var path = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", fileName);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await photo.CopyToAsync(stream);
+                }
+
+            }
+
             if (menuvm != null)
             {
-                 Menu menu = new()
+                Menu menu = new()
                 {
                     MenuName = menuvm.MenuName,
                     MenüPrice = menuvm.MenüPrice,
-                    MenuCategoryId = menuvm.MenuCategoryId,
+                    MenuCategoryId = menuvm.MenuCategoryId!=0 ? menuvm.MenuCategoryId:null,
+                    Photopath = "/Uploads"+"/" +fileName
 
                 };
                 _context.Menus.Add(menu);

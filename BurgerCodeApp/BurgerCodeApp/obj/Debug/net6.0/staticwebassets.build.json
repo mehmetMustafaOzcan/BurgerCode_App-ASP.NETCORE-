@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OtppBPDjn4m2L5wx5Bjfm0jYk6biG61f6l5HWLnQOBA=",
+  "Hash": "Og27K8bPyGrsDW1FZdT+bZve34QdqDWYfVTHZbHD1p4=",
   "Source": "BurgerCodeApp",
   "BasePath": "_content/BurgerCodeApp",
   "Mode": "Default",
@@ -25600,6 +25600,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\bg-hero.webp",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "Uploads/bg-hero.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\bg-hero.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\wepik-export-202305161009467BhH.png",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "Uploads/wepik-export-202305161009467BhH.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\wepik-export-202305161009467BhH.png"
     }
   ]
 }

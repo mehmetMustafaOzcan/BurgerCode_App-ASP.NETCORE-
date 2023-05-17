@@ -13,12 +13,15 @@
                                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
                                 <form class="mx-1 mx-md-4" asp-action="register" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <input type="text" class="form-control" asp-for="UserName" />
-                                            <label class="form-label" for="form3Example1c">Your Name</label>
+                                            <label class="form-label" asp-for="UserName">Your User Name</label>
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
+
                                         </div>
                                     </div>
 
@@ -26,23 +29,27 @@
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <input type="email" asp-for="EmailAddress" class="form-control" />
-                                            <label class="form-label"asp-for="EmailAddress">Your Email</label>
+                                            <label class="form-label" asp-for="EmailAddress">Your Email</label>
+                                            <span asp-validation-for="EmailAddress" class="text-danger"></span>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input type="password"asp-for="Password" class="form-control" />
-                                            <label class="form-label" for="form3Example4c">Password</label>
+                                            <input type="password" asp-for="Password" class="form-control" />
+                                            <label class="form-label" asp-for="Password">Password</label>
+                                            <span asp-validation-for="Password" class="text-danger "></span>
                                         </div>
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <input type="password" id="form3Example4cd" class="form-control" />
+                                            <input type="password" id="Password2" class="form-control" />
                                             <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                                            <span id="passmessage" class="text-danger ms-auto"></span>
+
                                         </div>
                                     </div>
 
@@ -54,7 +61,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                                        <button type="submit" class="btn btn-primary btn-lg" id="register" disabled>Register</button>
                                     </div>
 
                                 </form>
@@ -73,3 +80,35 @@
         </div>
     </div>
 </section>
+
+@section Scripts{
+    <script>
+        var input1 = document.getElementById("Password");
+        var input2 = document.getElementById("Password2");
+        var message = document.getElementById("passmessage");
+        var button = document.getElementById("register");
+
+        input1.addEventListener("input", compareInputs);
+        input2.addEventListener("input", compareInputs);
+
+        function compareInputs() {
+            if (input1.value == "" && input2.value == "") {
+                message.textContent = ""
+                message.className = message.className.replace("text-info", "text-danger");
+                button.disabled = true;
+            }
+            else if (input1.value === input2.value) {
+                message.textContent = "Şifreler aynıdır."
+                message.className = message.className.replace("text-danger", "text-info");
+                button.disabled = false;
+            }
+
+            else {
+                message.textContent = "Şifreler farklı."
+                message.className = message.className.replace("text-info", "text-danger");
+                button.disabled = true;
+            }
+        }
+
+    </script>
+                            }

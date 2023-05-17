@@ -9,47 +9,47 @@ using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using System.Security.Claims;
 using BurgerCodeApp.Models.Enums;
+using Microsoft.AspNetCore.Identity;
+using NuGet.Versioning;
+using BurgerCodeApp.Models.ViewModels;
+using NuGet.ContentModel;
 
 namespace BurgerCodeApp.Controllers
 {
     public class BasketDetailsController : Controller
     {
         private readonly BurgerDbContext _context;
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        public BasketDetailsController(BurgerDbContext context)
+        //private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly SignInManager<AppUser> _signinManager;
+        public BasketDetailsController(BurgerDbContext context, SignInManager<AppUser> signinManager)
         {
             _context = context;
+            _signinManager = signinManager;
         }
 
         // GET: BasketDetails
         public async Task<IActionResult> Basket()
         {
             Basket basket = GetUserActiveBasket();
-           
+            decimal totalprice = 0;
+            foreach (var item in basket.BasketDetails)
+            {
+                totalprice += (decimal)(item.Quantity * item.Menu.MenüPrice * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)));
+                foreach (var extra in item.ExtraDetails)
+                {
+                    totalprice += (decimal)extra.Extra.Price* item.Quantity;
+                }
+
+            }
           
-           
+            basket.TotalPrice=totalprice;
+            _context.SaveChanges();
+
             return View(basket);
         }
 
         // GET: BasketDetails/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null || _context.BasketDetails == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var basketDetail = await _context.BasketDetails
-        //        .Include(b => b.Basket)
-        //        .Include(b => b.Menu)
-        //        .FirstOrDefaultAsync(m => m.BasketId == id);
-        //    if (basketDetail == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(basketDetail);
-        //}
+      
         public async Task<IActionResult> Details(int? id)//sepete eklenecek ürün gösterme
         {
             if (id == null || _context.Menus == null)
@@ -79,19 +79,26 @@ namespace BurgerCodeApp.Controllers
                 return NotFound();
             }
             //TODO BasketId set edilecek kullanıcının girişte aldığı basket id ve basket false edilecek.
-            Basket basket = GetUserActiveBasket();
-            BasketDetail basketDetail = new() { BasketId = basket.BasketId, MenuId = vm.MenuId, MenuSize = vm.Size, Quantity = vm.Quantity, };
-            foreach (var item in vm.Extras)
+            if (_signinManager.IsSignedIn(User))
             {
-                Extra extra = _context.Extras.Find(item);
-                ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
-                basketDetail.ExtraDetails.Add(extraDetail);
-            }
+                Basket basket = GetUserActiveBasket();
+                BasketDetail basketDetail = new() { BasketId = basket.BasketId, MenuId = vm.MenuId, MenuSize = vm.Size, Quantity = vm.Quantity, };
+                foreach (var item in vm.Extras)
+                {
+                    Extra extra = _context.Extras.Find(item);
+                    ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
+                    basketDetail.ExtraDetails.Add(extraDetail);
+                }
 
-            // ExtraDetail extraDetail = new() { BasketId = basket.BasketId,Quantity=1,ExtraId=vm.}
-            _context.BasketDetails.Add(basketDetail);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Menus");
+                // ExtraDetail extraDetail = new() { BasketId = basket.BasketId,Quantity=1,ExtraId=vm.}
+                _context.BasketDetails.Add(basketDetail);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Menus");
+            }
+            else
+            {
+                return RedirectToAction( "Login", "Account",new  {area="Identity"}) ;
+            }
         }
 
         private Basket GetUserActiveBasket()
@@ -142,15 +149,24 @@ namespace BurgerCodeApp.Controllers
             {
                 return NotFound();
             }
-
-            var basketDetail = await _context.BasketDetails.FindAsync(id);
+            Basket basket = GetUserActiveBasket();
+            var basketDetail = basket.BasketDetails.Where(x => x.BasketDetailId == id).FirstOrDefault();
             if (basketDetail == null)
             {
                 return NotFound();
             }
-            ViewData["BasketId"] = new SelectList(_context.Baskets, "BasketId", "BasketId", basketDetail.BasketId);
-            ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId", basketDetail.MenuId);
-            return View(basketDetail);
+
+            decimal totalprice = (decimal)(basketDetail.Menu.MenüPrice * ((basketDetail.MenuSize > 1 ? 1 + (decimal)basketDetail.MenuSize / 10 : 1)));
+
+            foreach (var extra in basketDetail.ExtraDetails)
+            {
+                totalprice += (decimal)extra.Extra.Price;
+            }
+            totalprice *= basketDetail.Quantity;
+            BasketEditVm basketEdit = new() { MenuName = basketDetail.Menu.MenuName, Size = basketDetail.MenuSize, Photopath = basketDetail.Menu.Photopath, Quantity = basketDetail.Quantity,MenüPrice=(decimal)basketDetail.Menu.MenüPrice,TotalPrice= totalprice };
+            ViewBag.Extras = _context.Extras.ToList();
+            basketEdit.Extras = basketDetail.ExtraDetails.Select(x => x.ExtraId).ToList();
+            return View(basketEdit);
         }
 
         // POST: BasketDetails/Edit/5

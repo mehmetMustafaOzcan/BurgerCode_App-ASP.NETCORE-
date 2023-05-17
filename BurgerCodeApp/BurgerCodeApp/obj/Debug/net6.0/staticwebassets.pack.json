@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Uploads\\bg-hero.webp"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo.png",
+      "PackagePath": "staticwebassets\\Uploads\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\wepik-export-202305161009467BhH.png",
       "PackagePath": "staticwebassets\\Uploads\\wepik-export-202305161009467BhH.png"
     },
@@ -5013,8 +5017,8 @@
       "PackagePath": "staticwebassets\\img\\about-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero.jpg",
-      "PackagePath": "staticwebassets\\img\\bg-hero.jpg"
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero1.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-hero1.jpg"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero2.jpg",

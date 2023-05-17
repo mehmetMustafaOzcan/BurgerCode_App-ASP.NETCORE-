@@ -1,4 +1,5 @@
 ﻿using BurgerCodeApp.Areas.Identity.Models;
+using BurgerCodeApp.Controllers;
 using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -31,8 +32,15 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserVm userVm)
         {
-            //if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
+                var user = await _userManager.FindByEmailAsync(userVm.EmailAddress);//email unique mi kontrol
+                if (user != null)
+                {
+                    // E-posta adresi zaten kayıtlı ise hata mesajı ekleyin
+                    ModelState.AddModelError("EmailAddress", "Bu e-posta adresi zaten kayıtlı.");
+                    return View();
+                }
                 //basket aktifliği kontrolu eklenecek
                 AppUser appUser = new AppUser
                 {
@@ -53,7 +61,10 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
                     return RedirectToAction("Login");
                 }
             }
-            return View();
+
+           
+          
+            return View(userVm);
         }
         public IActionResult Login()
         {

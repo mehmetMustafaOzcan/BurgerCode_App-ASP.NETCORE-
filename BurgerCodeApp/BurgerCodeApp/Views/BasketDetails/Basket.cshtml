@@ -22,7 +22,7 @@
                                     </div>
                                 </div>
                                 @{
-                                    decimal total = 0; 
+                                    decimal total = 0;
                                 }
                                 @foreach (var item in Model.BasketDetails)
                                 {
@@ -32,13 +32,13 @@
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div>
                                                         <img src="@item.Menu.Photopath"
-                                                        class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                             class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                                     </div>
                                                     <div class="ms-3">
                                                         <h5>@item.Menu.MenuName</h5>
                                                         @foreach (var extra in item.ExtraDetails)
                                                         {
-                                                            <span class="small mb-0 text-dark text-muted">@extra.Extra.Name | </span>
+                                                            <span class="small mb-0 text-dark text-muted">@extra.Extra.Name <sub>+@((int)extra.Extra.Price)$</sub> | </span>
 
                                                         }
                                                     </div>
@@ -48,17 +48,19 @@
                                                         <h5 class="fw-normal mb-0">@item.Quantity <sub>pc.</sub></h5>
                                                     </div>
                                                     <div style="width: 90px;">
-                                                        <h5 class="mb-0">$@(
-                                                        item.Quantity * item.Menu.MenüPrice * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1))
-                                                        )</h5>
+                                                        <h5 class="mb-0">
+                                                            $@(
+                                                               item.Quantity * (item.Menu.MenüPrice * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1))+(int)item.ExtraDetails.Sum(x => x.Extra.Price)))
+                                                               
+                                                        </h5>
                                                     </div>
                                                     <a type="post" class="btn btn-ghost-danger " asp-action="Delete" asp-route-id="@item.BasketDetailId"><i class="fas fa-trash-alt text-warning"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                   
-                                    total+=(decimal)(item.Quantity * item.Menu.MenüPrice * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)));
+
+                                 
 
                                 }
 
@@ -195,30 +197,33 @@
                                             </div>
 
                                         </form>
+                                        <form asp-controller="baskets" asp-action="edit" method="post">
 
-                                        <hr class="my-4">
+                                            <hr class="my-4">
 
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">Subtotal</p>
-                                            <p class="mb-2">$ @total</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between">
-                                            <p class="mb-2">Shipping</p>
-                                            <p class="mb-2">$20.00</p>
-                                        </div>
-
-                                        <div class="d-flex justify-content-between mb-4">
-                                            <p class="mb-2">Total(Incl. taxes)</p>
-                                            <p class="mb-2">$@(total+20)</p>
-                                        </div>
-
-                                        <button type="button" class="btn btn-warning btn-block btn-lg">
                                             <div class="d-flex justify-content-between">
-                                                <span>$ @(total + 20) </span>
-                                                <span class="fw-bolder ms-2"> Checkout <i class="fas fa-money-check ms-2"></i></span>
+                                                <p class="mb-2">Subtotal</p>
+                                                <p class="mb-2">$ @Model.TotalPrice</p>
                                             </div>
-                                        </button>
+
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-2">Shipping</p>
+                                                <p class="mb-2">$20.00</p>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <p class="mb-2">Total(Incl. taxes)</p>
+                                                <p class="mb-2">$@(Model.TotalPrice + 20)</p>
+                                                <input type="hidden" asp-for="BasketId" />
+                                            </div>
+
+                                            <button type="submit" class="btn btn-warning btn-block btn-lg ">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>$ @(Model.TotalPrice + 20) </span>
+                                                    <span class="fw-bolder ms-2"> Checkout <i class="fas fa-money-check ms-2"></i></span>
+                                                </div>
+                                            </button>
+                                        </form>
 
                                     </div>
                                 </div>

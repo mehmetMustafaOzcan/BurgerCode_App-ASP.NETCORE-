@@ -13,6 +13,7 @@ namespace BurgerCodeApp.Models
 
         public int BasketId { get; set; }
         public string AppUserId { get; set; } = null!;
+        public decimal TotalPrice { get; set; }
         public BasketStage Stage { get; set; }
         public AppUser AppUser { get; set; }
 

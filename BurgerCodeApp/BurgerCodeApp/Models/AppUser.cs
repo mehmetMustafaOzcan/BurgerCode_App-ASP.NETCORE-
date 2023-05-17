@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace BurgerCodeApp.Models
 {
@@ -9,5 +11,6 @@ namespace BurgerCodeApp.Models
          Baskets = new HashSet<Basket>();
         }
         public virtual ICollection<Basket> Baskets { get; set; }
+       
     }
 }

@@ -1,4 +1,5 @@
-﻿@model BurgerCodeApp.Models.BasketDetail
+﻿@using BurgerCodeApp.Models.ViewModels;
+@model BasketEditVm
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,35 +7,132 @@
 
 <h1>Edit</h1>
 
-<h4>BasketDetail</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="BasketId" />
-            <input type="hidden" asp-for="MenuId" />
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<!-- Reservation Start -->
+<div class="container-xxl py-1 px-2 wow fadeInUp " data-wow-delay="0.1s">
+    <div class="row g-0 align-items-center border rounded-pill rounded-end">
+        <div class="col-md-6 ">
+            <div>
+                <img class="flex-shrink-0 img-fluid rounded" src="@Model.Photopath" alt="" style="width: 600px;">
+                <span></span>
+
             </div>
-            <div class="form-group">
-                <label asp-for="MenuSize" class="control-label"></label>
-                <input asp-for="MenuSize" class="form-control" />
-                <span asp-validation-for="MenuSize" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 bg-white d-flex align-items-center">
+            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                <h1 class="text-dark mb-4 ff-secondary ">@Model.MenuName</h1>
+                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+
+                <form asp-action="Edit" method="post">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <div class="form-floating">
+                                <h5 class="text-primary "><span>$</span><span id="price">@((int)Model.TotalPrice)</span></h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                @foreach (var item in Model.Sizes)
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input radio" type="radio" value="@item" id="flexRadioDefault @item" for="Size" name="size" onchange="calculateTotal()" @(Model.Size == item ? "checked" : "") />
+                                        <label class="form-check-label" for="flexRadioDefault @item">
+                                            @item
+                                        </label>
+                                    </div>
+                                }
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating ">
+                                <div class="form-group d-flex justify-content-end align-items-center">
+
+                                    <input class="form-control w-25 border-0 border-bottom " type="number" asp-for="Quantity" min="1" max="100" oninput="calculateTotal()" />
+                                    <label class="form-check-label ms-2 " asp-for="Quantity">Pc. </label>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="mb-0 mt-2 ff-secondary">
+                            Soslar
+                        </label>
+                        <div class="col-12 mt-0">
+                            <div class="form-floating  alert alert-primary rounded-pill rounded-end">
+
+                                @{
+                                    int i = 0;
+                                }
+                                @foreach (var item in ViewBag.Extras)
+                                {
+                                    <div class="form-check d-inline-flex">
+                                        <input type="checkbox" class="m-1 sauce" id="@(i)" value="@item.Price" name="Extras" onchange="calculateTotal()" @(Model.Extras.Contains(item.ExtraId) ? "checked" : "") />
+                                        <label class="form-check-label" for="@(i++)">
+                                            @item.Name
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3 rounded-pill rounded-end" type="submit">Book Now</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+@section Scripts{
+    <script>
+        function calculateTotal() {
+            var adetInput = document.getElementById("Quantity");
+            var adet = parseFloat(adetInput.value);
+             var temelFiyat = parseFloat(@Model.MenüPrice); // Temel fiyat
+          
+            var boyutInputs = document.getElementsByName("size");
+            var seciliBoyut;
+            for (var i = 0; i < boyutInputs.length; i++) {
+                if (boyutInputs[i].checked) {
+                    seciliBoyut = boyutInputs[i].value;
+                    break;
+                }
+            }
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            var sosInputs = document.querySelectorAll('input[type="checkbox"]:checked');
+
+
+            if (seciliBoyut == 1) {
+                temelFiyat +=0; // Küçük boyut 
+            } else if (seciliBoyut == 2) {
+                temelFiyat += parseFloat(@Model.MenüPrice)*(0.2); // Orta boyut fiyatı ekle
+            } else if (seciliBoyut == 3) {
+                temelFiyat += parseFloat(@Model.MenüPrice) * (0.3);// Büyük boyut fiyatı ekle
+            }
+
+            for (var j = 0; j < sosInputs.length; j++) {
+                temelFiyat += parseFloat(sosInputs[j].value); // Her seçilen sos için fiyat ekle
+            }
+
+            var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet
+            var toplamFiyatLabel = document.getElementById("price");
+            toplamFiyatLabel.textContent = toplamFiyat;
+        }
+
+    </script>
 }

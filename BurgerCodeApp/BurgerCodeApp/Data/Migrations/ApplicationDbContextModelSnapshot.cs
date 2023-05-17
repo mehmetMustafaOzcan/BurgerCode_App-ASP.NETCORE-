@@ -37,6 +37,9 @@ namespace BurgerCodeApp.Data.Migrations
                     b.Property<int>("Stage")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("BasketId");
 
                     b.HasIndex(new[] { "AppUserId" }, "IX_Baskets_AppUserId");
@@ -462,6 +465,10 @@ namespace BurgerCodeApp.Data.Migrations
             modelBuilder.Entity("BurgerCodeApp.Models.AppUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
 
                     b.HasDiscriminator().HasValue("AppUser");
                 });

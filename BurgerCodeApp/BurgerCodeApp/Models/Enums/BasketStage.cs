@@ -3,7 +3,7 @@
     public enum BasketStage
     {
         Active,
-        Passive,
+        Completed,
         Cancelled
     }
 }

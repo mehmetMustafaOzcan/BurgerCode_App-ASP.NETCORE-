@@ -38,7 +38,7 @@ namespace BurgerCodeApp.Data
 
             modelBuilder.Entity<BasketDetail>(entity =>
             {
-               
+
 
                 entity.HasIndex(e => e.MenuId, "IX_BasketDetails_MenuId");
 
@@ -160,11 +160,14 @@ namespace BurgerCodeApp.Data
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Products_Categories");
             });
+            modelBuilder.Entity<AppUser>()
+            .HasIndex(e => e.Email)
+            .IsUnique();
 
             base.OnModelCreating(modelBuilder);
         }
 
-      
+
     }
 
 

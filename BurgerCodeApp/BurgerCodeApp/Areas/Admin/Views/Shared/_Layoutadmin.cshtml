@@ -17,7 +17,9 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title> Burger Code Admin Panel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
     <link rel="apple-touch-icon" sizes="57x57" href="~/admin/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="~/admin/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="~/admin/assets/favicon/apple-icon-72x72.png">
@@ -116,13 +118,7 @@
                     <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span> Dropdowns</a></li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-action="Index" asp-controller="Employee">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-people"></use>
-                    </svg> Employee
-                </a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" asp-action="Index" asp-controller="Order">
                     <svg class="nav-icon">
@@ -131,13 +127,6 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-link-broken"></use>
-                    </svg>Boş
-                </a>
-            </li>
             <li class="nav-group">
                 <a class="nav-link nav-group-toggle">
                     <svg class="nav-icon">
@@ -172,45 +161,19 @@
                 <a class="nav-link nav-group-toggle" href="#">
                     <svg class="nav-icon">
                         <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-star"></use>
-                    </svg> Icons
+                    </svg> Orders
                 </a>
                 <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"> CoreUI Icons<span class="badge badge-sm bg-success ms-auto">Free</span></a></li>
+                    <li class="nav-item"><a class="nav-link"  asp-controller="baskets" asp-area="admin"> All Baskets<span class="badge badge-sm bg-success ms-auto">Free</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"> CoreUI Icons - Brand</a></li>
                     <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-flag.html"> CoreUI Icons - Flag</a></li>
                 </ul>
             </li>
-            <li class="nav-group">
-                <a class="nav-link nav-group-toggle" href="#">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-bell"></use>
-                    </svg> Notifications
-                </a>   
            
-                </a>
-                <ul class="nav-group-items">
-                    <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"></span> Alerts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"></span> Badge</a></li>
-                    <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"></span> Modals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="notifications/toasts.html"><span class="nav-icon"></span> Toasts</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="widgets.html">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-calculator"></use>
-                    </svg> Widgets<span class="badge badge-sm bg-info ms-auto">NEW</span>
-                </a>
-            </li>
+            
             <li class="nav-divider"></li>
             <li class="nav-title">Theme</li>
-            <li class="nav-item">
-                <a class="nav-link" href="colors.html">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-drop"></use>
-                    </svg> Colors
-                </a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="typography.html">
                     <svg class="nav-icon">
@@ -256,21 +219,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item mt-auto">
-                <a class="nav-link" href="https://coreui.io/docs/templates/installation/" target="_blank">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-description"></use>
-                    </svg> Docs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-link-danger" href="https://coreui.io/pro/" target="_top">
-                    <svg class="nav-icon">
-                        <use xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-layers"></use>
-                    </svg> Try CoreUI
-                    <div class="fw-semibold">PRO</div>
-                </a>
-            </li>
+           
         </ul>
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
     </div>

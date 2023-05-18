@@ -78,11 +78,10 @@
                 <h1 class="text-dark mb-4 ff-secondary ">@Model.MenuName</h1>
                 <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
 
-                <form asp-action="details" method="post">
+                <form asp-action="details" method="post" id="myForm">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                @*<div class="display-5">@Model.MenuName</div>*@
                             </div>
                         </div>
                         <div class="col-md-6 text-end">
@@ -133,7 +132,7 @@
                                 @foreach (var item in ViewBag.Extras)
                                 {
                                     <div class="form-check d-inline-flex">
-                                        <input type="checkbox" class="m-1 sauce" id="@(i)" value="@item.ExtraId" name="Extras" onchange="calculateTotal()" />
+                                        <input type="checkbox" class="m-1 sauce" id="@(i)" value="@item.ExtraId" data-price="@item.Price" name="Extras" onchange="calculateTotal()" />
                                         <label class="form-check-label" for="@(i++)">
                                             @item.Name
                                         </label>
@@ -145,100 +144,100 @@
                             <input type="" asp-for="MenuId" class="invisible" readonly />
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                            <button type="button" id="submitbtn" class="btn btn-primary w-100 py-3 rounded-pill rounded-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Add to Chart
+                            </button>
+                            @* <button class="btn btn-primary w-100 py-3 rounded-pill rounded-end" type="submit">Add to Chart</button>*@
                         </div>
                     </div>
 
+                    @*Modal start*@
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                </div>
+                                <div class="modal-body">
+                                   Ürün Sepete Eklendi
+                                </div>
+                                <div class="modal-footer">
+                                    <a class="btn btn-secondary " asp-controller="Menus" asp-action="index">Go To Menus</a>
+                                    <a type="submit" class="btn btn-primary " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
+
+
 @section Scripts{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        //var label = document.getElementById("price");
-        //var price = parseFloat(label.textContent)
-        //var checkboxes = document.getElementsByClassName("sauce");
-        //for (var i = 0; i < checkboxes.length; i++) {
-        //    checkboxes[i].addEventListener("change", function () {
-        //         price = parseFloat(label.textContent)
-        //        var sauceprice = parseFloat(this.getAttribute("name"));
-        //        console.log(sauceprice)
-        //        if (this.checked) {
-        //            var totalprice = price + sauceprice
-        //            label.innerText = totalprice;
-        //            price = totalprice;
-        //        } else {
-        //            var totalprice = price - sauceprice
-        //            label.innerText = totalprice;
-        //            price = totalprice;
-        //        }
-        //    });
-        //}
+        $(document).ready(function () {
+            $("#submitbtn").click(function (event) {
+                event.preventDefault();
 
-        //var selectedRadioValue = 0;
-        //var previousRadioValue = 0;
-        //var totalAmountLabel = document.getElementById("price");
+              //   AJAX isteği burada gerçekleştirilecek
+                 $.ajax({
+                     url: "",
+                     method: "POST",
+                     data: $("#myForm").serialize(),
+                     success: function (response) {
+                         console.log("İstek başarıyla gönderildi.");
+                     },
+                     error: function (xhr, status, error) {
+                         console.log("Bir hata oluştu. İstek gönderilemedi.");
+                     }
+                 });
+            });
+        });
+    </script>
 
-        //function updateAmount(radio) {
-        //    // Seçilen radio düğmesinin değerini al
-        //    selectedRadioValue = parseInt(radio.value) > 1 ? ((parseFloat(@Model.MenuPrice) * parseInt(radio.value)) / 10) : 0;
 
-        //    // Önceki eklemeyi kaldır
-        //    totalAmountLabel.textContent = parseFloat(totalAmountLabel.textContent) - previousRadioValue;
-        //    price = parseFloat(totalAmountLabel.textContent) - previousRadioValue;
-        //    // Yeni miktarı ekle
-        //    totalAmountLabel.textContent = parseFloat(totalAmountLabel.textContent) + selectedRadioValue;
-        //    price = parseFloat(totalAmountLabel.textContent) + selectedRadioValue;
-        //    // Önceki değeri güncelle
-        //    previousRadioValue = selectedRadioValue;
-        //}
-   
-        //function updateLabel() {
-        //    // Adet değerini al
-        //    var adetInput = document.getElementById("Quantity");
-        //    var adet = parseInt(adetInput.value);
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js">
+    </script>
+    <script>
 
-        //    // Etiketi güncelle
-        //    var guncellenenLabel = document.getElementById("price");
-        //    //var price = parseFloat(guncellenenLabel.textContent)
-        //    var totprice = price * adet
-        //    guncellenenLabel.textContent = totprice;
-        //}
         function calculateTotal() {
-            var adetInput = document.getElementById("Quantity");
-            var adet = parseFloat(adetInput.value);
-            var temelFiyat = parseFloat(@Model.MenuPrice); // Temel fiyat
+                    var adetInput = document.getElementById("Quantity");
+                    var adet = parseFloat(adetInput.value);
+                    var temelFiyat = parseFloat(@Model.MenuPrice); // Temel fiyat
 
-            var boyutInputs = document.getElementsByName("Size");
-            var seciliBoyut;
-            for (var i = 0; i < boyutInputs.length; i++) {
-                if (boyutInputs[i].checked) {
-                    seciliBoyut = boyutInputs[i].value;
-                    break;
+                    var boyutInputs = document.getElementsByName("Size");
+                    var seciliBoyut;
+                    for (var i = 0; i < boyutInputs.length; i++) {
+                        if (boyutInputs[i].checked) {
+                            seciliBoyut = boyutInputs[i].value;
+                            break;
+                        }
+                    }
+
+                    var sosInputs = document.querySelectorAll('input[type="checkbox"]:checked');
+
+
+                    if (seciliBoyut == 1) {
+                        temelFiyat += 0; // Küçük boyut
+                    } else if (seciliBoyut == 2) {
+                        temelFiyat += parseFloat(@Model.MenuPrice) * (0.2); // Orta boyut fiyatı ekle
+                    } else if (seciliBoyut == 3) {
+                        temelFiyat += parseFloat(@Model.MenuPrice) * (0.3);// Büyük boyut fiyatı ekle
+                    }
+
+                    for (var j = 0; j < sosInputs.length; j++) {
+                        var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price"));
+                        temelFiyat += sauceprice; // Her seçilen sos için fiyat ekle
+                    }
+
+                    var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet
+                    var toplamFiyatLabel = document.getElementById("price");
+                    toplamFiyatLabel.textContent = toplamFiyat;
                 }
-            }
 
-            var sosInputs = document.querySelectorAll('input[type="checkbox"]:checked');
-            
-
-            if (seciliBoyut ==1) {
-                temelFiyat += 5; // Küçük boyut fiyatı ekle
-            } else if (seciliBoyut == 2) {
-                temelFiyat += 10; // Orta boyut fiyatı ekle
-            } else if (seciliBoyut == 3) {
-                temelFiyat += 15; // Büyük boyut fiyatı ekle
-            }
-
-            for (var j = 0; j < sosInputs.length; j++) {
-                temelFiyat += 2; // Her seçilen sos için 2 birim fiyat ekle
-            }
-
-            var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet
-            var toplamFiyatLabel = document.getElementById("price");
-            toplamFiyatLabel.textContent = toplamFiyat;
-        }
-   
     </script>
 }

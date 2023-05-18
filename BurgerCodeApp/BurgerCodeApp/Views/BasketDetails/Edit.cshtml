@@ -39,6 +39,7 @@
                         <div class="col-md-6 text-end">
                             <div class="form-floating">
                                 <h5 class="text-primary "><span>$</span><span id="price">@((int)Model.TotalPrice)</span></h5>
+                                <input asp-for="BasketDetailId" hidden/>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -77,7 +78,7 @@
                                 @foreach (var item in ViewBag.Extras)
                                 {
                                     <div class="form-check d-inline-flex">
-                                        <input type="checkbox" class="m-1 sauce" id="@(i)" value="@item.Price" name="Extras" onchange="calculateTotal()" @(Model.Extras.Contains(item.ExtraId) ? "checked" : "") />
+                                        <input type="checkbox" class="m-1 sauce" id="@(i)" value="@item.ExtraId" data-price="@item.Price" name="Extras" onchange="calculateTotal()" @(Model.Extras.Contains(item.ExtraId) ? "checked" : "") />
                                         <label class="form-check-label" for="@(i++)">
                                             @item.Name
                                         </label>
@@ -126,7 +127,8 @@
             }
 
             for (var j = 0; j < sosInputs.length; j++) {
-                temelFiyat += parseFloat(sosInputs[j].value); // Her seçilen sos için fiyat ekle
+                var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price"));
+                temelFiyat += sauceprice; // Her seçilen sos için fiyat ekle
             }
 
             var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet

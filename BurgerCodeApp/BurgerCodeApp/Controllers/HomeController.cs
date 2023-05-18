@@ -17,8 +17,8 @@ namespace BurgerCodeApp.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [Route("/NotFound404")]
+        public IActionResult NotFound404()
         {
             return View();
         }

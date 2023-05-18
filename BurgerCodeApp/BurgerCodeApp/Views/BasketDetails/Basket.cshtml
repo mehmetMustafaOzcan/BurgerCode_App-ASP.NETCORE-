@@ -35,7 +35,7 @@
                                                              class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                                     </div>
                                                     <div class="ms-3">
-                                                        <h5>@item.Menu.MenuName</h5>
+                                                        <a asp-action="edit" asp-route-id="@item.BasketDetailId"> <h5>@item.Menu.MenuName</h5></a>
                                                         @foreach (var extra in item.ExtraDetails)
                                                         {
                                                             <span class="small mb-0 text-dark text-muted">@extra.Extra.Name <sub>+@((int)extra.Extra.Price)$</sub> | </span>
@@ -197,7 +197,7 @@
                                             </div>
 
                                         </form>
-                                        <form asp-controller="baskets" asp-action="edit" method="post">
+                                        <form asp-controller="baskets" asp-action="OrderComplate" method="post">
 
                                             <hr class="my-4">
 

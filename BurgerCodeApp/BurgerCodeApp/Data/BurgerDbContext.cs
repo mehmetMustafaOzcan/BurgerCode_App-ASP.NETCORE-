@@ -47,7 +47,7 @@ namespace BurgerCodeApp.Data
                 entity.HasOne(d => d.Basket)
                     .WithMany(p => p.BasketDetails)
                     .HasForeignKey(d => d.BasketId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_BasketDetails_Baskets");
 
                 entity.HasOne(d => d.Menu)

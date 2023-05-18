@@ -7,6 +7,7 @@
             Extras = new();
             Sizes= new() {1,2,3};
         }
+        public int BasketDetailId { get; set; }
         public string MenuName { get; set; }
         public decimal TotalPrice { get; set; }
         public decimal MenüPrice { get; set; }

@@ -1,0 +1,49 @@
+﻿@using BurgerCodeApp.Models.Enums;
+@model dynamic
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Baskets</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+         
+            <th>
+                UserName
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Total Price
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @item.User
+            </td>
+            <td>
+                    @item.Email
+            </td>
+          
+            <td>
+                    @item.Total
+            </td>  
+           
+            <td>
+              
+                    <a asp-action="UserBasketDetails" asp-route-email="@item.Email">Details</a>
+            
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

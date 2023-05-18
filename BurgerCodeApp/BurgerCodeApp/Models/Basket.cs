@@ -15,6 +15,7 @@ namespace BurgerCodeApp.Models
         public string AppUserId { get; set; } = null!;
         public decimal TotalPrice { get; set; }
         public BasketStage Stage { get; set; }
+        public DateTime? ComplateDate { get; set; }
         public AppUser AppUser { get; set; }
 
         public virtual ICollection<BasketDetail> BasketDetails { get; set; }

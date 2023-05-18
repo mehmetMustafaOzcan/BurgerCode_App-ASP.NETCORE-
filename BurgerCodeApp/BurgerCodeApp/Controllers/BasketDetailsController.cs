@@ -78,16 +78,19 @@ namespace BurgerCodeApp.Controllers
             {
                 return NotFound();
             }
-            //TODO BasketId set edilecek kullanıcının girişte aldığı basket id ve basket false edilecek.
             if (_signinManager.IsSignedIn(User))
             {
                 Basket basket = GetUserActiveBasket();
                 BasketDetail basketDetail = new() { BasketId = basket.BasketId, MenuId = vm.MenuId, MenuSize = vm.Size, Quantity = vm.Quantity, };
-                foreach (var item in vm.Extras)
+                if (vm.Extras!=null)
                 {
-                    Extra extra = _context.Extras.Find(item);
-                    ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
-                    basketDetail.ExtraDetails.Add(extraDetail);
+                    foreach (var item in vm.Extras)
+                    {
+                        Extra extra = _context.Extras.Find(item);
+                        ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
+                        basketDetail.ExtraDetails.Add(extraDetail);
+                    }
+
                 }
 
                 // ExtraDetail extraDetail = new() { BasketId = basket.BasketId,Quantity=1,ExtraId=vm.}
@@ -163,7 +166,7 @@ namespace BurgerCodeApp.Controllers
                 totalprice += (decimal)extra.Extra.Price;
             }
             totalprice *= basketDetail.Quantity;
-            BasketEditVm basketEdit = new() { MenuName = basketDetail.Menu.MenuName, Size = basketDetail.MenuSize, Photopath = basketDetail.Menu.Photopath, Quantity = basketDetail.Quantity,MenüPrice=(decimal)basketDetail.Menu.MenüPrice,TotalPrice= totalprice };
+            BasketEditVm basketEdit = new() { BasketDetailId= basketDetail.BasketDetailId, MenuName = basketDetail.Menu.MenuName, Size = basketDetail.MenuSize, Photopath = basketDetail.Menu.Photopath, Quantity = basketDetail.Quantity,MenüPrice=(decimal)basketDetail.Menu.MenüPrice,TotalPrice= totalprice };
             ViewBag.Extras = _context.Extras.ToList();
             basketEdit.Extras = basketDetail.ExtraDetails.Select(x => x.ExtraId).ToList();
             return View(basketEdit);
@@ -174,36 +177,30 @@ namespace BurgerCodeApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BasketId,MenuId,Quantity,MenuSize")] BasketDetail basketDetail)
+        public async Task<IActionResult> Edit(int id, BasketVm basketvm)
         {
-            if (id != basketDetail.BasketId)
+            if (id == 0&& basketvm==null)
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            if (_signinManager.IsSignedIn(User))
             {
-                try
+                BasketDetail basketDetail =await _context.BasketDetails.Include(x => x.ExtraDetails).Where(x => x.BasketDetailId == id).FirstOrDefaultAsync();
+                basketDetail.Quantity = basketvm.Quantity;basketDetail.MenuSize = basketvm.Size;
+                basketDetail.ExtraDetails.Clear();
+                foreach (var sauce in basketvm.Extras)
                 {
-                    _context.Update(basketDetail);
-                    await _context.SaveChangesAsync();
+                    Extra extra = _context.Extras.Find(sauce);
+                    ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
+                    basketDetail.ExtraDetails.Add(extraDetail);
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!BasketDetailExists(basketDetail.BasketId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+
+                _context.BasketDetails.Update(basketDetail);
+                _context.SaveChanges();
+                return RedirectToAction("Basket");
             }
-            ViewData["BasketId"] = new SelectList(_context.Baskets, "BasketId", "BasketId", basketDetail.BasketId);
-            ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId", basketDetail.MenuId);
-            return View(basketDetail);
+            return RedirectToAction("Login", "Account", new { area = "Identity" });
+
         }
 
         // GET: BasketDetails/Delete/5

@@ -5085,6 +5085,10 @@
       "PackagePath": "staticwebassets\\img\\menu-8.jpg"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\notfound.jpg",
+      "PackagePath": "staticwebassets\\img\\notfound.jpg"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\team-1.jpg",
       "PackagePath": "staticwebassets\\img\\team-1.jpg"
     },

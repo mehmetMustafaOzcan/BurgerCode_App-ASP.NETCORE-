@@ -92,7 +92,7 @@ namespace BurgerCodeApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int BasketId)//sepet ödemesi
+        public async Task<IActionResult> OrderComplate(int BasketId)//sepet ödemesi
         {
             if (BasketId == 0)
             {
@@ -102,6 +102,7 @@ namespace BurgerCodeApp.Controllers
             if (basket!=null&&basket.TotalPrice!=0)
             {
                 basket.Stage = BasketStage.Completed;//sepeti tamamlandı yap
+                basket.ComplateDate= DateTime.Now;
                 Basket newbasket = new() { AppUserId = basket.AppUserId };//yeni sepet aç
                 try
                 {

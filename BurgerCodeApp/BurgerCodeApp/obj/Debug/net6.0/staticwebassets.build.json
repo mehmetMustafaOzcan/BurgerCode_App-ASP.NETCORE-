@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sRt1Brhz16gytg6bkr8C+zEw6EHokxF3FMN8bxcMMeM=",
+  "Hash": "hmxYPuK6fDYzpxyGKrNTfiGAMnpXU5UHSCDNsvzhDIY=",
   "Source": "BurgerCodeApp",
   "BasePath": "_content/BurgerCodeApp",
   "Mode": "Default",
@@ -22608,6 +22608,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\menu-8.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\notfound.jpg",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "img/notfound.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\notfound.jpg"
     },
     {
       "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\team-1.jpg",

@@ -34,6 +34,9 @@ namespace BurgerCodeApp.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime?>("ComplateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Stage")
                         .HasColumnType("int");
 
@@ -489,6 +492,7 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasOne("BurgerCodeApp.Models.Basket", "Basket")
                         .WithMany("BasketDetails")
                         .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_BasketDetails_Baskets");
 

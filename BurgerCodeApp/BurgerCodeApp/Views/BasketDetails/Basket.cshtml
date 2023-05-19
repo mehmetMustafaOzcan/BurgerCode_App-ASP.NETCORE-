@@ -54,7 +54,7 @@
                                                                
                                                         </h5>
                                                     </div>
-                                                    <a type="post" class="btn btn-ghost-danger " asp-action="Delete" asp-route-id="@item.BasketDetailId"><i class="fas fa-trash-alt text-warning"></i></a>
+                                                    <a type="" class="btn btn-ghost-danger " onclick="showConfirmation('@item.BasketDetailId')"><i class="fas fa-trash-alt text-warning"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -239,3 +239,13 @@
     </div>
 </section>
 
+@section Scripts{
+
+        <script>
+            function showConfirmation(itemId) {
+            if (confirm("This Item Will Be Deleted From Your Cart, Are You Sure?")) {
+                window.location.href = "/BasketDetails/Delete/" + itemId;
+                }
+            }
+    </script>
+}

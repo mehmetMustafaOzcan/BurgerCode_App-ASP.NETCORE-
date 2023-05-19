@@ -206,21 +206,18 @@ namespace BurgerCodeApp.Controllers
         // GET: BasketDetails/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.BasketDetails == null)
+            if (_context.BasketDetails == null)
             {
-                return NotFound();
+                return Problem("Entity set 'BurgerDbContext.BasketDetails'  is null.");
+            }
+            var basketDetail = await _context.BasketDetails.FindAsync(id);
+            if (basketDetail != null)
+            {
+                _context.BasketDetails.Remove(basketDetail);
             }
 
-            var basketDetail = await _context.BasketDetails
-                .Include(b => b.Basket)
-                .Include(b => b.Menu)
-                .FirstOrDefaultAsync(m => m.BasketDetailId == id);
-            if (basketDetail == null)
-            {
-                return NotFound();
-            }
-
-            return View(basketDetail);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Basket));
         }
 
         // POST: BasketDetails/Delete/5

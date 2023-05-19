@@ -10,6 +10,7 @@ using BurgerCodeApp.Models;
 using BurgerCodeApp.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.CodeAnalysis;
+using BurgerCodeApp.Models.Enums;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
@@ -101,14 +102,17 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             ViewData["MenuCategoryId"] = MenuCategory;
             return View(menuvm);
         }
-        public async Task<IActionResult> AddProduct()
+        public async Task<IActionResult> AddProduct(int id)
         {
          
             List<SelectListItem> Product = _context.Products.Select(x => new SelectListItem { Value = x.ProductId.ToString(), Text = x.Name, }).ToList();
             ViewBag.ProductId = Product;
-            List<SelectListItem> Menus = _context.Menus.Select(x => new SelectListItem { Value = x.MenuId.ToString(), Text = x.MenuName}).ToList();
-            ViewBag.Menus = Menus;
-            return View();
+            MenuVm mv = new(); 
+            mv.MenuId = id;
+            mv.MenuName = _context.Menus.Find(id).MenuName;
+            
+            return View(mv);
+
         }
 
         [HttpPost]
@@ -116,21 +120,50 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         {
             if (menuvm != null)
             {
-               
+
                 MenuDetail menudt = new()
                 {
                     MenuId = menuvm.MenuId,
                     ProductId = menuvm.ProductId,
-                    Quantity=menuvm.ProductQuantity,
-                    UnitPrice=_context.Products.Find(menuvm.ProductId).Price
+                    Quantity = menuvm.ProductQuantity,
+                    UnitPrice = _context.Products.Find(menuvm.ProductId).Price
                 };
-                 _context.Menus.Find(menuvm.MenuId).MenuDetails.Add(menudt);
+                _context.Menus.Find(menuvm.MenuId).MenuDetails.Add(menudt);
                 await _context.SaveChangesAsync();
             }
             List<SelectListItem> Product = _context.Products.Select(x => new SelectListItem { Value = x.ProductId.ToString(), Text = x.Name, }).ToList();
             ViewBag.ProductId = Product;
-            return RedirectToAction("AddProduct");
+            return View(menuvm);
         }
+
+        public async Task<IActionResult> GetMenuDetails(int id)
+        {
+
+         
+            var detail = await _context.MenuDetails.Where(x => x.MenuId == id).Include(x => x.Product).Select(x => new { productId = x.ProductId,ProductName=x.Product.Name,Quantity=x.Quantity}).ToListAsync();
+
+            return Json(detail);
+
+        }
+        public async Task<IActionResult> DeleteProduct(int productId,int menuId )
+        {
+            if (productId!=0&&menuId!=0)
+            {
+                var md = await _context.MenuDetails.Where(x => x.MenuId == menuId && x.ProductId == productId).FirstOrDefaultAsync();
+                if (md!=null)
+                {
+                    _context.MenuDetails.Remove(md);
+                    _context.SaveChanges();
+                    return Ok();
+                }
+                return NotFound();
+
+            }
+
+            return NotFound();
+        
+        }
+            
 
 
         // GET: Admin/Menus/Edit/5
@@ -146,7 +179,16 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["MenuCategoryId"] = new SelectList(_context.MenuCategories, "MenuCategoryId", "MenuCategoryId", menu.MenuCategoryId);
+            List<SelectListItem> MenuCategory = _context.MenuCategories.Select(x => new SelectListItem { Value = x.MenuCategoryId.ToString(), Text = x.Name, }).ToList();
+            ViewData["MenuCategoryId"] = MenuCategory;
+            var statusList = Enum.GetValues(typeof(Status)).Cast<Status>().Select(e => new SelectListItem
+            {
+                Value = e.ToString(),
+                Text = e.ToString()
+            }).ToList();
+
+            ViewBag.StatusList = statusList;
+
             return View(menu);
         }
 
@@ -155,7 +197,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")] Menu menu)
+        public async Task<IActionResult> Edit(int id, [Bind("MenuId,MenuName,MenuCategoryId,MenüPrice,SaleStatus,Photopath")] Menu menu)
         {
             if (id != menu.MenuId)
             {
@@ -182,7 +224,15 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MenuCategoryId"] = new SelectList(_context.MenuCategories, "MenuCategoryId", "MenuCategoryId", menu.MenuCategoryId);
+            List<SelectListItem> MenuCategory = _context.MenuCategories.Select(x => new SelectListItem { Value = x.MenuCategoryId.ToString(), Text = x.Name, }).ToList();
+            ViewData["MenuCategoryId"] = MenuCategory;
+            var statusList = Enum.GetValues(typeof(Status)).Cast<Status>().Select(e => new SelectListItem
+            {
+                Value = e.ToString(),
+                Text = e.ToString()
+            }).ToList();
+
+            ViewBag.StatusList = statusList;
             return View(menu);
         }
 

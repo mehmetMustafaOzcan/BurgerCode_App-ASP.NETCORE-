@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Uploads\\bg-hero.webp"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo-.png",
+      "PackagePath": "staticwebassets\\Uploads\\logo-.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo.png",
       "PackagePath": "staticwebassets\\Uploads\\logo.png"
     },

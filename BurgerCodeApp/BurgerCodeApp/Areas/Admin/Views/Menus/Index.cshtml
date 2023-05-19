@@ -1,14 +1,12 @@
 ﻿@model IEnumerable<BurgerCodeApp.Models.Menu>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "All Menus";
 }
 
-<h1>Index</h1>
+<h1 class="display-4 text-center m-2">All Menus</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -21,7 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.MenuCategory)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleStatus)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -34,14 +34,19 @@
                 @Html.DisplayFor(modelItem => item.MenüPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MenuCategory.MenuCategoryId)
+                @Html.DisplayFor(modelItem => item.MenuCategory.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MenuId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MenuId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MenuId">Delete</a>
+                @Html.DisplayFor(modelItem => item.SaleStatus)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.MenuId"><i class="fas fa-pen"></i></a> 
+                    <a class="btn btn-success" asp-action="AddProduct" asp-route-id="@item.MenuId"><i class="fas fa-wrench"></i></a> 
             </td>
         </tr>
 }
     </tbody>
 </table>
+<div class="text-center m-2">
+    <a class="btn btn-ghost-warning border" asp-action="Create">Create New</a>
+</div>

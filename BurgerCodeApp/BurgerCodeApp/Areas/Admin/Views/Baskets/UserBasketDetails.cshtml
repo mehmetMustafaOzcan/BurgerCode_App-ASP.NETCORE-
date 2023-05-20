@@ -1,13 +1,13 @@
 ﻿@using BurgerCodeApp.Models.Enums;
 @model IEnumerable<Basket>
-
+<div class="text-end">
+    <a class="btn btn-ghost-danger" asp-action="Index"><i class="fas fa-times"></i></a>
+</div>
 <div class="text-bold">
     <p>User Name: @Model.Select(x=>x.AppUser.UserName).FirstOrDefault() </p>
     <p> E-Mail: @Model.Select(x=>x.AppUser.Email).FirstOrDefault() </p>
 </div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -40,9 +40,18 @@
                 <td>
                 </td> 
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.BasketId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.BasketId">Details</a> |
+
+                    <div class="dropdown d-inline">
+                        <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-caret-square-down"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end text-center">
+                            <a asp-action="Edit" asp-route-id="@item.BasketId"><i class="fas fa-pen"></i></a> |
+                            <a asp-action="Details" asp-route-id="@item.BasketId">Details</a> |
+                        </div>
+                    </div>
                     <a class="btn btn-ghost-danger" href="/Admin/Baskets/Delete/@item.BasketId" @(item.Stage != BasketStage.Active ? "hidden" : "")><i class="fas fa-trash-alt"></i></a>
+                   
                 </td>
             </tr>
         }

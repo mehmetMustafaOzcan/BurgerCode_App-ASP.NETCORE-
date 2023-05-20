@@ -1,11 +1,13 @@
 ﻿using BurgerCodeApp.Areas.Identity.Models;
 using BurgerCodeApp.Controllers;
-using BurgerCodeApp.Data;
+using BurgerCodeApp.Data.Context;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
+using System.Net.Mail;
 
 namespace BurgerCodeApp.Areas.Identity.Controllers
 {
@@ -17,21 +19,27 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly BurgerDbContext _context;
 
-        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager,BurgerDbContext context)
+        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, BurgerDbContext context)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _context = context;
         }
 
-      
+
         public IActionResult Register()
         {
-            return View();
+            if (!_signInManager.IsSignedIn(User))
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
         [HttpPost]
         public async Task<IActionResult> Register(UserVm userVm)
         {
+
+
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(userVm.EmailAddress);//email unique mi kontrol
@@ -45,30 +53,47 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
                 AppUser appUser = new AppUser
                 {
                     UserName = userVm.UserName,
-                    
+
                     Email = userVm.EmailAddress,
-                    
+
                 };
                 IdentityResult result = await _userManager.CreateAsync(appUser, userVm.Password);
-                
+
                 if (result.Succeeded)
                 {
-                Basket basket = new();
-                   // await _userManager.AddToRoleAsync(appUser, "ADMIN");
-                   basket.AppUserId = _userManager.Users.SingleOrDefault(x=>x.UserName == userVm.UserName).Id;
-                _context.Baskets.Add(basket);
+                    Basket basket = new();
+
+                   // await _userManager.AddToRoleAsync(appUser ,"ADMIN");
+                    /*
+                    var token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
+
+                    var emailDogrulamaLinki = Url.Action(nameof(ConfirmEmail), "User", new { token, email = appUser.Email });
+
+
+                    var emailDogrulamaMesaji = new MailMessage(new Dictionary<string, string>() { { appUser.UserName!, appUser.Email! } }, "Email Doğrulama Linki", $"<b>Uygulamamıza giriş yapabilmeniz için doğrulama linki:</b> {emailDogrulamaLinki!}");
+                    _emailService.SendEmail(emailDogrulamaMesaji);
+                    */
+
+                    // await _userManager.AddToRoleAsync(appUser, "ADMIN");
+                    basket.AppUserId = _userManager.Users.SingleOrDefault(x => x.UserName == userVm.UserName).Id;
+                    _context.Baskets.Add(basket);
                     _context.SaveChanges();
                     return RedirectToAction("Login");
                 }
-            }
 
-           
-          
-            return View(userVm);
+
+
+
+            }
+            return View();
         }
         public IActionResult Login()
         {
-            return View();
+            if (!_signInManager.IsSignedIn(User))
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
 
         [HttpPost]
@@ -78,16 +103,26 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
             //if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(loginVm.EmailAddress);
-
-                var result = await _signInManager.PasswordSignInAsync(user.UserName, loginVm.Password, false, lockoutOnFailure: false);
-                if (result.Succeeded)
+                if (user != null)
                 {
+                    var result = await _signInManager.PasswordSignInAsync(user.UserName, loginVm.Password, false, lockoutOnFailure: false);
 
-                    return RedirectToAction("Index", "home", new { area = "" });
+
+                    if (result.Succeeded)
+                    {
+
+                        return RedirectToAction("Index", "home", new { area = "" });
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("LoginError", "Invalid login attempt");
+
+                    }
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Geçersiz oturum açma denemesi");
+                    ModelState.AddModelError("LoginError", "Invalid login attempt");
+
                 }
             }
 

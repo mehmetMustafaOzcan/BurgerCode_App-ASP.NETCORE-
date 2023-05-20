@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using BurgerCodeApp.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.CodeAnalysis;
 using BurgerCodeApp.Models.Enums;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
@@ -69,7 +69,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(/*[Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")]*/ MenuVm menuvm, IFormFile photo)
         {
-            var fileName = "";
+            var fileName = "defaulthamb.png";
             if (photo != null && photo.Length > 0)
             {
                  fileName = Path.GetFileName(photo.FileName);
@@ -85,15 +85,15 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             {
                 Menu menu = new()
                 {
-                    MenuName = menuvm.MenuName,
-                    MenüPrice = menuvm.MenüPrice,
+                    Name = menuvm.MenuName,
+                    Price = menuvm.MenüPrice,
                     MenuCategoryId = menuvm.MenuCategoryId!=0 ? menuvm.MenuCategoryId:null,
-                    Photopath = "/Uploads"+"/" +fileName
+                    PicturePath = "/Uploads"+"/" +fileName
 
                 };
                 _context.Menus.Add(menu);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(AddProduct));
+                return RedirectToAction(nameof(Index));
 
             }
             List<SelectListItem> MenuCategory = _context.MenuCategories.Select(x => new SelectListItem { Value = x.MenuCategoryId.ToString(), Text = x.Name, }).ToList();
@@ -109,7 +109,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             ViewBag.ProductId = Product;
             MenuVm mv = new(); 
             mv.MenuId = id;
-            mv.MenuName = _context.Menus.Find(id).MenuName;
+            mv.MenuName = _context.Menus.Find(id).Name;
             
             return View(mv);
 
@@ -193,18 +193,27 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // POST: Admin/Menus/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MenuId,MenuName,MenuCategoryId,MenüPrice,SaleStatus,Photopath")] Menu menu)
+        public async Task<IActionResult> Edit(int id, [Bind("MenuId,Name,MenuCategoryId,Price,SaleStatus,PicturePath")] Menu menu,IFormFile UpdatePhoto)
         {
             if (id != menu.MenuId)
             {
                 return NotFound();
             }
+            var fileName = "";
+            if (UpdatePhoto != null && UpdatePhoto.Length > 0)
+            {
+                fileName = Path.GetFileName(UpdatePhoto.FileName);
+                var path = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", fileName);
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await UpdatePhoto.CopyToAsync(stream);
+                }
+                menu.PicturePath = "/Uploads" + "/" + fileName;
+            }
 
-            if (ModelState.IsValid)
+            if (menu!=null)
             {
                 try
                 {
@@ -235,7 +244,11 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             ViewBag.StatusList = statusList;
             return View(menu);
         }
-
+        private bool MenuExists(int id)
+        {
+            return (_context.Menus?.Any(e => e.MenuId == id)).GetValueOrDefault();
+        }
+        /*MENÜ Silme Kapalı!!!! Silinemez Gerekli durumda güncellenip açılabilir
         // GET: Admin/Menus/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -273,10 +286,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        */
 
-        private bool MenuExists(int id)
-        {
-            return (_context.Menus?.Any(e => e.MenuId == id)).GetValueOrDefault();
-        }
     }
 }

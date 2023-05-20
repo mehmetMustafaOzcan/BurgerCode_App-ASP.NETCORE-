@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Controllers
 {
@@ -20,7 +20,7 @@ namespace BurgerCodeApp.Controllers
         }
 
         // GET: Menus
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()/**/
         {
             var burgerDbContext = _context.Menus.Include(m => m.MenuCategory);
             return View(await burgerDbContext.ToListAsync());
@@ -44,7 +44,7 @@ namespace BurgerCodeApp.Controllers
 
             return View(menu);
         }
-
+        /*
         // GET: Menus/Create
         public IActionResult Create()
         {
@@ -68,7 +68,8 @@ namespace BurgerCodeApp.Controllers
             ViewData["MenuCategoryId"] = new SelectList(_context.MenuCategories, "MenuCategoryId", "MenuCategoryId", menu.MenuCategoryId);
             return View(menu);
         }
-
+        */
+        /*
         // GET: Menus/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -85,7 +86,7 @@ namespace BurgerCodeApp.Controllers
             ViewData["MenuCategoryId"] = new SelectList(_context.MenuCategories, "MenuCategoryId", "MenuCategoryId", menu.MenuCategoryId);
             return View(menu);
         }
-
+      
         // POST: Menus/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -121,7 +122,8 @@ namespace BurgerCodeApp.Controllers
             ViewData["MenuCategoryId"] = new SelectList(_context.MenuCategories, "MenuCategoryId", "MenuCategoryId", menu.MenuCategoryId);
             return View(menu);
         }
-
+          */
+        /*
         // GET: Menus/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -140,7 +142,8 @@ namespace BurgerCodeApp.Controllers
 
             return View(menu);
         }
-
+        */
+        /*
         // POST: Menus/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -159,7 +162,7 @@ namespace BurgerCodeApp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        */
         private bool MenuExists(int id)
         {
           return (_context.Menus?.Any(e => e.MenuId == id)).GetValueOrDefault();

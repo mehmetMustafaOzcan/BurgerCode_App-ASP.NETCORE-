@@ -3,14 +3,16 @@
 @{
     ViewData["Title"] = "Delete";
 }
+<div class="text-end">
+    <a class="btn btn-ghost-danger text-end rounded-circle border" asp-action="UserBasketDetails" asp-route-email="@Model.AppUser.Email"><i class="fas fa-times "></i></a>
 
-<h1>Delete</h1>
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are you sure you want to delete this Basket?</h3>
 <div>
-    <h4>Basket</h4>
+   
     <hr />
-    <dl class="row">
+    <dl class="row alert alert-danger">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TotalPrice)
         </dt>
@@ -24,16 +26,22 @@
             @Html.DisplayFor(model => model.Stage)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AppUser)
+            @Html.DisplayNameFor(model => model.AppUser.UserName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AppUser.Id)
+            @Html.DisplayFor(model => model.AppUser.UserName)
+        </dd> 
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AppUser.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AppUser.Email)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="BasketId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger m-2" /> 
+    
     </form>
 </div>

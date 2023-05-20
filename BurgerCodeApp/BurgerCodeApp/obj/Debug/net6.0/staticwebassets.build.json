@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bQGdwZKrawrL9WBkYxhPkO63po3L2Gc8FfJ/O5FKB2U=",
+  "Hash": "nZunbnhD8blrBejg3JSDFEqUrxayiUqWJqLiSOWydXY=",
   "Source": "BurgerCodeApp",
   "BasePath": "_content/BurgerCodeApp",
   "Mode": "Default",
@@ -18003,6 +18003,40 @@
       "OriginalItemSpec": "wwwroot\\admin\\css\\examples.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\fontawesome.css",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "admin/css/fontawesome.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\css\\fontawesome.css"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\fontawesome.css.map",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "admin/css/fontawesome.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\css\\fontawesome.css.map"
+    },
+    {
       "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\style.css",
       "SourceId": "BurgerCodeApp",
       "SourceType": "Discovered",
@@ -25636,6 +25670,23 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\bg-hero.webp"
     },
     {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\defaulthamb.png",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "Uploads/defaulthamb.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\defaulthamb.png"
+    },
+    {
       "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo.png",
       "SourceId": "BurgerCodeApp",
       "SourceType": "Discovered",
@@ -25668,6 +25719,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\logo-.png"
+    },
+    {
+      "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\preview.jpg",
+      "SourceId": "BurgerCodeApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\",
+      "BasePath": "_content/BurgerCodeApp",
+      "RelativePath": "Uploads/preview.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\preview.jpg"
     },
     {
       "Identity": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\wepik-export-202305161009467BhH.png",

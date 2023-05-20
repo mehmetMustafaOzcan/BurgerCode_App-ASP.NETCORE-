@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Controllers
 {
@@ -18,15 +18,16 @@ namespace BurgerCodeApp.Controllers
         {
             _context = context;
         }
-
+        /*
         // GET: MenuDetails
         public async Task<IActionResult> Index()
         {
             var burgerDbContext = _context.MenuDetails.Include(m => m.Menu).Include(m => m.Product);
             return View(await burgerDbContext.ToListAsync());
         }
-
+        */
         // GET: MenuDetails/Details/5
+        /*
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.MenuDetails == null)
@@ -45,7 +46,7 @@ namespace BurgerCodeApp.Controllers
 
             return View(menuDetail);
         }
-
+        *//*
         // GET: MenuDetails/Create
         public IActionResult Create()
         {
@@ -71,7 +72,8 @@ namespace BurgerCodeApp.Controllers
             ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductId", menuDetail.ProductId);
             return View(menuDetail);
         }
-
+        */
+        /*
         // GET: MenuDetails/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -89,7 +91,7 @@ namespace BurgerCodeApp.Controllers
             ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductId", menuDetail.ProductId);
             return View(menuDetail);
         }
-
+        
         // POST: MenuDetails/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -126,7 +128,8 @@ namespace BurgerCodeApp.Controllers
             ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductId", menuDetail.ProductId);
             return View(menuDetail);
         }
-
+        */
+        /*
         // GET: MenuDetails/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -170,5 +173,6 @@ namespace BurgerCodeApp.Controllers
         {
           return (_context.MenuDetails?.Any(e => e.MenuId == id)).GetValueOrDefault();
         }
+        */
     }
 }

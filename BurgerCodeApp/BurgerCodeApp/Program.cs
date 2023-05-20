@@ -1,7 +1,10 @@
-using BurgerCodeApp.Data;
+using BurgerCodeApp.Data.Context;
 using BurgerCodeApp.Models;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -62,7 +65,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
       name: "areas",
-      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+      pattern: "{area:exists}/{controller=Reports}/{action=Index}/{id?}"
     );
 });
 app.MapControllerRoute(

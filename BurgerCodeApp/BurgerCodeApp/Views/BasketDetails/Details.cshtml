@@ -155,15 +155,15 @@
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                <div class="modal-header text-center">
+                                    <h1 class="modal-title fs-5 ff-secondary" id="staticBackdropLabel">"Great! The product has been added to your cart!</h1>
                                 </div>
-                                <div class="modal-body">
-                                   Ürün Sepete Eklendi
+                                <div class="modal-body text-center">
+                                    Product Added to Cart!
                                 </div>
-                                <div class="modal-footer">
-                                    <a class="btn btn-secondary " asp-controller="Menus" asp-action="index">Go To Menus</a>
-                                    <a type="submit" class="btn btn-primary " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
+                                <div class="modal-footer d-flex justify-content-between">
+                                    <a class="btn btn-primary rounded-pill rounded-end " asp-controller="Menus" asp-action="index">Go To Menus</a>
+                                    <a type="submit" class="btn btn-danger rounded-pill rounded-start " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
                                 </div>
                             </div>
                         </div>

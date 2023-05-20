@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using BurgerCodeApp.Models.Enums;
+using BurgerCodeApp.Data.Context;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Yönetici")]
     public class BasketsController : Controller
     {
         private readonly BurgerDbContext _context;
@@ -61,7 +63,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            else if (basket.Stage>0)
+            else if (basket.Stage>0)//her ihtimalde pasif basket silme kapalı
             {
                 return NotFound();
             }

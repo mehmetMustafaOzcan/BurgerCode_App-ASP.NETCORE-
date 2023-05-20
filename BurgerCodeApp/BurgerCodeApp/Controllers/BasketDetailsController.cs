@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using System.Security.Claims;
 using BurgerCodeApp.Models.Enums;
@@ -13,9 +12,12 @@ using Microsoft.AspNetCore.Identity;
 using NuGet.Versioning;
 using BurgerCodeApp.Models.ViewModels;
 using NuGet.ContentModel;
+using Microsoft.AspNetCore.Authorization;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Controllers
 {
+    [Authorize]
     public class BasketDetailsController : Controller
     {
         private readonly BurgerDbContext _context;
@@ -34,7 +36,7 @@ namespace BurgerCodeApp.Controllers
             decimal totalprice = 0;
             foreach (var item in basket.BasketDetails)
             {
-                totalprice += (decimal)(item.Quantity * item.Menu.MenüPrice * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)));
+                totalprice += (decimal)(item.Quantity * item.Menu.Price * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)));
                 foreach (var extra in item.ExtraDetails)
                 {
                     totalprice += (decimal)extra.Extra.Price* item.Quantity;
@@ -66,7 +68,7 @@ namespace BurgerCodeApp.Controllers
             {
                 return NotFound();
             }
-            BasketVm vm = new BasketVm() { MenuName = Menü.MenuName, MenuId = Menü.MenuId ,PicturePath=Menü.Photopath,MenuPrice=(decimal)Menü.MenüPrice};
+            BasketVm vm = new BasketVm() { MenuName = Menü.Name, MenuId = Menü.MenuId ,PicturePath=Menü.PicturePath,MenuPrice=(decimal)Menü.Price};
 
             return View(vm);
         }
@@ -117,7 +119,7 @@ namespace BurgerCodeApp.Controllers
             return basket;
         }
 
-
+        /*
         // GET: BasketDetails/Create
         public async Task<IActionResult> Create()
         {
@@ -126,10 +128,8 @@ namespace BurgerCodeApp.Controllers
             ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId");
             return View();
         }
-
+       
         // POST: BasketDetails/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("BasketId,MenuId,Quantity,MenuSize")] BasketDetail basketDetail, List<string> selectedExtras)
@@ -144,9 +144,9 @@ namespace BurgerCodeApp.Controllers
             ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId", basketDetail.MenuId);
             return View(basketDetail);
         }
-
+         */
         // GET: BasketDetails/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)/**/
         {
             if (id == null || _context.BasketDetails == null)
             {
@@ -159,14 +159,14 @@ namespace BurgerCodeApp.Controllers
                 return NotFound();
             }
 
-            decimal totalprice = (decimal)(basketDetail.Menu.MenüPrice * ((basketDetail.MenuSize > 1 ? 1 + (decimal)basketDetail.MenuSize / 10 : 1)));
+            decimal totalprice = (decimal)(basketDetail.Menu.Price * ((basketDetail.MenuSize > 1 ? 1 + (decimal)basketDetail.MenuSize / 10 : 1)));
 
             foreach (var extra in basketDetail.ExtraDetails)
             {
                 totalprice += (decimal)extra.Extra.Price;
             }
             totalprice *= basketDetail.Quantity;
-            BasketEditVm basketEdit = new() { BasketDetailId= basketDetail.BasketDetailId, MenuName = basketDetail.Menu.MenuName, Size = basketDetail.MenuSize, Photopath = basketDetail.Menu.Photopath, Quantity = basketDetail.Quantity,MenüPrice=(decimal)basketDetail.Menu.MenüPrice,TotalPrice= totalprice };
+            BasketEditVm basketEdit = new() { BasketDetailId= basketDetail.BasketDetailId, MenuName = basketDetail.Menu.Name, Size = basketDetail.MenuSize, Photopath = basketDetail.Menu.PicturePath, Quantity = basketDetail.Quantity,MenüPrice=(decimal)basketDetail.Menu.Price,TotalPrice= totalprice };
             ViewBag.Extras = _context.Extras.ToList();
             basketEdit.Extras = basketDetail.ExtraDetails.Select(x => x.ExtraId).ToList();
             return View(basketEdit);
@@ -177,7 +177,7 @@ namespace BurgerCodeApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, BasketVm basketvm)
+        public async Task<IActionResult> Edit(int id, BasketVm basketvm)/**/
         {
             if (id == 0&& basketvm==null)
             {
@@ -188,12 +188,16 @@ namespace BurgerCodeApp.Controllers
                 BasketDetail basketDetail =await _context.BasketDetails.Include(x => x.ExtraDetails).Where(x => x.BasketDetailId == id).FirstOrDefaultAsync();
                 basketDetail.Quantity = basketvm.Quantity;basketDetail.MenuSize = basketvm.Size;
                 basketDetail.ExtraDetails.Clear();
-                foreach (var sauce in basketvm.Extras)
+                if (basketvm.Extras!=null)
                 {
-                    Extra extra = _context.Extras.Find(sauce);
-                    ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
-                    basketDetail.ExtraDetails.Add(extraDetail);
+                    foreach (var sauce in basketvm.Extras)
+                    {
+                        Extra extra = _context.Extras.Find(sauce);
+                        ExtraDetail extraDetail = new() { ExtraId = extra.ExtraId, Quantity = 1 };
+                        basketDetail.ExtraDetails.Add(extraDetail);
+                    }
                 }
+             
 
                 _context.BasketDetails.Update(basketDetail);
                 _context.SaveChanges();
@@ -204,7 +208,7 @@ namespace BurgerCodeApp.Controllers
         }
 
         // GET: BasketDetails/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)/**/
         {
             if (_context.BasketDetails == null)
             {
@@ -220,7 +224,7 @@ namespace BurgerCodeApp.Controllers
             return RedirectToAction(nameof(Basket));
         }
 
-        // POST: BasketDetails/Delete/5
+       /* // POST: BasketDetails/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -238,7 +242,7 @@ namespace BurgerCodeApp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Basket));
         }
-
+       */
         private bool BasketDetailExists(int id)
         {
             return (_context.BasketDetails?.Any(e => e.BasketId == id)).GetValueOrDefault();

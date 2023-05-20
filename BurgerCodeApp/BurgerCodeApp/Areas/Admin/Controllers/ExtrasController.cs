@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
@@ -23,40 +23,20 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Extras
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()/**/
         {
               return _context.Extras != null ? 
                           View(await _context.Extras.ToListAsync()) :
                           Problem("Entity set 'BurgerDbContext.Extras'  is null.");
         }
 
-        // GET: Admin/Extras/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Extras == null)
-            {
-                return NotFound();
-            }
-
-            var extra = await _context.Extras
-                .FirstOrDefaultAsync(m => m.ExtraId == id);
-            if (extra == null)
-            {
-                return NotFound();
-            }
-
-            return View(extra);
-        }
-
         // GET: Admin/Extras/Create
-        public IActionResult Create()
+        public IActionResult Create()/**/
         {
             return View();
         }
 
         // POST: Admin/Extras/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ExtraId,Name,Description,Price")] Extra extra)
@@ -71,7 +51,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Extras/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)/**/
         {
             if (id == null || _context.Extras == null)
             {
@@ -91,7 +71,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ExtraId,Name,Description,Price")] Extra extra)
+        public async Task<IActionResult> Edit(int id, [Bind("ExtraId,Name,Description,Price")] Extra extra)/**/
         {
             if (id != extra.ExtraId)
             {
@@ -122,7 +102,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Extras/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)/**/
         {
             if (id == null || _context.Extras == null)
             {
@@ -142,25 +122,35 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         // POST: Admin/Extras/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)/*trycatch*/
         {
+
             if (_context.Extras == null)
             {
                 return Problem("Entity set 'BurgerDbContext.Extras'  is null.");
             }
-            var extra = await _context.Extras.FindAsync(id);
-            if (extra != null)
+            try
             {
-                _context.Extras.Remove(extra);
+                var extra = await _context.Extras.FindAsync(id);
+                if (extra != null)
+                {
+                    _context.Extras.Remove(extra);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception)
+            {
+
+              return RedirectToAction(nameof(Index));
             }
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
-
         private bool ExtraExists(int id)
         {
-          return (_context.Extras?.Any(e => e.ExtraId == id)).GetValueOrDefault();
+            return (_context.Extras?.Any(e => e.ExtraId == id)).GetValueOrDefault();
         }
+
     }
 }

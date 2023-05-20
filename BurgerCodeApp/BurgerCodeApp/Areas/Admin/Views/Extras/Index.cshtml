@@ -4,12 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Extras</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-ghost-success" asp-action="Create"><i class="fas fa-plus-circle"></i></a>
 </p>
-<table class="table">
+<table class=" table table-striped ">
     <thead>
         <tr>
             <th>
@@ -25,23 +25,32 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ExtraId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ExtraId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ExtraId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg class="icon">
+                                <use xlink:href="vendors/coreui/icons/svg/free.svg#cil-options"></use>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end text-center">
+                            <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.ExtraId"><i class="fas fa-pen"></i></a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ExtraId"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -31,11 +31,11 @@
                                             <div class="d-flex justify-content-between">
                                                 <div class="d-flex flex-row align-items-center">
                                                     <div>
-                                                        <img src="@item.Menu.Photopath"
+                                                        <img src="@item.Menu.PicturePath"
                                                              class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
                                                     </div>
                                                     <div class="ms-3">
-                                                        <a asp-action="edit" asp-route-id="@item.BasketDetailId"> <h5>@item.Menu.MenuName</h5></a>
+                                                        <a asp-action="edit" asp-route-id="@item.BasketDetailId"> <h5>@item.Menu.Name</h5></a>
                                                         @foreach (var extra in item.ExtraDetails)
                                                         {
                                                             <span class="small mb-0 text-dark text-muted">@extra.Extra.Name <sub>+@((int)extra.Extra.Price)$</sub> | </span>
@@ -50,7 +50,7 @@
                                                     <div style="width: 90px;">
                                                         <h5 class="mb-0">
                                                             $@(
-                                                               item.Quantity * (item.Menu.MenüPrice * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1))+(int)item.ExtraDetails.Sum(x => x.Extra.Price)))
+                                                               item.Quantity * (item.Menu.Price * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1))+(int)item.ExtraDetails.Sum(x => x.Extra.Price)))
                                                                
                                                         </h5>
                                                     </div>

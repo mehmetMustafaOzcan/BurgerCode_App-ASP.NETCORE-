@@ -9,12 +9,20 @@
       "PackagePath": "staticwebassets\\Uploads\\bg-hero.webp"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\defaulthamb.png",
+      "PackagePath": "staticwebassets\\Uploads\\defaulthamb.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo-.png",
       "PackagePath": "staticwebassets\\Uploads\\logo-.png"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo.png",
       "PackagePath": "staticwebassets\\Uploads\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\preview.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\preview.jpg"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\wepik-export-202305161009467BhH.png",
@@ -4003,6 +4011,14 @@
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\examples.min.css.map",
       "PackagePath": "staticwebassets\\admin\\css\\examples.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\admin\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\fontawesome.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\fontawesome.css.map"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\css\\style.css",

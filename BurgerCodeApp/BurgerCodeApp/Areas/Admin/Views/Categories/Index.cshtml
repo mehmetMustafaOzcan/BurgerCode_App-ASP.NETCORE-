@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Product Categories</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -30,10 +30,21 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
+
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CateogryId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CateogryId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CateogryId">Delete</a>
+               
+                    <div class="dropdown">
+                        <button class="btn btn-transparent p-0" type="button" data-coreui-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg class="icon">
+                                <use xlink:href="vendors/coreui/icons/svg/free.svg#cil-options"></use>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end text-center">
+                            <a asp-action="Edit" asp-route-id="@item.CateogryId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.CateogryId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.CateogryId">Delete</a>
+                        </div>
+                    </div>
             </td>
         </tr>
 }

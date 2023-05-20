@@ -1,0 +1,58 @@
+﻿@using BurgerCodeApp.Areas.Admin.Models;
+@model ReportVm
+
+<div class="tab-content rounded-bottom">
+    <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1276">
+        <div class="row">
+            <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-primary">
+                    <div class="card-body">
+                        <div class="fs-4 fw-semibold">Total Earning</div>
+                        <div>@Model.TotalEarning $</div>
+                        <div class="progress progress-white progress-thin my-2">
+                            <div class="progress-bar" role="progressbar" style="width:100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div><a asp-action="SalesReports" asp-controller="Reports" asp-area="admin" asp-route-report="totals"><small class="text-medium-emphasis-inverse">Total Earning Detail</small></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-warning">
+                    <div class="card-body">
+                        <div class="fs-4 fw-semibold">Extra Earning</div>
+                        <div>@Model.ExtraEarning $</div>
+                        <div class="progress progress-white progress-thin my-2">
+                            <div class="progress-bar" role="progressbar" style="width: @((int)((Model.ExtraEarning/Model.TotalEarning)*100))%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div><a asp-action="SalesReports" asp-controller="Reports" asp-area="admin" asp-route-report="extras"><small class="text-medium-emphasis-inverse">All Extra Earning Detail</small></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-info">
+                    <div class="card-body">
+                        <div class="fs-4 fw-semibold">Menu Earning</div>
+                        <div>@Model.MenuEarning $</div>
+                        <div class="progress progress-white progress-thin my-2">
+                            <div class="progress-bar" role="progressbar" style="width: @((int)((Model.MenuEarning/Model.TotalEarning)*100))%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div><a asp-action="SalesReports" asp-controller="Reports" asp-area="admin" asp-route-report="menus"><small class="text-medium-emphasis-inverse">All Menu Earning Detail</small></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-->
+            <!-- /.col-->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-danger">
+                    <div class="card-body">
+                        <div class="fs-4 fw-semibold">Best Seller</div>
+                        <div>" @Model.FirstMenu "</div>
+                        <div>@Model.FirstMenuQuantity pc.</div>
+                    </div><small class="text-medium-emphasis-inverse ms-2">Best Seller Menu</small>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <!-- /.row-->
+    </div>
+</div>

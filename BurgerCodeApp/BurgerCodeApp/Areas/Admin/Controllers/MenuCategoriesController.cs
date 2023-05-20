@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {

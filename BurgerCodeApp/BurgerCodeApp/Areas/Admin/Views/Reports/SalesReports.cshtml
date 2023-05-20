@@ -1,0 +1,55 @@
+﻿@using System.Text.Json;
+@using Newtonsoft.Json.Linq;
+@model dynamic
+
+<h3 class="text-center">Sales Reports</h3>
+<hr />
+<div class="row  justify-content-center">
+    <div class="col-5">
+        <table class="table table-striped text-lg-center">
+
+            @{
+                if (Model is JsonResult jsonResult)
+                {
+                    string jsonString = JsonSerializer.Serialize(((JsonResult)Model).Value);
+
+                    JArray array = JArray.Parse(jsonString);
+                    <thead>
+                        <tr>
+                            @foreach (JObject obj in array)
+                            {
+                                @foreach (KeyValuePair<string, JToken> prop in obj)
+                                {
+                                    <th>@prop.Key</th>
+
+                                }
+                                break;
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (JObject obj in array)
+                        {
+                            <tr>
+                                @foreach (KeyValuePair<string, JToken> prop in obj)
+                                {
+                                    <td>@prop.Value </td>
+
+                                }
+                            </tr>
+                        }
+                      
+                    </tbody>
+                }
+            }
+           
+
+        </table>
+        <div class="text-end">
+
+            <div class=" text-danger fw-bolder text-decoration-underline mb-2"> Total: @ViewBag.totals</div>
+        </div>
+    </div>
+   
+
+</div>

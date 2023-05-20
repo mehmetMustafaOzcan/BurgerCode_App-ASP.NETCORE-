@@ -1,10 +1,11 @@
-﻿using BurgerCodeApp.Models.Enums;
+﻿using BurgerCodeApp.Models.Abstracts;
+using BurgerCodeApp.Models.Enums;
 using System;
 using System.Collections.Generic;
 
 namespace BurgerCodeApp.Models
 {
-    public partial class Menu
+    public partial class Menu: BaseProduct
     {
         public Menu()
         {
@@ -13,11 +14,7 @@ namespace BurgerCodeApp.Models
         }
 
         public int MenuId { get; set; }
-        public string MenuName { get; set; } = null!;
         public int? MenuCategoryId { get; set; }
-        public string? Photopath { get; set; }
-        public Status SaleStatus { get; set; } = Status.Onsale;
-        public decimal? MenüPrice { get; set; }
 
         public virtual MenuCategory? MenuCategory { get; set; }
         public virtual ICollection<BasketDetail> BasketDetails { get; set; }

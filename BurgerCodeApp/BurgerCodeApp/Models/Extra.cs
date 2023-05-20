@@ -1,10 +1,11 @@
-﻿using BurgerCodeApp.Models.Enums;
+﻿using BurgerCodeApp.Models.Abstracts;
+using BurgerCodeApp.Models.Enums;
 using System;
 using System.Collections.Generic;
 
 namespace BurgerCodeApp.Models
 {
-    public partial class Extra
+    public partial class Extra: BaseProduct
     {
         public Extra()
         {
@@ -12,10 +13,7 @@ namespace BurgerCodeApp.Models
         }
 
         public int ExtraId { get; set; }
-        public string Name { get; set; } = null!;
         public string? Description { get; set; }
-        public Status SaleStatus { get; set; } = Status.Onsale;
-        public decimal? Price { get; set; }
 
         public virtual ICollection<ExtraDetail> ExtraDetails { get; set; }
     }

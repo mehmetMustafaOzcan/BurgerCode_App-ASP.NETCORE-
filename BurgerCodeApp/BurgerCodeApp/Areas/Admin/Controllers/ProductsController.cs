@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
@@ -155,14 +155,23 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             {
                 return Problem("Entity set 'BurgerDbContext.Products'  is null.");
             }
-            var product = await _context.Products.FindAsync(id);
-            if (product != null)
+
+            try
             {
-                _context.Products.Remove(product);
+                var product = await _context.Products.FindAsync(id);
+                if (product != null)
+                {
+                    _context.Products.Remove(product);
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            catch (Exception)
+            {
+
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         private bool ProductExists(int id)

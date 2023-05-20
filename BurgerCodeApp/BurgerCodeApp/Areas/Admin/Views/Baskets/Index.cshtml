@@ -2,7 +2,7 @@
 @model dynamic
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "All Baskets";
 }
 
 <h1>All Baskets</h1>
@@ -39,8 +39,8 @@
             </td>  
            
             <td>
-              
-                    <a asp-action="UserBasketDetails" asp-route-email="@item.Email">Details</a>
+
+                    <a class="btn btn-info text-white" asp-action="UserBasketDetails" asp-route-email="@item.Email"><i class="fas fa-info-circle"></i></a>
             
             </td>
         </tr>

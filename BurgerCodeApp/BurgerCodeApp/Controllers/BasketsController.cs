@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Data;
 using BurgerCodeApp.Models;
 using BurgerCodeApp.Models.Enums;
+using BurgerCodeApp.Data.Context;
 
 namespace BurgerCodeApp.Controllers
 {
@@ -19,14 +19,14 @@ namespace BurgerCodeApp.Controllers
         {
             _context = context;
         }
-
+        /*
         // GET: Baskets
         public async Task<IActionResult> Index()
         {
             var burgerDbContext = _context.Baskets.Include(b => b.AppUser);
             return View(await burgerDbContext.ToListAsync());
         }
-
+        
         // GET: Baskets/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -45,14 +45,14 @@ namespace BurgerCodeApp.Controllers
 
             return View(basket);
         }
-
+      
         // GET: Baskets/Create
         public IActionResult Create()
         {
             ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id");
             return View();
         }
-
+          *//*
         // POST: Baskets/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -69,7 +69,8 @@ namespace BurgerCodeApp.Controllers
             ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id", basket.AppUserId);
             return View(basket);
         }
-
+        */
+        /*
         // GET: Baskets/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -86,7 +87,7 @@ namespace BurgerCodeApp.Controllers
             ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id", basket.AppUserId);
             return View(basket);
         }
-
+        */
         // POST: Baskets/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -125,7 +126,7 @@ namespace BurgerCodeApp.Controllers
             }
             return RedirectToAction("Basket","BasketDetails");
         }
-
+        /*
         // GET: Baskets/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -144,7 +145,7 @@ namespace BurgerCodeApp.Controllers
 
             return View(basket);
         }
-
+        *//*
         // POST: Baskets/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -163,7 +164,7 @@ namespace BurgerCodeApp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        */
         private bool BasketExists(int id)
         {
           return (_context.Baskets?.Any(e => e.BasketId == id)).GetValueOrDefault();

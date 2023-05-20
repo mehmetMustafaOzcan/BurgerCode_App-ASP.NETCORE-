@@ -6,7 +6,7 @@
 @if (SignInManager.IsSignedIn(User))
 {
 
-    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Register" title="Manage">Hello @User.Identity?.Name!</a>
+    <a class="nav-item nav-link mt-2" asp-area="Identity" asp-controller="Account" asp-action="Register" title="Manage"><i class="fas fa-crown"></i> @User.Identity?.Name!</a>
 
 
    @* <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
@@ -22,7 +22,7 @@
     </div>
 
 
-    <a class="nav-link btn btn-link text-dark" asp-area="Identity" asp-action="Logout" asp-controller="Account" >Çıkış</a>
+    <a class="nav-link btn btn-link text-dark" asp-area="Identity" asp-action="Logout" asp-controller="Account"><i class="fas fa-door-open fs-4"></i></a>
     <div>
    
     </div>
@@ -31,10 +31,10 @@
 else
 {
 
-    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Register">Register</a>
+    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Register"><i class="fas fa-user-plus fs-4"></i></a>
 
 
-    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Login">Login</a>
+    <a class="nav-item nav-link" asp-area="Identity" asp-controller="Account" asp-action="Login"><i class="fas fa-key fs-4"></i></a>
 
 
 }

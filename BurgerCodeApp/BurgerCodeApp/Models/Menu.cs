@@ -15,6 +15,7 @@ namespace BurgerCodeApp.Models
 
         public int MenuId { get; set; }
         public int? MenuCategoryId { get; set; }
+        public string? Description { get; set; }
 
         public virtual MenuCategory? MenuCategory { get; set; }
         public virtual ICollection<BasketDetail> BasketDetails { get; set; }

@@ -7,17 +7,17 @@ namespace BurgerCodeApp.Areas.Identity.Models
     public class UserVm
     {
 
-        [Required(ErrorMessage = "Kullanıcı adı gereklidir.")]
-        [StringLength(20, MinimumLength = 5, ErrorMessage = "Kullanıcı adı 5 ila 20 karakter arasında olmalıdır.")]
-        [RegularExpression(@"^[^\s!@#$%^&*(),.?:{}|<>]+$", ErrorMessage = "Kullanıcı adı özel karakter içermemelidir.")]
+        [Required(ErrorMessage = "Username is required.")]
+        [StringLength(20, MinimumLength = 5, ErrorMessage = "Username must be between 5 and 20 characters.")]
+        [RegularExpression(@"^[^\s!@#$%^&*(),.?:{}|<>]+$", ErrorMessage = "Username must not contain special characters.")]
         public string UserName { get; set; }
         public string? FirstName { get; set; }
         public string? Lastname { get; set; }
-        [Required(ErrorMessage = "Pasword!")]
+        [Required(ErrorMessage = "Password is required.")]
         public string Password { get; set; }
         public string? PhoneNumber { get; set; }
         [Required]
-        [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi giriniz.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid e-mail address.")]
         public string EmailAddress { get; set; }
     }
 }

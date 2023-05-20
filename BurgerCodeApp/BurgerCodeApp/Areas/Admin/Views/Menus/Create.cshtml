@@ -25,9 +25,14 @@
                 <select asp-for="MenuCategoryId" class="form-control" asp-items="ViewBag.MenuCategoryId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="MenüPrice" class="control-label">Price</label>
-                <input asp-for="MenüPrice" class="form-control" />
-                <span asp-validation-for="MenüPrice" class="text-danger"></span>
+                <label asp-for="MenuPrice" class="control-label">Price</label>
+                <input asp-for="MenuPrice" class="form-control" />
+                <span asp-validation-for="MenuPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group m-2">
                 <label  class="control-label">Add Photo</label>

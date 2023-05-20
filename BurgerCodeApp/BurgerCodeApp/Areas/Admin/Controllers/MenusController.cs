@@ -15,7 +15,8 @@ using BurgerCodeApp.Data.Context;
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+
 
     public class MenusController : Controller
     {
@@ -36,7 +37,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Menus/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id)/*-*/
         {
             if (id == null || _context.Menus == null)
             {
@@ -63,8 +64,6 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // POST: Admin/Menus/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(/*[Bind("MenuId,MenuName,MenuCategoryId,MenüPrice")]*/ MenuVm menuvm, IFormFile photo)
@@ -86,7 +85,8 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
                 Menu menu = new()
                 {
                     Name = menuvm.MenuName,
-                    Price = menuvm.MenüPrice,
+                    Price = menuvm.MenuPrice,
+                    Description = menuvm.Description,
                     MenuCategoryId = menuvm.MenuCategoryId!=0 ? menuvm.MenuCategoryId:null,
                     PicturePath = "/Uploads"+"/" +fileName
 
@@ -136,7 +136,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             return View(menuvm);
         }
 
-        public async Task<IActionResult> GetMenuDetails(int id)
+        public async Task<IActionResult> GetMenuDetails(int id)/*for ajax*/
         {
 
          
@@ -167,7 +167,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
 
 
         // GET: Admin/Menus/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? id)/**/
         {
             if (id == null || _context.Menus == null)
             {
@@ -195,7 +195,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         // POST: Admin/Menus/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MenuId,Name,MenuCategoryId,Price,SaleStatus,PicturePath")] Menu menu,IFormFile UpdatePhoto)
+        public async Task<IActionResult> Edit(int id, [Bind("MenuId,Name,MenuCategoryId,Price,SaleStatus,PicturePath,Description")] Menu menu,IFormFile UpdatePhoto)
         {
             if (id != menu.MenuId)
             {

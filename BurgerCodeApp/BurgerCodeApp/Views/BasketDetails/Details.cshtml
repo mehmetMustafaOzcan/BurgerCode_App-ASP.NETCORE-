@@ -6,61 +6,6 @@
 
 
 
-<div>
-    @*  <h4>BasketDetail</h4>
-    <hr />
-    <form asp-action="details" method="post">
-    <div class="d-flex align-items-center">
-    <img class="flex-shrink-0 img-fluid rounded" src="@Model.PicturePath" alt="" style="width: 600px;">
-    <div class=" d-flex flex-column text-start ps-4">
-    <h5 class="d-flex justify-content-between border-bottom pb-2">
-    <span>@Model.MenuName</span>
-    <span class="text-primary">$115</span>
-    </h5>
-    <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
-    <div class="d-flex flex-row justify-content-end mb-0 px-3">
-
-    @foreach (var item in ViewBag.Extras)
-    {
-    <div class="form-check d-inline-flex">
-    <input type="checkbox" name="Extras" value="@item.ExtraId" />
-    <label class="form-check-label" for="SelectedToppings">
-    @item.Name
-    </label>
-    </div>
-    }
-
-    </div>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" value="1" id="flexRadioDefault1" asp-for="Size">
-    <label class="form-check-label" for="flexRadioDefault1" asp-for="Size">
-    Küçük
-    </label>
-    </div>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" value="2" id="flexRadioDefault2" asp-for="Size">
-    <label class="form-check-label" for="flexRadioDefault2" asp-for="Size">
-    Orta
-    </label>
-    </div>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" value="3" id="flexRadioDefault3" for="Size" asp-for="Size">
-    <label class="form-check-label" for="flexRadioDefault3" >
-    Büyük
-    </label>
-    </div>
-    <div class="form-group">
-    <label class="form-check-label" asp-for="Quantity">Quantity</label>
-    <input class="form-control w-25" type="number" asp-for="Quantity" />
-    </div>
-    <div>
-    <input type="" asp-for="MenuId" class="invisible" readonly />
-    </div>
-    <button type="submit" class="btn btn-warning w-75 text-center "> Sipariş ver</button>
-    </div>
-    </div>
-    </form>*@
-</div>
 
 <!-- Reservation Start -->
 <div class="container-xxl py-1 px-2 wow fadeInUp " data-wow-delay="0.1s">
@@ -162,7 +107,13 @@
                                     Product Added to Cart!
                                 </div>
                                 <div class="modal-footer d-flex justify-content-between">
-                                    <a class="btn btn-primary rounded-pill rounded-end " asp-controller="Menus" asp-action="index">Go To Menus</a>
+                                    <div>
+                                        Go To
+                                        <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Menus">Menus</a>
+                                        <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Burger">Burgers</a>
+                                        
+
+                                    </div>
                                     <a type="submit" class="btn btn-danger rounded-pill rounded-start " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
                                 </div>
                             </div>

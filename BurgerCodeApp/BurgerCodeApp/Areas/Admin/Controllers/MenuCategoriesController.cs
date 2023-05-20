@@ -12,7 +12,8 @@ using BurgerCodeApp.Data.Context;
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+
     public class MenuCategoriesController : Controller
     {
         private readonly BurgerDbContext _context;
@@ -30,23 +31,6 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
                           Problem("Entity set 'BurgerDbContext.MenuCategories'  is null.");
         }
 
-        // GET: Admin/MenuCategories/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.MenuCategories == null)
-            {
-                return NotFound();
-            }
-
-            var menuCategory = await _context.MenuCategories
-                .FirstOrDefaultAsync(m => m.MenuCategoryId == id);
-            if (menuCategory == null)
-            {
-                return NotFound();
-            }
-
-            return View(menuCategory);
-        }
 
         // GET: Admin/MenuCategories/Create
         public IActionResult Create()
@@ -55,8 +39,6 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // POST: Admin/MenuCategories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MenuCategoryId,Name,Description")] MenuCategory menuCategory)
@@ -87,8 +69,6 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // POST: Admin/MenuCategories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MenuCategoryId,Name,Description")] MenuCategory menuCategory)

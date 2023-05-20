@@ -6,11 +6,15 @@
 
 <h1>Delete</h1>
 
+<div class="text-end">
+    <a class="btn btn-ghost-danger" asp-action="Index"><i class="fas fa-times"></i></a>
+</div>
+
 <h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>Category</h4>
     <hr />
-    <dl class="row">
+    <dl class="row alert alert-danger">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -27,7 +31,6 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="CateogryId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
     </form>
 </div>

@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Create";
 }
+<div class="text-end">
+    <a class="btn btn-ghost-danger" asp-action="Index"><i class="fas fa-times"></i></a>
+</div>
 
 <h1>Create</h1>
 
@@ -29,9 +32,7 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -12,7 +12,8 @@ using BurgerCodeApp.Data.Context;
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+
     public class ProductsController : Controller
     {
         private readonly BurgerDbContext _context;

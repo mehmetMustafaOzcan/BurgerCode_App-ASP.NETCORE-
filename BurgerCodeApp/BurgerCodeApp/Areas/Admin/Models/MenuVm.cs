@@ -11,7 +11,8 @@ namespace BurgerCodeApp.Areas.Admin.Models
         public int MenuId { get; set; }
         public string MenuName { get; set; }
         public int MenuCategoryId { get; set; }
-        public decimal MenüPrice { get; set; }
+        public decimal MenuPrice { get; set; }
+        public string Description { get; set; }
         public int ProductId { get; set; }
         public int ProductQuantity { get; set; }
     }

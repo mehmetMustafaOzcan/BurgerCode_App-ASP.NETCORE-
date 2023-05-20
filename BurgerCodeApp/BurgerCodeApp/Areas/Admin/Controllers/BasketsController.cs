@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Yönetici")]
+    [Authorize(Roles = "Admin")]
     public class BasketsController : Controller
     {
         private readonly BurgerDbContext _context;
@@ -24,7 +24,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         }
 
         // GET: Admin/Baskets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()/**/
         {
             var burgerDbContext = _context.Baskets.Include(b => b.AppUser).GroupBy(x => new { x.AppUser.Email,x.AppUser.UserName }).Select(b => new {User=b.Key.UserName,Email=b.Key.Email,Total=b.Sum(x=>x.TotalPrice)});
             return View(await burgerDbContext.ToListAsync());
@@ -91,33 +91,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
-
-
         /*
-        // GET: Admin/Baskets/Create
-        public IActionResult Create()
-        {
-            ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id");
-            return View();
-        }
-
-        // POST: Admin/Baskets/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BasketId,AppUserId,TotalPrice,Stage")] Basket basket)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(basket);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id", basket.AppUserId);
-            return View(basket);
-        }
-
-        // GET: Admin/Baskets/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Baskets == null)
@@ -133,46 +107,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id", basket.AppUserId);
             return View(basket);
         }
-
-        // POST: Admin/Baskets/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BasketId,AppUserId,TotalPrice,Stage")] Basket basket)
-        {
-            if (id != basket.BasketId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(basket);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!BasketExists(basket.BasketId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AppUserId"] = new SelectList(_context.Set<AppUser>(), "Id", "Id", basket.AppUserId);
-            return View(basket);
-        }
-
-        
-        private bool BasketExists(int id)
-        {
-          return (_context.Baskets?.Any(e => e.BasketId == id)).GetValueOrDefault();
-        }
         */
+       
     }
 }

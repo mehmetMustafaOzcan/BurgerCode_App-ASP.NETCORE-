@@ -164,6 +164,9 @@ namespace BurgerCodeApp.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuId"), 1L, 1);
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("MenuCategoryId")
                         .HasColumnType("int")
                         .HasColumnName("MenuCategoryID");
@@ -302,23 +305,23 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "98f74fbc-79a7-4c9d-a779-64b997331d86",
-                            ConcurrencyStamp = "98cdf728-4bf0-496f-87af-d70ce12dd930",
-                            Name = "Yönetici",
+                            Id = "b2a3773d-2392-4df1-933f-9ecc63ad2c71",
+                            ConcurrencyStamp = "50caed70-4891-4de6-9ee5-3f84d13c986f",
+                            Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "ff0dd615-8558-4d4e-af75-5eec085a90a8",
-                            ConcurrencyStamp = "57421939-997e-41c8-862c-658d836e4345",
-                            Name = "Editör",
+                            Id = "dec634ab-9129-4bba-959e-5180c05cf941",
+                            ConcurrencyStamp = "be8f0706-63e6-446b-836d-f40f023deaa8",
+                            Name = "Editor",
                             NormalizedName = "EDITOR"
                         },
                         new
                         {
-                            Id = "38d25af2-7d2b-491b-8811-79e68dad796e",
-                            ConcurrencyStamp = "2343300f-0ce0-4c99-bafd-dae7b0e2db9f",
-                            Name = "Normal Kullanıcı",
+                            Id = "7d00b31a-7ce8-44c5-8438-fa0143b6eb07",
+                            ConcurrencyStamp = "ee5e7e9b-8d64-468a-bce5-4ea24fcec4af",
+                            Name = "User",
                             NormalizedName = "USER"
                         });
                 });

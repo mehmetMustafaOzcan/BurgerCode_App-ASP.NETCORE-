@@ -45,9 +45,9 @@
         <table class="table" id="t">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Product ID</th>
                     <th scope="col">Product Name</th>
                     <th scope="col">Quantity</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,60 +61,6 @@
 
 
 
-
-@* <script>
-        $(document).ready(function () {
-            // Ekleme işlemi yapılacak olan AJAX isteği
-            $("#submitbtn").click(function (event) {
-                event.preventDefault();
-
-                //  Ürün ekle isteği burada gerçekleştirilecek
-                $.ajax({
-                    url: "", // Post isteğinin yapıldığı URL'yi buraya yazın
-                    method: "POST",
-                    data: $("#myForm").serialize(),
-                    success: function (response) {
-                        console.log("İstek başarıyla gönderildi.");
-                        tabloyuGuncelle(); // Ekleme işlemi tamamlandıktan sonra tabloyu güncelle
-                    },
-                    error: function (xhr, status, error) {
-                        console.log("Bir hata oluştu. İstek gönderilemedi.");
-                    }
-                });
-            });
-
-            // Tabloyu güncelleme işlemini yapacak fonksiyon
-            function tabloyuGuncelle() {
-                // AJAX isteğiyle tablo verilerini getir
-                $.ajax({
-                    url: "/Admin/Menus/GetMenuDetails/@Model.MenuId", // Get isteğinin yapıldığı URL'yi buraya yazın
-                    method: "GET",
-                    success: function (response) {
-                        // Tabloya verileri yerleştirme
-                        var tableBody = $("#t tbody");
-                        tableBody.empty(); // Tablonun içeriğini temizle
-
-                        // Her bir veri öğesi için yeni bir tablo satırı oluştur
-                        response.forEach(function (item) {
-                            var newRow = $("<tr>");
-                            newRow.append($("<td>").text(item.productName));
-                            newRow.append($("<td>").text(item.quantity));
-                            tableBody.append(newRow);
-                        });
-                    },
-                    error: function (xhr, status, error) {
-                        console.log("Bir hata oluştu. Get isteği gerçekleştirilemedi.");
-                        console.log("Hata: " + error);
-                    }
-                });
-            }
-
-            // Sayfa yüklendiğinde tabloyu ilk kez doldur
-            tabloyuGuncelle();
-        });
-
-
-    </script>*@
 
 
 
@@ -187,7 +133,7 @@
 
                             var deleteButton = $("<button>")
                                 .addClass("btn btn-danger delete-btn")
-                                .text("Sil")
+                                .text("Delete")
                                 .attr("data-productid", item.productId);
 
                             newRow.append($("<td>").append(deleteButton));

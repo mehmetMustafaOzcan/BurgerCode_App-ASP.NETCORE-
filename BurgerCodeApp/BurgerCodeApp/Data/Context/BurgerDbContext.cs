@@ -167,17 +167,17 @@ namespace BurgerCodeApp.Data.Context
             modelBuilder.Entity<IdentityRole>().HasData(
                new IdentityRole()
                {
-                   Name = "Yönetici",
+                   Name = "Admin",
                    NormalizedName = "ADMIN",
                },
                new IdentityRole()
                {
-                   Name = "Editör",
+                   Name = "Editor",
                    NormalizedName = "EDITOR",
                },
                new IdentityRole()
                {
-                   Name = "Normal Kullanıcı",
+                   Name = "User",
                    NormalizedName = "USER",
                }
            );

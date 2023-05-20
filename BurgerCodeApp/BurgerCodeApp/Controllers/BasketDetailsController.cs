@@ -29,8 +29,8 @@ namespace BurgerCodeApp.Controllers
             _signinManager = signinManager;
         }
 
-        // GET: BasketDetails
-        public async Task<IActionResult> Basket()
+        // Route: Basket
+        public async Task<IActionResult> Basket()//userbasket
         {
             Basket basket = GetUserActiveBasket();
             decimal totalprice = 0;
@@ -50,7 +50,7 @@ namespace BurgerCodeApp.Controllers
             return View(basket);
         }
 
-        // GET: BasketDetails/Details/5
+        // Route: BasketDetails/Details/5
       
         public async Task<IActionResult> Details(int? id)//sepete eklenecek ürün gösterme
         {
@@ -119,32 +119,7 @@ namespace BurgerCodeApp.Controllers
             return basket;
         }
 
-        /*
-        // GET: BasketDetails/Create
-        public async Task<IActionResult> Create()
-        {
-            ViewData["BasketId"] = new SelectList(_context.Baskets, "BasketId", "BasketId");
-            ViewData["Extra"] = await _context.Extras.ToListAsync();
-            ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId");
-            return View();
-        }
        
-        // POST: BasketDetails/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BasketId,MenuId,Quantity,MenuSize")] BasketDetail basketDetail, List<string> selectedExtras)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(basketDetail);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["BasketId"] = new SelectList(_context.Baskets, "BasketId", "BasketId", basketDetail.BasketId);
-            ViewData["MenuId"] = new SelectList(_context.Menus, "MenuId", "MenuId", basketDetail.MenuId);
-            return View(basketDetail);
-        }
-         */
         // GET: BasketDetails/Edit/5
         public async Task<IActionResult> Edit(int? id)/**/
         {
@@ -173,8 +148,6 @@ namespace BurgerCodeApp.Controllers
         }
 
         // POST: BasketDetails/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, BasketVm basketvm)/**/
@@ -215,7 +188,7 @@ namespace BurgerCodeApp.Controllers
                 return Problem("Entity set 'BurgerDbContext.BasketDetails'  is null.");
             }
             var basketDetail = await _context.BasketDetails.FindAsync(id);
-            if (basketDetail != null)
+            if (basketDetail != null&& GetUserActiveBasket().BasketDetails.Contains(basketDetail))//sadece kendi basketini siler
             {
                 _context.BasketDetails.Remove(basketDetail);
             }
@@ -224,25 +197,7 @@ namespace BurgerCodeApp.Controllers
             return RedirectToAction(nameof(Basket));
         }
 
-       /* // POST: BasketDetails/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.BasketDetails == null)
-            {
-                return Problem("Entity set 'BurgerDbContext.BasketDetails'  is null.");
-            }
-            var basketDetail = await _context.BasketDetails.FindAsync(id);
-            if (basketDetail != null)
-            {
-                _context.BasketDetails.Remove(basketDetail);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Basket));
-        }
-       */
+      
         private bool BasketDetailExists(int id)
         {
             return (_context.BasketDetails?.Any(e => e.BasketId == id)).GetValueOrDefault();

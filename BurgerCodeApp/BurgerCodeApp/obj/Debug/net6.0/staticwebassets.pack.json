@@ -5037,8 +5037,24 @@
       "PackagePath": "staticwebassets\\img\\about-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero1.jpg",
-      "PackagePath": "staticwebassets\\img\\bg-hero1.jpg"
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\abouthamb (1).jpg",
+      "PackagePath": "staticwebassets\\img\\abouthamb (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\abouthamb (2).jpg",
+      "PackagePath": "staticwebassets\\img\\abouthamb (2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\abouthamb (3).jpg",
+      "PackagePath": "staticwebassets\\img\\abouthamb (3).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\abouthamb (4).jpg",
+      "PackagePath": "staticwebassets\\img\\abouthamb (4).jpg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-hero.jpg"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\bg-hero2.jpg",
@@ -5107,6 +5123,10 @@
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\notfound.jpg",
       "PackagePath": "staticwebassets\\img\\notfound.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\tabicon.ico",
+      "PackagePath": "staticwebassets\\img\\tabicon.ico"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\team-1.jpg",

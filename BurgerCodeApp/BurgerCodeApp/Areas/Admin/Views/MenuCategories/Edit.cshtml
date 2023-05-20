@@ -5,7 +5,9 @@
 }
 
 <h1>Edit</h1>
-
+<div class="text-end">
+    <a class="btn btn-ghost-danger" asp-action="Index"><i class="fas fa-times"></i></a>
+</div>
 <h4>MenuCategory</h4>
 <hr />
 <div class="row">
@@ -30,9 +32,6 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

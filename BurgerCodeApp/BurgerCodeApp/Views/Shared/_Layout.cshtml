@@ -10,7 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="~/img/favicon.ico" rel="icon">
+    <link href="~/img/tabicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="~/admin/css/fontawesome.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -56,21 +58,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a class="nav-item nav-link" asp-action="index" asp-controller="home" asp-area="">Home</a>
-                        <a href="#" class="nav-item nav-link">About</a>
-                        <a href="#" class="nav-item nav-link">Service</a>
-                        <a asp-area="" asp-controller="Menus" asp-action="index" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">Booking</a>
-                                <a href="#" class="dropdown-item">Our Team</a>
-                                <a href="#" class="dropdown-item">Testimonial</a>
-                            </div>
-
-                        </div>
-                        <a href="#" class="nav-item nav-link">Contact</a>
+                        <a class="nav-item nav-link" asp-action="index" asp-controller="home" asp-area=""><i class="fas fa-home fs-4 fa-fw"></i></a>
+                      
+                        <a asp-area="" asp-controller="Menus" asp-action="index" asp-route-filter="Menus" class="nav-item nav-link ">
+                            <svg b-8h5csqnmgg class="sidebar-brand-full pb-2" width="80" height="35" alt="CoreUI Logo">
+                                <use b-8h5csqnmgg class="" xlink:href="/admin/vendors/coreui/icons/svg/free.svg#cil-fastfood"></use>
+                            </svg>
+                        </a>
+                       
+                        <a class="nav-item nav-link me-2" asp-controller="Menus" asp-action="index" asp-route-filter="Burger"><i class="fas fa-hamburger fs-3 fa-fw"></i></a>
                         <partial name="_LoginPartial" />
+                        <a href="#" class="nav-item nav-link"><i class="fas fa-info fs-4 "></i></a>
                     </div>
                     
 
@@ -124,8 +122,6 @@
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
                         <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
                     </div>
                 </div>
@@ -134,11 +130,9 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            &copy; <a class="border-bottom" href="#">Burger Code</a>, All Right Reserved.
 
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

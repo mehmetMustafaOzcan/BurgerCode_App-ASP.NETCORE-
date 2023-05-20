@@ -17,8 +17,12 @@
 
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                        <input type="text" asp-for="UserName" class="form-control" />
-                                        <label class="form-label" asp-for="UserName">Your UserName</label>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" asp-for="UserName" class="form-control" />
+                                            <label class="form-label" asp-for="UserName">Your UserName</label>
+                                            <span asp-validation-for="UserName" class="text-danger ms-2"></span>
+
+                                        </div>
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center mb-4">
@@ -65,7 +69,7 @@
                             </div>
                             <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                <img src="https://img.freepik.com/free-photo/tasty-burger-isolated-white-background-fresh-hamburger-fastfood-with-beef-cheese_90220-1063.jpg?w=740&t=st=1684589563~exp=1684590163~hmac=1dcc0652e5a103712666b8f568e64c8655be0d42e3507a842e05759aa7a1f224"
                                      class="img-fluid" alt="Sample image">
 
                             </div>

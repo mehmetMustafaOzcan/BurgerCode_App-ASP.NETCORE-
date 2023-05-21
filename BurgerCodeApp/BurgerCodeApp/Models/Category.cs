@@ -10,7 +10,7 @@ namespace BurgerCodeApp.Models
             Products = new HashSet<Product>();
         }
 
-        public int CateogryId { get; set; }
+        public int CategoryId { get; set; }
         public string Name { get; set; } = null!;
         public string? Description { get; set; }
 

@@ -7,6 +7,7 @@ namespace BurgerCodeApp.Models
     {
         public int MenuId { get; set; }
         public string MenuName { get; set; }
+        public string Description { get; set; }
         public int Size { get; set; }
         public int Quantity { get; set; }
         public decimal MenuPrice { get; set; }

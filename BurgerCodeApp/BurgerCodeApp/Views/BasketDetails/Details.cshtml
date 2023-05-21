@@ -19,9 +19,9 @@
         </div>
         <div class="col-md-6 bg-white d-flex align-items-center">
             <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal"> Add to Chart</h5>
                 <h1 class="text-dark mb-4 ff-secondary ">@Model.MenuName</h1>
-                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                <small class="fst-italic">@Model.Description</small>
 
                 <form asp-action="details" method="post" id="myForm">
                     <div class="row g-3">
@@ -39,19 +39,19 @@
                                 <div class="form-check">
                                     <input class="form-check-input radio" type="radio" value="1" id="flexRadioDefault1" asp-for="Size" onchange="calculateTotal()" checked />
                                     <label class="form-check-label" for="flexRadioDefault1" asp-for="Size">
-                                        Küçük
+                                        Small
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input radio" type="radio" value="2" id="flexRadioDefault2" asp-for="Size" onchange="calculateTotal()" />
                                     <label class="form-check-label " for="flexRadioDefault2" asp-for="Size">
-                                        Orta
+                                        Middle
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input radio " type="radio" value="3" id="flexRadioDefault3" for="Size" asp-for="Size" onchange="calculateTotal()" />
                                     <label class="form-check-label" for="flexRadioDefault3">
-                                        Büyük
+                                        Big
                                     </label>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <label class="mb-0 mt-2 ff-secondary">
-                            Soslar
+                            Sauces
                         </label>
                         <div class="col-12 mt-0">
                             <div class="form-floating  alert alert-primary">
@@ -92,12 +92,12 @@
                             <button type="button" id="submitbtn" class="btn btn-primary w-100 py-3 rounded-pill rounded-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 Add to Chart
                             </button>
-                            @* <button class="btn btn-primary w-100 py-3 rounded-pill rounded-end" type="submit">Add to Chart</button>*@
+                           
                         </div>
                     </div>
 
                     @*Modal start*@
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header text-center">
@@ -111,8 +111,6 @@
                                         Go To
                                         <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Menus">Menus</a>
                                         <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Burger">Burgers</a>
-                                        
-
                                     </div>
                                     <a type="submit" class="btn btn-danger rounded-pill rounded-start " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
                                 </div>
@@ -129,6 +127,8 @@
 
 @section Scripts{
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js">
+    </script>*@
     <script>
         $(document).ready(function () {
             $("#submitbtn").click(function (event) {
@@ -151,15 +151,15 @@
     </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js">
-    </script>
+  
     <script>
 
         function calculateTotal() {
                     var adetInput = document.getElementById("Quantity");
-                    var adet = parseFloat(adetInput.value);
-                    var temelFiyat = parseFloat(@Model.MenuPrice); // Temel fiyat
+            var adet = parseFloat(adetInput.value);
+                var temelFiyat = parseFloat("@(Model.MenuPrice.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture))");
 
+          
                     var boyutInputs = document.getElementsByName("Size");
                     var seciliBoyut;
                     for (var i = 0; i < boyutInputs.length; i++) {
@@ -175,19 +175,19 @@
                     if (seciliBoyut == 1) {
                         temelFiyat += 0; // Küçük boyut
                     } else if (seciliBoyut == 2) {
-                        temelFiyat += parseFloat(@Model.MenuPrice) * (0.2); // Orta boyut fiyatı ekle
+                temelFiyat += Number(temelFiyat * (0.2)); // Orta boyut fiyatı ekle
                     } else if (seciliBoyut == 3) {
-                        temelFiyat += parseFloat(@Model.MenuPrice) * (0.3);// Büyük boyut fiyatı ekle
+                temelFiyat += Number(temelFiyat * (0.3));;// Büyük boyut fiyatı ekle
                     }
-
                     for (var j = 0; j < sosInputs.length; j++) {
-                        var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price"));
+                var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price").replace(",", "."));
                         temelFiyat += sauceprice; // Her seçilen sos için fiyat ekle
                     }
+            console.log(sauceprice)
 
                     var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet
                     var toplamFiyatLabel = document.getElementById("price");
-                    toplamFiyatLabel.textContent = toplamFiyat;
+            toplamFiyatLabel.textContent = toplamFiyat.toFixed(2);
                 }
 
     </script>

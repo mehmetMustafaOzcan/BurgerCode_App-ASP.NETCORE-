@@ -22,6 +22,109 @@ namespace BurgerCodeApp.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("BurgerCodeApp.Models.AppUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "e7bb73c8-a445-4c5c-9aa9-15cb7d84363c",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "7cfc3033-73ed-4de0-9e8b-9f661a9b4431",
+                            Email = "admin@example.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@EXAMPLE.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIbZCSMy8gEkX/KM0GNHcrz3xyAGR3PnIngYCXoTYgigDxYPD15GIWSK614ryhYgJQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "",
+                            TwoFactorEnabled = false,
+                            UserName = "admin"
+                        },
+                        new
+                        {
+                            Id = "182188f2-ba89-460f-9a1f-f3ad6a270c04",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "929ceba6-9263-4859-82a5-0447b75f9a89",
+                            Email = "john.doe@example.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "JOHN.DOE@EXAMPLE.COM",
+                            NormalizedUserName = "JOHN_DOE",
+                            PasswordHash = "AQAAAAEAACcQAAAAEP60nZykCyv3kFn3x+A0YDjvqj37I89giWk9Ki5d5A/O5C7Q/gJGctafO2yT2LBZCw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "",
+                            TwoFactorEnabled = false,
+                            UserName = "John_Doe"
+                        });
+                });
+
             modelBuilder.Entity("BurgerCodeApp.Models.Basket", b =>
                 {
                     b.Property<int>("BasketId")
@@ -48,6 +151,22 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasIndex(new[] { "AppUserId" }, "IX_Baskets_AppUserId");
 
                     b.ToTable("Baskets");
+
+                    b.HasData(
+                        new
+                        {
+                            BasketId = 1,
+                            AppUserId = "e7bb73c8-a445-4c5c-9aa9-15cb7d84363c",
+                            Stage = 0,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            BasketId = 2,
+                            AppUserId = "182188f2-ba89-460f-9a1f-f3ad6a270c04",
+                            Stage = 0,
+                            TotalPrice = 0m
+                        });
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.BasketDetail", b =>
@@ -82,11 +201,11 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("BurgerCodeApp.Models.Category", b =>
                 {
-                    b.Property<int>("CateogryId")
+                    b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CateogryId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
 
                     b.Property<string>("Description")
                         .HasMaxLength(50)
@@ -97,9 +216,41 @@ namespace BurgerCodeApp.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("CateogryId");
+                    b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            Description = "Delicious hamburgers",
+                            Name = "Hamburger"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            Description = "Mouth-watering cheeseburgers",
+                            Name = "Cheeseburger"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            Description = "Tasty chicken burgers",
+                            Name = "Chicken Burger"
+                        },
+                        new
+                        {
+                            CategoryId = 4,
+                            Description = "Refreshing soft drinks",
+                            Name = "Soft Drink"
+                        },
+                        new
+                        {
+                            CategoryId = 5,
+                            Description = "Crispy and golden French fries",
+                            Name = "French Fries"
+                        });
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.Extra", b =>
@@ -134,6 +285,88 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasKey("ExtraId");
 
                     b.ToTable("Extras");
+
+                    b.HasData(
+                        new
+                        {
+                            ExtraId = 1,
+                            Description = "Add extra cheese",
+                            Name = "Cheese",
+                            Price = 1.99m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 2,
+                            Description = "Add crispy bacon",
+                            Name = "Bacon",
+                            Price = 2.99m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 3,
+                            Description = "Add flavorful guacamole",
+                            Name = "Guacamole",
+                            Price = 1.99m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 4,
+                            Description = "Classic tomato ketchup",
+                            Name = "Ketchup",
+                            Price = 0.99m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 5,
+                            Description = "Tangy mustard sauce",
+                            Name = "Mustard",
+                            Price = 0.99m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 6,
+                            Description = "Creamy mayonnaise",
+                            Name = "Mayonnaise",
+                            Price = 0.99m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 7,
+                            Description = "Smoky barbecue sauce",
+                            Name = "BBQ Sauce",
+                            Price = 1.49m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 8,
+                            Description = "Creamy ranch dressing",
+                            Name = "Ranch Dressing",
+                            Price = 1.49m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 9,
+                            Description = "Spicy buffalo sauce",
+                            Name = "Buffalo Sauce",
+                            Price = 1.49m,
+                            SaleStatus = 0
+                        },
+                        new
+                        {
+                            ExtraId = 10,
+                            Description = "Flavorful garlic aioli sauce",
+                            Name = "Garlic Aioli",
+                            Price = 1.49m,
+                            SaleStatus = 0
+                        });
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.ExtraDetail", b =>
@@ -194,6 +427,140 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasIndex(new[] { "MenuCategoryId" }, "IX_Menus_MenuCategoryID");
 
                     b.ToTable("Menus");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuId = 1,
+                            Description = "Delicious classic burger with juicy beef patty, lettuce, tomato, and pickles.",
+                            MenuCategoryId = 2,
+                            Name = "Classic Burger",
+                            PicturePath = "/img/fordummy/classic_burger.png",
+                            Price = 8.99m,
+                            SaleStatus = 0,
+                            Stock = 50
+                        },
+                        new
+                        {
+                            MenuId = 2,
+                            Description = "Satisfying combo featuring a cheeseburger, crispy fries, and a refreshing cola.",
+                            MenuCategoryId = 1,
+                            Name = "Cheeseburger Combo",
+                            PicturePath = "/img/fordummy/cheeseburger_combo.png",
+                            Price = 12.99m,
+                            SaleStatus = 0,
+                            Stock = 30
+                        },
+                        new
+                        {
+                            MenuId = 3,
+                            Description = "Tasty chicken burger with grilled chicken breast, lettuce, and mayo.",
+                            MenuCategoryId = 2,
+                            Name = "Chicken Burger",
+                            PicturePath = "/img/fordummy/chicken_burger.png",
+                            Price = 9.99m,
+                            SaleStatus = 0,
+                            Stock = 40
+                        },
+                        new
+                        {
+                            MenuId = 4,
+                            Description = "Flavorful veggie burger made with fresh vegetables and special seasonings.",
+                            MenuCategoryId = 2,
+                            Name = "Veggie Burger",
+                            PicturePath = "/img/fordummy/veggie_burger.png",
+                            Price = 7.99m,
+                            SaleStatus = 0,
+                            Stock = 20
+                        },
+                        new
+                        {
+                            MenuId = 5,
+                            Description = "Crispy and golden french fries, perfect as a side or snack.",
+                            MenuCategoryId = 4,
+                            Name = "Fries",
+                            PicturePath = "/img/fordummy/fries.png",
+                            Price = 3.99m,
+                            SaleStatus = 0,
+                            Stock = 100
+                        },
+                        new
+                        {
+                            MenuId = 6,
+                            Description = "Refreshing cola to quench your thirst.",
+                            MenuCategoryId = 3,
+                            Name = "Cola",
+                            PicturePath = "/img/fordummy/cola.png",
+                            Price = 1.99m,
+                            SaleStatus = 0,
+                            Stock = 80
+                        },
+                        new
+                        {
+                            MenuId = 7,
+                            Description = "Mouthwatering double cheeseburger with two juicy beef patties and melted cheese.",
+                            MenuCategoryId = 1,
+                            Name = "Double Cheeseburger",
+                            PicturePath = "/img/fordummy/double_cheeseburger.png",
+                            Price = 10.99m,
+                            SaleStatus = 0,
+                            Stock = 25
+                        },
+                        new
+                        {
+                            MenuId = 8,
+                            Description = "Delicious fish burger with breaded fish fillet, lettuce, and tartar sauce.",
+                            MenuCategoryId = 2,
+                            Name = "Fish Burger",
+                            PicturePath = "/img/fordummy/fish_burger.png",
+                            Price = 8.99m,
+                            SaleStatus = 0,
+                            Stock = 35
+                        },
+                        new
+                        {
+                            MenuId = 9,
+                            Description = "Satisfying vegan burger made with plant-based patty, fresh veggies, and vegan mayo.",
+                            MenuCategoryId = 2,
+                            Name = "Vegan Burger",
+                            PicturePath = "/img/fordummy/vegan_burger.png",
+                            Price = 9.99m,
+                            SaleStatus = 0,
+                            Stock = 15
+                        },
+                        new
+                        {
+                            MenuId = 10,
+                            Description = "Crunchy and flavorful onion rings, perfect as a side or snack.",
+                            MenuCategoryId = 4,
+                            Name = "Onion Rings",
+                            PicturePath = "/img/fordummy/onion_rings.png",
+                            Price = 4.99m,
+                            SaleStatus = 0,
+                            Stock = 90
+                        },
+                        new
+                        {
+                            MenuId = 11,
+                            Description = "Creamy and delicious milkshake available in various flavors.",
+                            MenuCategoryId = 3,
+                            Name = "Milkshake",
+                            PicturePath = "/img/fordummy/milkshake.png",
+                            Price = 3.99m,
+                            SaleStatus = 0,
+                            Stock = 70
+                        },
+                        new
+                        {
+                            MenuId = 12,
+                            Description = "Tasty burger with BBQ sauce, caramelized onions, and melted cheese.",
+                            MenuCategoryId = 1,
+                            Name = "BBQ Burger",
+                            PicturePath = "/img/fordummy/bbq_burger.png",
+                            Price = 9.99m,
+                            SaleStatus = 0,
+                            Stock = 30
+                        });
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.MenuCategory", b =>
@@ -216,6 +583,32 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasKey("MenuCategoryId");
 
                     b.ToTable("MenuCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuCategoryId = 1,
+                            Description = "Combo Menus",
+                            Name = "Menu"
+                        },
+                        new
+                        {
+                            MenuCategoryId = 2,
+                            Description = "Delicious Burgers",
+                            Name = "Burger"
+                        },
+                        new
+                        {
+                            MenuCategoryId = 3,
+                            Description = "Refreshing Beverages",
+                            Name = "Drink"
+                        },
+                        new
+                        {
+                            MenuCategoryId = 4,
+                            Description = "Side Items",
+                            Name = "Side"
+                        });
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.MenuDetail", b =>
@@ -237,6 +630,57 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasIndex(new[] { "ProductId" }, "IX_MenuDetails_ProductId");
 
                     b.ToTable("MenuDetails");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuId = 1,
+                            ProductId = 1,
+                            Quantity = 1,
+                            UnitPrice = 8.99m
+                        },
+                        new
+                        {
+                            MenuId = 2,
+                            ProductId = 2,
+                            Quantity = 1,
+                            UnitPrice = 12.99m
+                        },
+                        new
+                        {
+                            MenuId = 2,
+                            ProductId = 3,
+                            Quantity = 1,
+                            UnitPrice = 3.99m
+                        },
+                        new
+                        {
+                            MenuId = 3,
+                            ProductId = 4,
+                            Quantity = 1,
+                            UnitPrice = 9.99m
+                        },
+                        new
+                        {
+                            MenuId = 4,
+                            ProductId = 5,
+                            Quantity = 1,
+                            UnitPrice = 7.99m
+                        },
+                        new
+                        {
+                            MenuId = 5,
+                            ProductId = 6,
+                            Quantity = 1,
+                            UnitPrice = 3.99m
+                        },
+                        new
+                        {
+                            MenuId = 6,
+                            ProductId = 7,
+                            Quantity = 1,
+                            UnitPrice = 1.99m
+                        });
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.Product", b =>
@@ -274,6 +718,158 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasIndex(new[] { "CategoryId" }, "IX_Products_CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            CategoryId = 1,
+                            Name = "Classic Burger",
+                            PicturePath = "/images/classic-burger.jpg",
+                            Price = 9.99m,
+                            SaleStatus = 0,
+                            Stock = 50
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            CategoryId = 1,
+                            Name = "BBQ Burger",
+                            PicturePath = "/images/bbq-burger.jpg",
+                            Price = 10.99m,
+                            SaleStatus = 0,
+                            Stock = 30
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            CategoryId = 1,
+                            Name = "Cheeseburger Deluxe",
+                            PicturePath = "/images/cheeseburger-deluxe.jpg",
+                            Price = 11.99m,
+                            SaleStatus = 0,
+                            Stock = 20
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            CategoryId = 2,
+                            Name = "Double Cheeseburger",
+                            PicturePath = "/images/double-cheeseburger.jpg",
+                            Price = 12.99m,
+                            SaleStatus = 0,
+                            Stock = 15
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            CategoryId = 2,
+                            Name = "Bacon Cheeseburger",
+                            PicturePath = "/images/bacon-cheeseburger.jpg",
+                            Price = 11.99m,
+                            SaleStatus = 0,
+                            Stock = 25
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            CategoryId = 2,
+                            Name = "Mushroom Swiss Burger",
+                            PicturePath = "/images/mushroom-swiss-burger.jpg",
+                            Price = 11.99m,
+                            SaleStatus = 0,
+                            Stock = 18
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            CategoryId = 3,
+                            Name = "Crispy Chicken Burger",
+                            PicturePath = "/images/crispy-chicken-burger.jpg",
+                            Price = 9.99m,
+                            SaleStatus = 0,
+                            Stock = 40
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 3,
+                            Name = "Spicy Chicken Burger",
+                            PicturePath = "/images/spicy-chicken-burger.jpg",
+                            Price = 10.99m,
+                            SaleStatus = 0,
+                            Stock = 35
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            CategoryId = 3,
+                            Name = "Grilled Chicken Burger",
+                            PicturePath = "/images/grilled-chicken-burger.jpg",
+                            Price = 10.99m,
+                            SaleStatus = 0,
+                            Stock = 30
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            CategoryId = 4,
+                            Name = "Coca-Cola",
+                            PicturePath = "/images/coca-cola.jpg",
+                            Price = 2.99m,
+                            SaleStatus = 0,
+                            Stock = 100
+                        },
+                        new
+                        {
+                            ProductId = 11,
+                            CategoryId = 4,
+                            Name = "Sprite",
+                            PicturePath = "/images/sprite.jpg",
+                            Price = 2.99m,
+                            SaleStatus = 0,
+                            Stock = 90
+                        },
+                        new
+                        {
+                            ProductId = 12,
+                            CategoryId = 4,
+                            Name = "Fanta",
+                            PicturePath = "/images/fanta.jpg",
+                            Price = 2.99m,
+                            SaleStatus = 0,
+                            Stock = 80
+                        },
+                        new
+                        {
+                            ProductId = 13,
+                            CategoryId = 5,
+                            Name = "Regular French Fries",
+                            PicturePath = "/images/regular-french-fries.jpg",
+                            Price = 3.99m,
+                            SaleStatus = 0,
+                            Stock = 60
+                        },
+                        new
+                        {
+                            ProductId = 14,
+                            CategoryId = 5,
+                            Name = "Curly French Fries",
+                            PicturePath = "/images/curly-french-fries.jpg",
+                            Price = 4.99m,
+                            SaleStatus = 0,
+                            Stock = 50
+                        },
+                        new
+                        {
+                            ProductId = 15,
+                            CategoryId = 5,
+                            Name = "Sweet Potato Fries",
+                            PicturePath = "/images/sweet-potato-fries.jpg",
+                            Price = 4.99m,
+                            SaleStatus = 0,
+                            Stock = 45
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -305,22 +901,15 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b2a3773d-2392-4df1-933f-9ecc63ad2c71",
-                            ConcurrencyStamp = "50caed70-4891-4de6-9ee5-3f84d13c986f",
+                            Id = "b156b9b6-d3ad-4d06-a052-b1bded7126cf",
+                            ConcurrencyStamp = "a2c0975b-b0aa-40e4-98c4-b646f47d575e",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "dec634ab-9129-4bba-959e-5180c05cf941",
-                            ConcurrencyStamp = "be8f0706-63e6-446b-836d-f40f023deaa8",
-                            Name = "Editor",
-                            NormalizedName = "EDITOR"
-                        },
-                        new
-                        {
-                            Id = "7d00b31a-7ce8-44c5-8438-fa0143b6eb07",
-                            ConcurrencyStamp = "ee5e7e9b-8d64-468a-bce5-4ea24fcec4af",
+                            Id = "837e66c1-cff7-4d32-b8b1-778c618547c8",
+                            ConcurrencyStamp = "b5e585fb-0ca1-48b4-9b8a-f006ba5c6a51",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -349,77 +938,6 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -482,6 +1000,18 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "e7bb73c8-a445-4c5c-9aa9-15cb7d84363c",
+                            RoleId = "b156b9b6-d3ad-4d06-a052-b1bded7126cf"
+                        },
+                        new
+                        {
+                            UserId = "182188f2-ba89-460f-9a1f-f3ad6a270c04",
+                            RoleId = "837e66c1-cff7-4d32-b8b1-778c618547c8"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -501,17 +1031,6 @@ namespace BurgerCodeApp.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("BurgerCodeApp.Models.AppUser", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.HasIndex("Email")
-                        .IsUnique()
-                        .HasFilter("[Email] IS NOT NULL");
-
-                    b.HasDiscriminator().HasValue("AppUser");
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.Basket", b =>
@@ -615,7 +1134,7 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("BurgerCodeApp.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -624,7 +1143,7 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("BurgerCodeApp.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -639,7 +1158,7 @@ namespace BurgerCodeApp.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("BurgerCodeApp.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -648,11 +1167,16 @@ namespace BurgerCodeApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("BurgerCodeApp.Models.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("BurgerCodeApp.Models.AppUser", b =>
+                {
+                    b.Navigation("Baskets");
                 });
 
             modelBuilder.Entity("BurgerCodeApp.Models.Basket", b =>
@@ -690,11 +1214,6 @@ namespace BurgerCodeApp.Data.Migrations
             modelBuilder.Entity("BurgerCodeApp.Models.Product", b =>
                 {
                     b.Navigation("MenuDetails");
-                });
-
-            modelBuilder.Entity("BurgerCodeApp.Models.AppUser", b =>
-                {
-                    b.Navigation("Baskets");
                 });
 #pragma warning restore 612, 618
         }

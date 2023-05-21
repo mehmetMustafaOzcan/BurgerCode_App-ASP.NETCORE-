@@ -50,11 +50,11 @@
                                                     <div style="width: 90px;">
                                                         <h5 class="mb-0">
                                                             $@(
-                                                               item.Quantity * (item.Menu.Price * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1))+(int)item.ExtraDetails.Sum(x => x.Extra.Price)))
+                                                               Math.Round(item.Quantity * (item.Menu.Price * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)) + (decimal)item.ExtraDetails.Sum(x => x.Extra.Price)) ,2))
                                                                
                                                         </h5>
                                                     </div>
-                                                    <a type="" class="btn btn-ghost-danger " onclick="showConfirmation('@item.BasketDetailId')"><i class="fas fa-trash-alt text-warning"></i></a>
+                                                    <a  class="btn btn-ghost-danger " onclick="showConfirmation('@item.BasketDetailId')"><i class="fas fa-trash-alt text-warning"></i></a>
                                                 </div>
                                             </div>
                                         </div>

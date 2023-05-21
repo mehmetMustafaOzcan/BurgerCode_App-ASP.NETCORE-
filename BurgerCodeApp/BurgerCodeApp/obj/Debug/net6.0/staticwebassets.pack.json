@@ -5065,6 +5065,30 @@
       "PackagePath": "staticwebassets\\img\\circle.png"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\cheeseburger_combo.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\cheeseburger_combo.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\chicken_burger.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\chicken_burger.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\classic_burger.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\classic_burger.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\cola.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\cola.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\fries.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\fries.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\veggie_burger.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\veggie_burger.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\hamb.png",
       "PackagePath": "staticwebassets\\img\\hamb.png"
     },

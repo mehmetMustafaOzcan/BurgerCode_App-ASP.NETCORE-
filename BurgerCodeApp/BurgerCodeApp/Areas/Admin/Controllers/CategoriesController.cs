@@ -40,7 +40,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             }
 
             var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CateogryId == id);
+                .FirstOrDefaultAsync(m => m.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
@@ -92,7 +92,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CateogryId,Name,Description")] Category category)
         {
-            if (id != category.CateogryId)
+            if (id != category.CategoryId)
             {
                 return NotFound();
             }
@@ -106,7 +106,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CateogryId))
+                    if (!CategoryExists(category.CategoryId))
                     {
                         return NotFound();
                     }
@@ -129,7 +129,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
             }
 
             var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CateogryId == id);
+                .FirstOrDefaultAsync(m => m.CategoryId == id);
             if (category == null)
             {
                 return NotFound();
@@ -159,7 +159,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
 
         private bool CategoryExists(int id)
         {
-          return (_context.Categories?.Any(e => e.CateogryId == id)).GetValueOrDefault();
+          return (_context.Categories?.Any(e => e.CategoryId == id)).GetValueOrDefault();
         }
     }
 }

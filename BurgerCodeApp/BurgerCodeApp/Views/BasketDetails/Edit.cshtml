@@ -21,7 +21,7 @@
             <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                 <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                 <h1 class="text-dark mb-4 ff-secondary ">@Model.MenuName</h1>
-                <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                <small class="fst-italic">@*Ipsum ipsum clita erat amet dolor justo diam*@</small>
 
                 <form asp-action="Edit" method="post">
                     <div class="row g-3">
@@ -31,8 +31,8 @@
                         </div>
                         <div class="col-md-6 text-end">
                             <div class="form-floating">
-                                <h5 class="text-primary "><span>$</span><span id="price">@((int)Model.TotalPrice)</span></h5>
-                                <input asp-for="BasketDetailId" hidden/>
+                                <h5 class="text-primary "><span>$</span><span id="price">@(Math.Round(Model.TotalPrice,2))</span></h5>
+                                <input asp-for="BasketDetailId" hidden />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -42,7 +42,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input radio" type="radio" value="@item" id="flexRadioDefault @item" for="Size" name="size" onchange="calculateTotal()" @(Model.Size == item ? "checked" : "") />
                                         <label class="form-check-label" for="flexRadioDefault @item">
-                                            @item
+                                            @(item==1?"Small":(item==2?"Middle":"Big"))
                                         </label>
                                     </div>
                                 }
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <label class="mb-0 mt-2 ff-secondary">
-                            Soslar
+                            Sauces
                         </label>
                         <div class="col-12 mt-0">
                             <div class="form-floating  alert alert-primary rounded-pill rounded-end">
@@ -97,8 +97,8 @@
         function calculateTotal() {
             var adetInput = document.getElementById("Quantity");
             var adet = parseFloat(adetInput.value);
-             var temelFiyat = parseFloat(@Model.MenüPrice); // Temel fiyat
-          
+            var temelFiyat = parseFloat("@(Model.MenüPrice.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture))"); // Temel fiyat
+
             var boyutInputs = document.getElementsByName("size");
             var seciliBoyut;
             for (var i = 0; i < boyutInputs.length; i++) {
@@ -111,23 +111,25 @@
             var sosInputs = document.querySelectorAll('input[type="checkbox"]:checked');
 
 
-            if (seciliBoyut == 1) {
-                temelFiyat +=0; // Küçük boyut 
-            } else if (seciliBoyut == 2) {
-                temelFiyat += parseFloat(@Model.MenüPrice)*(0.2); // Orta boyut fiyatı ekle
-            } else if (seciliBoyut == 3) {
-                temelFiyat += parseFloat(@Model.MenüPrice) * (0.3);// Büyük boyut fiyatı ekle
-            }
 
+            if (seciliBoyut == 1) {
+                temelFiyat += 0; // Küçük boyut
+            } else if (seciliBoyut == 2) {
+                temelFiyat += Number(temelFiyat * (0.2)); // Orta boyut fiyatı ekle
+            } else if (seciliBoyut == 3) {
+                temelFiyat += Number(temelFiyat * (0.3));;// Büyük boyut fiyatı ekle
+            }
             for (var j = 0; j < sosInputs.length; j++) {
-                var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price"));
+                var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price").replace(",", "."));
                 temelFiyat += sauceprice; // Her seçilen sos için fiyat ekle
             }
+            console.log(sauceprice)
 
             var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet
             var toplamFiyatLabel = document.getElementById("price");
-            toplamFiyatLabel.textContent = toplamFiyat;
+            toplamFiyatLabel.textContent = toplamFiyat.toFixed(2);
         }
+
 
     </script>
 }

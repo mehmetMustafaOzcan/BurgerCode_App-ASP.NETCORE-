@@ -34,12 +34,13 @@ namespace BurgerCodeApp.Controllers
         {
             Basket basket = GetUserActiveBasket();
             decimal totalprice = 0;
+            
             foreach (var item in basket.BasketDetails)
             {
-                totalprice += (decimal)(item.Quantity * item.Menu.Price * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)));
+                totalprice += (item.Quantity * item.Menu.Price * ((item.MenuSize > 1 ? 1 + (decimal)item.MenuSize / 10 : 1)));
                 foreach (var extra in item.ExtraDetails)
                 {
-                    totalprice += (decimal)extra.Extra.Price* item.Quantity;
+                    totalprice += extra.Extra.Price* item.Quantity;
                 }
 
             }
@@ -60,15 +61,15 @@ namespace BurgerCodeApp.Controllers
             }
 
             ViewBag.Extras = _context.Extras;
-            var Menü = await _context.Menus
+            var Menu = await _context.Menus
                 .Include(b => b.MenuDetails)
                 .Include(b => b.BasketDetails)
                 .FirstOrDefaultAsync(m => m.MenuId == id);
-            if (Menü == null)
+            if (Menu == null)
             {
                 return NotFound();
             }
-            BasketVm vm = new BasketVm() { MenuName = Menü.Name, MenuId = Menü.MenuId ,PicturePath=Menü.PicturePath,MenuPrice=(decimal)Menü.Price};
+            BasketVm vm = new BasketVm() { MenuName = Menu.Name, MenuId = Menu.MenuId ,PicturePath=Menu.PicturePath,MenuPrice=Menu.Price,Description=Menu.Description};
 
             return View(vm);
         }

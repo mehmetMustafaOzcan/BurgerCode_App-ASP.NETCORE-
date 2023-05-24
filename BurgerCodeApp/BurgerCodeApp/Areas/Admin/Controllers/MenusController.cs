@@ -146,7 +146,7 @@ namespace BurgerCodeApp.Areas.Admin.Controllers
 
         }
         public async Task<IActionResult> DeleteProduct(int productId,int menuId )
-        {
+        {/*ajax için*/
             if (productId!=0&&menuId!=0)
             {
                 var md = await _context.MenuDetails.Where(x => x.MenuId == menuId && x.ProductId == productId).FirstOrDefaultAsync();

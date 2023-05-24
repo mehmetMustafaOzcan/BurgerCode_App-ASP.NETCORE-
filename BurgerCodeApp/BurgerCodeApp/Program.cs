@@ -15,7 +15,7 @@ builder.Services.AddDbContext<BurgerDbContext>(options =>
 builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<BurgerDbContext>().AddDefaultTokenProviders().AddSignInManager<SignInManager<AppUser>>();
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.Password.RequiredLength = 3;
+    options.Password.RequiredLength = 5;
     options.Password.RequireDigit = false;
     options.Password.RequireLowercase = false;
     options.Password.RequireUppercase = false;

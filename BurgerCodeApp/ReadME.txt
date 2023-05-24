@@ -1,0 +1,5 @@
+-Seed Data Eklemesi yapılmıştır
+- "update-database" yapmanız yeterlidir.
+-2 adet kullanıcı eklemesi de yapılmıştır. birisi admin birisi normal kullanıcı
+-admin email ve şifre:  Email = "admin@example.com", Password= @dmiN!
+-User email ve şifre:  Email = "john.doe@example.com",Password=P@ssword!

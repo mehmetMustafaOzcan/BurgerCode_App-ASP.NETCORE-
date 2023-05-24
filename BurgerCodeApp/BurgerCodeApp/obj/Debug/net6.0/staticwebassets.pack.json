@@ -9,24 +9,12 @@
       "PackagePath": "staticwebassets\\Uploads\\bg-hero.webp"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\circle.png",
+      "PackagePath": "staticwebassets\\Uploads\\circle.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\defaulthamb.png",
       "PackagePath": "staticwebassets\\Uploads\\defaulthamb.png"
-    },
-    {
-      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo-.png",
-      "PackagePath": "staticwebassets\\Uploads\\logo-.png"
-    },
-    {
-      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\logo.png",
-      "PackagePath": "staticwebassets\\Uploads\\logo.png"
-    },
-    {
-      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\preview.jpg",
-      "PackagePath": "staticwebassets\\Uploads\\preview.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\Uploads\\wepik-export-202305161009467BhH.png",
-      "PackagePath": "staticwebassets\\Uploads\\wepik-export-202305161009467BhH.png"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\admin\\assets\\brand\\coreui.svg",
@@ -5111,6 +5099,10 @@
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\img\\logo1.png"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\menu-1.jpg",

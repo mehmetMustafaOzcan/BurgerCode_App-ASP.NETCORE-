@@ -63,7 +63,7 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
                 {
                     Basket basket = new();
 
-                   // await _userManager.AddToRoleAsync(appUser ,"ADMIN");
+                   // await _userManager.AddToRoleAsync(appUser ,"ADMIN");---Admin eklerken açılabilir
                     /*
                     var token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
 
@@ -110,7 +110,11 @@ namespace BurgerCodeApp.Areas.Identity.Controllers
 
                     if (result.Succeeded)
                     {
-
+                        var roles = await _userManager.GetRolesAsync(user);
+                        if (roles.Contains("Admin"))
+                        {
+                            return RedirectToAction("Index", "Reports", new { area = "Admin" });
+                        }
                         return RedirectToAction("Index", "home", new { area = "" });
                     }
                     else

@@ -24,10 +24,11 @@
        
        
         <button type="submit" class="btn btn-primary">Login</button>
+        <div class="text-danger">
+            @Html.ValidationMessage("LoginError")
+        </div>
     </form>
 </div>
-<div class="text-danger m-5">
-    @Html.ValidationMessage("LoginError")
-</div>
+
 
 

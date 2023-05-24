@@ -97,38 +97,39 @@
                     </div>
 
                     @*Modal start*@
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center">
-                                    <h1 class="modal-title fs-5 ff-secondary" id="staticBackdropLabel">"Great! The product has been added to your cart!</h1>
-                                </div>
-                                <div class="modal-body text-center">
-                                    Product Added to Cart!
-                                </div>
-                                <div class="modal-footer d-flex justify-content-between">
-                                    <div>
-                                        Go To
-                                        <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Menus">Menus</a>
-                                        <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Burger">Burgers</a>
-                                    </div>
-                                    <a type="submit" class="btn btn-danger rounded-pill rounded-start " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-
+@*Modal start*@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5 ff-secondary" id="staticBackdropLabel">"Great! The product has been added to your cart!</h1>
+            </div>
+            <div class="modal-body text-center">
+                Product Added to Cart!
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div>
+                    Go To
+                    <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Menus">Menus</a>
+                    <a class="btn btn-primary rounded-pill " asp-controller="Menus" asp-action="index" asp-route-filter="Burger">Burgers</a>
+                </div>
+                <a type="submit" class="btn btn-danger rounded-pill rounded-start " asp-controller="basketdetails" asp-action="basket">Go To Basket</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts{
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js">
-    </script>*@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js">
+    </script>
     <script>
         $(document).ready(function () {
             $("#submitbtn").click(function (event) {
@@ -183,7 +184,6 @@
                 var sauceprice = parseFloat(sosInputs[j].getAttribute("data-price").replace(",", "."));
                         temelFiyat += sauceprice; // Her seçilen sos için fiyat ekle
                     }
-            console.log(sauceprice)
 
                     var toplamFiyat = temelFiyat * adet; // Başlangıçta temel fiyat * adet
                     var toplamFiyatLabel = document.getElementById("price");

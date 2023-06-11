@@ -3897,6 +3897,55 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "BurgerCodeApp.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BurgerCodeApp.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BurgerCodeApp.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BurgerCodeApp.Application.dll": {}
+        }
+      },
+      "BurgerCodeApp.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BurgerCodeApp.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BurgerCodeApp.Domain.dll": {}
+        }
+      },
+      "BurgerCodeApp.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BurgerCodeApp.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BurgerCodeApp.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BurgerCodeApp.Infrastructure.dll": {}
+        }
+      },
+      "BurgerCodeApp.Persistance/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BurgerCodeApp.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BurgerCodeApp.Persistance.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BurgerCodeApp.Persistance.dll": {}
+        }
       }
     }
   },
@@ -10812,10 +10861,33 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "BurgerCodeApp.Application/1.0.0": {
+      "type": "project",
+      "path": "../BurgerCodeApp.Application/BurgerCodeApp.Application.csproj",
+      "msbuildProject": "../BurgerCodeApp.Application/BurgerCodeApp.Application.csproj"
+    },
+    "BurgerCodeApp.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BurgerCodeApp.Domain/BurgerCodeApp.Domain.csproj",
+      "msbuildProject": "../BurgerCodeApp.Domain/BurgerCodeApp.Domain.csproj"
+    },
+    "BurgerCodeApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../BurgerCodeApp.Infrastructure/BurgerCodeApp.Infrastructure.csproj",
+      "msbuildProject": "../BurgerCodeApp.Infrastructure/BurgerCodeApp.Infrastructure.csproj"
+    },
+    "BurgerCodeApp.Persistance/1.0.0": {
+      "type": "project",
+      "path": "../BurgerCodeApp.Persistance/BurgerCodeApp.Persistance.csproj",
+      "msbuildProject": "../BurgerCodeApp.Persistance/BurgerCodeApp.Persistance.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BurgerCodeApp.Application >= 1.0.0",
+      "BurgerCodeApp.Infrastructure >= 1.0.0",
+      "BurgerCodeApp.Persistance >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.14",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.14",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.14",
@@ -10851,7 +10923,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp.Application\\BurgerCodeApp.Application.csproj": {
+              "projectPath": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp.Application\\BurgerCodeApp.Application.csproj"
+            },
+            "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp.Infrastructure\\BurgerCodeApp.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp.Infrastructure\\BurgerCodeApp.Infrastructure.csproj"
+            },
+            "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp.Persistance\\BurgerCodeApp.Persistance.csproj": {
+              "projectPath": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp.Persistance\\BurgerCodeApp.Persistance.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

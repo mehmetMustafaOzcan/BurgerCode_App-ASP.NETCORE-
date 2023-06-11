@@ -71,6 +71,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BurgerCodeApp.Application\BurgerCodeApp.Application.csproj" />
+    <ProjectReference Include="..\BurgerCodeApp.Infrastructure\BurgerCodeApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\BurgerCodeApp.Persistance\BurgerCodeApp.Persistance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Areas\Admin\Pages\_ViewStart.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

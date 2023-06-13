@@ -1,0 +1,15 @@
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\bin\Debug\net6.0\BurgerCodeApp.Application.deps.json
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\bin\Debug\net6.0\BurgerCodeApp.Application.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\bin\Debug\net6.0\BurgerCodeApp.Application.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\bin\Debug\net6.0\BurgerCodeApp.Domain.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\bin\Debug\net6.0\BurgerCodeApp.Domain.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.csproj.AssemblyReference.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.AssemblyInfoInputs.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.AssemblyInfo.cs
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.csproj.CopyComplete
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\refint\BurgerCodeApp.Application.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\BurgerCodeApp.Application.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Application\obj\Debug\net6.0\ref\BurgerCodeApp.Application.dll

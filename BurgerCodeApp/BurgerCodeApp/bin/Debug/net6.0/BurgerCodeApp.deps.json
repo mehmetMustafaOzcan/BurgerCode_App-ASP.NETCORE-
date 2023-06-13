@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "BurgerCodeApp/1.0.0": {
         "dependencies": {
+          "BurgerCodeApp.Application": "1.0.0",
+          "BurgerCodeApp.Infrastructure": "1.0.0",
+          "BurgerCodeApp.Persistance": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.14",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.14",
           "Microsoft.AspNetCore.Identity.UI": "6.0.14",
@@ -2539,6 +2542,35 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "BurgerCodeApp.Application/1.0.0": {
+        "dependencies": {
+          "BurgerCodeApp.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BurgerCodeApp.Application.dll": {}
+        }
+      },
+      "BurgerCodeApp.Domain/1.0.0": {
+        "runtime": {
+          "BurgerCodeApp.Domain.dll": {}
+        }
+      },
+      "BurgerCodeApp.Infrastructure/1.0.0": {
+        "dependencies": {
+          "BurgerCodeApp.Application": "1.0.0"
+        },
+        "runtime": {
+          "BurgerCodeApp.Infrastructure.dll": {}
+        }
+      },
+      "BurgerCodeApp.Persistance/1.0.0": {
+        "dependencies": {
+          "BurgerCodeApp.Application": "1.0.0"
+        },
+        "runtime": {
+          "BurgerCodeApp.Persistance.dll": {}
+        }
       }
     }
   },
@@ -3870,6 +3902,26 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "BurgerCodeApp.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BurgerCodeApp.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BurgerCodeApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BurgerCodeApp.Persistance/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -29,7 +29,7 @@ namespace BurgerCodeApp.Controllers
             _signinManager = signinManager;
         }
 
-        // Route: Basket
+        // Route: /Basket
         public async Task<IActionResult> Basket()//userbasket
         {
             Basket basket = GetUserActiveBasket();

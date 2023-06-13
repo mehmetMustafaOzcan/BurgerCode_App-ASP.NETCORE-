@@ -1,0 +1,17 @@
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Persistance.deps.json
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Persistance.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Persistance.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Application.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Domain.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Application.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\bin\Debug\net6.0\BurgerCodeApp.Domain.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.csproj.AssemblyReference.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.AssemblyInfoInputs.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.AssemblyInfo.cs
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.csproj.CoreCompileInputs.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.csproj.CopyComplete
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\refint\BurgerCodeApp.Persistance.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\BurgerCodeApp.Persistance.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp.Persistance\obj\Debug\net6.0\ref\BurgerCodeApp.Persistance.dll

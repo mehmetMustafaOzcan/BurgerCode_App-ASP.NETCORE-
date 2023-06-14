@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerCodeApp", "BurgerCodeApp\BurgerCodeApp.csproj", "{693354D9-12E0-47EA-B835-026A0E1C081C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerCodeApp", "BurgerCodeApp\BurgerCodeApp.csproj", "{693354D9-12E0-47EA-B835-026A0E1C081C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerCodeApp.Domain", "Core\BurgerCodeApp.Domain\BurgerCodeApp.Domain.csproj", "{C295D345-7E65-47F9-A790-501F240BCF18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5853BFF7-03B6-4F80-B813-E38D3E99CC94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{693354D9-12E0-47EA-B835-026A0E1C081C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{693354D9-12E0-47EA-B835-026A0E1C081C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{693354D9-12E0-47EA-B835-026A0E1C081C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C295D345-7E65-47F9-A790-501F240BCF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C295D345-7E65-47F9-A790-501F240BCF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C295D345-7E65-47F9-A790-501F240BCF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C295D345-7E65-47F9-A790-501F240BCF18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C295D345-7E65-47F9-A790-501F240BCF18} = {5853BFF7-03B6-4F80-B813-E38D3E99CC94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C09B7C3-FB3A-40CD-A60B-53455FF0DD0B}

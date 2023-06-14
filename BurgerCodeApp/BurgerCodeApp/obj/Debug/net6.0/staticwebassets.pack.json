@@ -5069,8 +5069,28 @@
       "PackagePath": "staticwebassets\\img\\fordummy\\cola.png"
     },
     {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\double_cheeseburger.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\double_cheeseburger.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\fish_burger.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\fish_burger.png"
+    },
+    {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\fries.png",
       "PackagePath": "staticwebassets\\img\\fordummy\\fries.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\milkshake.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\milkshake.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\onion_rings.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\onion_rings.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\vegan_burger.png",
+      "PackagePath": "staticwebassets\\img\\fordummy\\vegan_burger.png"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\fordummy\\veggie_burger.png",
@@ -5091,6 +5111,10 @@
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\hamb4.png",
       "PackagePath": "staticwebassets\\img\\hamb4.png"
+    },
+    {
+      "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\hamb5.png",
+      "PackagePath": "staticwebassets\\img\\hamb5.png"
     },
     {
       "Id": "C:\\Users\\ÖZCAN\\Documents\\GitHub\\BurgerCode_App-ASP.NETCORE-\\BurgerCodeApp\\BurgerCodeApp\\wwwroot\\img\\hero.png",

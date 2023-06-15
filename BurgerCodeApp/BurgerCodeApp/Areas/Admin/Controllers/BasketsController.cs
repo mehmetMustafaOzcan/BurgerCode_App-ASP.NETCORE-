@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BurgerCodeApp.Models;
-using BurgerCodeApp.Models.Enums;
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Domain.Entities;
+using BurgerCodeApp.Persistence.Context;
 using Microsoft.AspNetCore.Authorization;
+using BurgerCodeApp.Domain.Entities.Enums;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {

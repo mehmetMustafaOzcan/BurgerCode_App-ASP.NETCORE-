@@ -9,8 +9,9 @@ using BurgerCodeApp.Models;
 using BurgerCodeApp.Areas.Admin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.CodeAnalysis;
-using BurgerCodeApp.Models.Enums;
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities;
+using BurgerCodeApp.Domain.Entities.Enums;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {

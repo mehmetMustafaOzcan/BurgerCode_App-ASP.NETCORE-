@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BurgerCodeApp.Models;
-using BurgerCodeApp.Data.Context;
-using BurgerCodeApp.Models.Enums;
+using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities.Enums;
 
 namespace BurgerCodeApp.Controllers
 {

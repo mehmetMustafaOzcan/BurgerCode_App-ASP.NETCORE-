@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,8 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.14" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.14" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.15">
@@ -68,6 +67,12 @@
     <Folder Include="Areas\Controller\" />
     <Folder Include="Areas\Identity\Data\" />
     <Folder Include="Areas\Identity\Views\Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\BurgerCodeApp.Application\BurgerCodeApp.Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\BurgerCodeApp.Infrastructure\BurgerCodeApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\Infrastructure\BurgerCodeApp.Persistence\BurgerCodeApp.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

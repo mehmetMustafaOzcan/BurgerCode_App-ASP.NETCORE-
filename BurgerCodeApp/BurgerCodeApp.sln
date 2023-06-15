@@ -5,9 +5,19 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerCodeApp", "BurgerCodeApp\BurgerCodeApp.csproj", "{693354D9-12E0-47EA-B835-026A0E1C081C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerCodeApp.Domain", "Core\BurgerCodeApp.Domain\BurgerCodeApp.Domain.csproj", "{C295D345-7E65-47F9-A790-501F240BCF18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurgerCodeApp.Domain", "Core\BurgerCodeApp.Domain\BurgerCodeApp.Domain.csproj", "{C295D345-7E65-47F9-A790-501F240BCF18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5853BFF7-03B6-4F80-B813-E38D3E99CC94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerCodeApp.Application", "Core\BurgerCodeApp.Application\BurgerCodeApp.Application.csproj", "{CBFF59B1-E982-46FD-9B54-73073CCB13E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8B636227-5064-482A-B5EA-6D601900FF2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerCodeApp.Infrastructure", "Infrastructure\BurgerCodeApp.Infrastructure\BurgerCodeApp.Infrastructure.csproj", "{8CCE3CF5-D75B-452A-AB5F-2E17D13EC1F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerCodeApp.Persistence", "Infrastructure\BurgerCodeApp.Persistence\BurgerCodeApp.Persistence.csproj", "{252DF3B8-A864-47CA-B784-04A7E3657EA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{81EDA1C2-D1AF-4AB2-8836-9E6F1D8458B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +33,28 @@ Global
 		{C295D345-7E65-47F9-A790-501F240BCF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C295D345-7E65-47F9-A790-501F240BCF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C295D345-7E65-47F9-A790-501F240BCF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBFF59B1-E982-46FD-9B54-73073CCB13E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBFF59B1-E982-46FD-9B54-73073CCB13E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBFF59B1-E982-46FD-9B54-73073CCB13E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBFF59B1-E982-46FD-9B54-73073CCB13E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCE3CF5-D75B-452A-AB5F-2E17D13EC1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCE3CF5-D75B-452A-AB5F-2E17D13EC1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCE3CF5-D75B-452A-AB5F-2E17D13EC1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCE3CF5-D75B-452A-AB5F-2E17D13EC1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252DF3B8-A864-47CA-B784-04A7E3657EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252DF3B8-A864-47CA-B784-04A7E3657EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252DF3B8-A864-47CA-B784-04A7E3657EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252DF3B8-A864-47CA-B784-04A7E3657EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{693354D9-12E0-47EA-B835-026A0E1C081C} = {81EDA1C2-D1AF-4AB2-8836-9E6F1D8458B1}
 		{C295D345-7E65-47F9-A790-501F240BCF18} = {5853BFF7-03B6-4F80-B813-E38D3E99CC94}
+		{CBFF59B1-E982-46FD-9B54-73073CCB13E9} = {5853BFF7-03B6-4F80-B813-E38D3E99CC94}
+		{8CCE3CF5-D75B-452A-AB5F-2E17D13EC1F8} = {8B636227-5064-482A-B5EA-6D601900FF2C}
+		{252DF3B8-A864-47CA-B784-04A7E3657EA4} = {8B636227-5064-482A-B5EA-6D601900FF2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C09B7C3-FB3A-40CD-A60B-53455FF0DD0B}

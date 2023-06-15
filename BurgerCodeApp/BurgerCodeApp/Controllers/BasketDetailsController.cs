@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BurgerCodeApp.Models;
 using System.Security.Claims;
-using BurgerCodeApp.Models.Enums;
 using Microsoft.AspNetCore.Identity;
 using NuGet.Versioning;
 using BurgerCodeApp.Models.ViewModels;
 using NuGet.ContentModel;
 using Microsoft.AspNetCore.Authorization;
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities;
+using BurgerCodeApp.Domain.Entities.Enums;
 
 namespace BurgerCodeApp.Controllers
 {

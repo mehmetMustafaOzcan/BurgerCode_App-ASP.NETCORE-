@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BurgerCodeApp.Domain\BurgerCodeApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

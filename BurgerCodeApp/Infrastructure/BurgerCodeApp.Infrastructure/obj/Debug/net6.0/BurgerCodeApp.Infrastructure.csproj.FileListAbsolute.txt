@@ -1,0 +1,17 @@
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.AssemblyInfo.cs
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Infrastructure.deps.json
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Infrastructure.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Infrastructure.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Application.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Domain.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Application.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\bin\Debug\net6.0\BurgerCodeApp.Domain.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.csproj.CopyComplete
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\refint\BurgerCodeApp.Infrastructure.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\BurgerCodeApp.Infrastructure.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\Infrastructure\BurgerCodeApp.Infrastructure\obj\Debug\net6.0\ref\BurgerCodeApp.Infrastructure.dll

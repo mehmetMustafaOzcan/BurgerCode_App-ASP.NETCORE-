@@ -1,4 +1,5 @@
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;

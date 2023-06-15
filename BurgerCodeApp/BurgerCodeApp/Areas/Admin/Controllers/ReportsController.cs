@@ -1,7 +1,7 @@
 ﻿using BurgerCodeApp.Areas.Admin.Models;
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities.Enums;
 using BurgerCodeApp.Models;
-using BurgerCodeApp.Models.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

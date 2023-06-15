@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BurgerCodeApp.Models;
 using Microsoft.AspNetCore.Authorization;
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities;
 
 namespace BurgerCodeApp.Areas.Admin.Controllers
 {

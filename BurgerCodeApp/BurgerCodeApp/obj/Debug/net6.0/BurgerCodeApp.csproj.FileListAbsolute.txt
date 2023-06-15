@@ -924,3 +924,11 @@ C:\Users\ÖZCAN\Desktop\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\scopedcss\p
 C:\Users\ÖZCAN\Desktop\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\BurgerCodeApp.csproj.CopyComplete
 C:\Users\ÖZCAN\Desktop\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\BurgerCodeApp.genruntimeconfig.cache
 C:\Users\ÖZCAN\Desktop\BurgerCodeApp\BurgerCodeApp\obj\Debug\net6.0\ref\BurgerCodeApp.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Application.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Domain.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Infrastructure.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Persistence.dll
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Application.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Infrastructure.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Persistence.pdb
+C:\Users\ÖZCAN\Documents\GitHub\BurgerCode_App-ASP.NETCORE-\BurgerCodeApp\BurgerCodeApp\bin\Debug\net6.0\BurgerCodeApp.Domain.pdb

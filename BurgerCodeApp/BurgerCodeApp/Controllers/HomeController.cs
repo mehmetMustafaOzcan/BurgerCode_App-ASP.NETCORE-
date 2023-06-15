@@ -1,6 +1,7 @@
-﻿using BurgerCodeApp.Data.Context;
+﻿using BurgerCodeApp.Persistence.Context;
+using BurgerCodeApp.Domain.Entities;
+using BurgerCodeApp.Domain.Entities.Enums;
 using BurgerCodeApp.Models;
-using BurgerCodeApp.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

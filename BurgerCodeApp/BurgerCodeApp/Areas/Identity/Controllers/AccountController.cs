@@ -1,7 +1,8 @@
 ﻿using BurgerCodeApp.Areas.Identity.Models;
 using BurgerCodeApp.Controllers;
-using BurgerCodeApp.Data.Context;
+using BurgerCodeApp.Persistence.Context;
 using BurgerCodeApp.Models;
+using BurgerCodeApp.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
